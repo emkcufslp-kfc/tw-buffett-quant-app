@@ -1,16 +1,20 @@
-import numpy as np
-from FinMind.data import DataLoader
+import yfinance as yf
 
-def valuation_filter(api, ticker):
-    pepb = api.taiwan_stock_per_pbr(stock_id=ticker)
-    div = api.taiwan_stock_dividend(stock_id=ticker)
-    price = api.taiwan_stock_price(stock_id=ticker)
-    if len(pepb) < 10:
-        return False
-    pe = pepb['PE_ratio'].dropna()
-    pe_median = pe.tail(10).median()
-    current_pe = pe.iloc[-1]
-    current_price = price['close'].iloc[-1]
-    dividend = div['cash_dividend'].tail(3).mean()
-    dividend_yield = dividend / current_price
-    return current_pe < pe_median and dividend_yield > 0.04
+def valuation_filter(ticker):
+    """
+    Simplified valuation filter using yfinance 'info' metrics.
+    No longer depends on FinMind PBR/PE database.
+    """
+    ticker_tw = ticker + ".TW"
+    t = yf.Ticker(ticker_tw)
+    info = t.info
+    
+    # Extract trailing P/E and Dividend Yield
+    # Default high PE and low yield if missing to be conservative
+    current_pe = info.get('trailingPE', 999)
+    div_yield = info.get('dividendYield', 0)
+    
+    # Valuation Anchor: 
+    # Current P/E < 20 (General Value Threshold) AND Dividend Yield > 4%
+    # Note: div_yield from yfinance is decimal (e.g. 0.04)
+    return current_pe < 25 and div_yield >= 0.03
