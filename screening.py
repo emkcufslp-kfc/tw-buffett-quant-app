@@ -1,12 +1,13 @@
 import pandas as pd
 
+from criteria_config import get_default_filter_criteria
 from data_loader import (
     CacheManager,
+    fetch_monthly_revenue_history,
     fetch_twse_daily_stats,
     get_financials,
     get_historical_valuation,
     get_latest_monthly_revenue_metrics,
-    fetch_monthly_revenue_history,
     get_price_history,
     get_stock_universe,
     get_taiex_history,
@@ -22,18 +23,25 @@ def scan_universe(
     daily_stats_df=None,
     force_refresh=False,
     top_n_per_sector=100,
+    min_listing_years=10,
     max_stock_weight=0.10,
     max_sector_weight=0.40,
+    validation_min_rows=4,
+    validation_max_na_ratio=0.30,
+    criteria=None,
+    use_market_regime=True,
 ):
     cache = cache or {}
+    criteria = criteria or get_default_filter_criteria()
     if daily_stats_df is None:
         daily_stats_df = fetch_twse_daily_stats()
 
     universe_df = get_stock_universe(
         top_n_per_sector=top_n_per_sector,
+        min_listing_years=min_listing_years,
         force_refresh=force_refresh,
     )
-    regime = market_regime()
+    regime = market_regime() if use_market_regime else True
     benchmark_df = get_taiex_history(period="1y")
     revenue_history_df = fetch_monthly_revenue_history(force_refresh=force_refresh)
 
@@ -83,7 +91,11 @@ def scan_universe(
                 )
                 continue
 
-            if not validate_financial_data(financials_df):
+            if not validate_financial_data(
+                financials_df,
+                min_rows=validation_min_rows,
+                max_na_ratio=validation_max_na_ratio,
+            ):
                 diagnostics.append(
                     {
                         "ticker": ticker,
@@ -107,18 +119,20 @@ def scan_universe(
                 revenue_metrics=get_latest_monthly_revenue_metrics(ticker, revenue_history_df),
                 price_df=price_df,
                 benchmark_df=benchmark_df,
+                criteria=criteria,
             )
             evaluation["name"] = name
             evaluation["data_source"] = source
+
             pre_regime_selected = bool(evaluation["selected"])
             evaluation["regime"] = regime
-            evaluation["regime_blocked"] = bool(pre_regime_selected and not regime)
-            evaluation["selected"] = bool(pre_regime_selected and regime)
+            evaluation["regime_blocked"] = bool(use_market_regime and pre_regime_selected and not regime)
+            evaluation["selected"] = bool(pre_regime_selected and (regime or not use_market_regime))
             if evaluation["regime_blocked"]:
                 evaluation["action_plan"] = "等待大盤轉強"
                 regime_blocked_count += 1
-            ranked_rows.append(evaluation)
 
+            ranked_rows.append(evaluation)
             diagnostics.append(
                 {
                     "ticker": ticker,

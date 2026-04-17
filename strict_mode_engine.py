@@ -2,6 +2,11 @@ import math
 
 import pandas as pd
 
+from criteria_config import get_default_filter_criteria
+
+
+FINANCIAL_SECTORS = {"金融保險業", "金融業", "Financial Services"}
+
 
 def _safe_float(value):
     try:
@@ -12,155 +17,180 @@ def _safe_float(value):
         return None
 
 
-def _classify_quality(df, revenue_metrics):
+def _classify_quality(df, revenue_metrics, criteria):
     latest_roe = _safe_float(df["ROE"].iloc[-1]) if not df.empty else None
     recent = df["ROE"].tail(min(4, len(df))).astype(float) if not df.empty else pd.Series(dtype=float)
     roe_trend = _safe_float(recent.diff().mean()) if len(recent) >= 2 else None
     roe_ttm = _safe_float(recent.mean()) if not recent.empty else None
     avg_3m_revenue_yoy = _safe_float(revenue_metrics.get("avg_3m_revenue_yoy"))
 
+    compounder_min_roe = criteria["quality_compounder_min_roe"]
+    investable_min_roe = criteria["quality_investable_min_roe"]
+    compounder_max_decline = criteria["quality_compounder_max_decline"]
+    investable_max_decline = criteria["quality_investable_max_decline"]
+    turnaround_min_revenue_yoy = criteria["turnaround_min_revenue_yoy"]
+    value_trap_revenue_yoy = criteria["value_trap_revenue_yoy"]
+
     if roe_ttm is None:
-        return "Data N/A", 0, latest_roe, roe_ttm, roe_trend, "缺少足夠 ROE 資料。"
+        return "Data N/A", 0, latest_roe, roe_ttm, roe_trend, "缺少有效 ROE 資料"
 
-    if roe_ttm > 15 and (roe_trend is None or roe_trend >= -0.5):
-        return "COMPOUNDER", 30, latest_roe, roe_ttm, roe_trend, "ROE 高且維持穩定，屬高品質複利型公司。"
-    if 8 <= roe_ttm <= 15 and (roe_trend is None or roe_trend >= -1.0):
-        return "INVESTABLE", 20, latest_roe, roe_ttm, roe_trend, "ROE 處於可投資區間，品質尚可。"
-    if roe_ttm < 8 and avg_3m_revenue_yoy is not None and avg_3m_revenue_yoy > 20:
-        return "TURNAROUND", 12, latest_roe, roe_ttm, roe_trend, "ROE 偏低，但近 3 個月月營收 YoY 明顯加速，具轉機特徵。"
-    if roe_ttm < 8:
-        if avg_3m_revenue_yoy is not None and avg_3m_revenue_yoy < 0:
-            return "VALUE TRAP", 5, latest_roe, roe_ttm, roe_trend, "ROE 偏低且近 3 個月月營收 YoY 下滑，疑似價值陷阱。"
-        return "VALUE TRAP", 5, latest_roe, roe_ttm, roe_trend, "ROE 偏低，轉機證據不足。"
-    return "INVESTABLE", 15, latest_roe, roe_ttm, roe_trend, "品質中性。"
+    if roe_ttm >= compounder_min_roe and (roe_trend is None or roe_trend >= compounder_max_decline):
+        return "COMPOUNDER", 30, latest_roe, roe_ttm, roe_trend, "平均 ROE 達到高標且趨勢穩定"
+    if investable_min_roe <= roe_ttm < compounder_min_roe and (roe_trend is None or roe_trend >= investable_max_decline):
+        return "INVESTABLE", 20, latest_roe, roe_ttm, roe_trend, "平均 ROE 達到可投資門檻"
+    if roe_ttm < investable_min_roe and avg_3m_revenue_yoy is not None and avg_3m_revenue_yoy >= turnaround_min_revenue_yoy:
+        return "TURNAROUND", 12, latest_roe, roe_ttm, roe_trend, "ROE 偏弱但近 3 月營收成長強勁"
+    if roe_ttm < investable_min_roe:
+        if avg_3m_revenue_yoy is not None and avg_3m_revenue_yoy < value_trap_revenue_yoy:
+            return "VALUE TRAP", 5, latest_roe, roe_ttm, roe_trend, "ROE 偏低且近 3 月營收動能不佳"
+        return "VALUE TRAP", 5, latest_roe, roe_ttm, roe_trend, "ROE 偏低，品質不足"
+    return "INVESTABLE", 15, latest_roe, roe_ttm, roe_trend, "品質中性"
 
 
-def _classify_river(ticker, sector, val_history_df, daily_stats_df):
+def _classify_river(ticker, sector, val_history_df, daily_stats_df, criteria):
     if val_history_df.empty or ticker not in daily_stats_df.index:
-        return "Data N/A", 0, None, None, None, "估值資料不足。"
+        return "Data N/A", 0, None, None, None, "缺少估值資料"
 
-    is_financial = sector in {"金融保險業", "金融業", "Financial Services"}
     current_pe = _safe_float(daily_stats_df.loc[ticker, "PE"])
     current_pb = _safe_float(daily_stats_df.loc[ticker, "PB"])
+    min_history = int(criteria["valuation_min_history"])
+    deep_value_std = criteria["valuation_deep_value_std"]
+    cheap_std = criteria["valuation_cheap_std"]
+    expensive_std = criteria["valuation_expensive_std"]
+    is_financial = sector in FINANCIAL_SECTORS
 
     if is_financial:
         pb_series = val_history_df["PB"].dropna()
-        if len(pb_series) < 5 or current_pb is None:
-            return "Data N/A", 0, None, current_pb, None, "金融股歷史 P/B 資料不足。"
+        if len(pb_series) < min_history or current_pb is None:
+            return "Data N/A", 0, None, current_pb, None, "金融股缺少足夠 P/B 歷史"
         mean_pb = float(pb_series.mean())
         std_pb = float(pb_series.std()) if not math.isnan(float(pb_series.std())) else 0.0
-        deep_value = mean_pb - 2.0 * std_pb
-        cheap = mean_pb - 1.0 * std_pb
-        expensive = mean_pb + 1.0 * std_pb
+        deep_value = mean_pb - deep_value_std * std_pb
+        cheap = mean_pb - cheap_std * std_pb
+        expensive = mean_pb + expensive_std * std_pb
 
         if current_pb < deep_value:
-            return "Deep Value", 25, None, current_pb, None, "金融股 P/B 處於深度低檔。"
+            return "Deep Value", 25, None, current_pb, mean_pb, "目前 P/B 遠低於歷史中樞"
         if current_pb < cheap:
-            return "Cheap", 20, None, current_pb, None, "金融股 P/B 低於長期均值一個標準差。"
+            return "Cheap", 20, None, current_pb, mean_pb, "目前 P/B 低於歷史均值"
         if current_pb > expensive:
-            return "Expensive", 5, None, current_pb, None, "金融股 P/B 偏高。"
-        return "Fair", 12, None, current_pb, None, "金融股 P/B 位於合理區間。"
+            return "Expensive", 5, None, current_pb, mean_pb, "目前 P/B 高於歷史區間"
+        return "Fair", 12, None, current_pb, mean_pb, "目前 P/B 接近歷史合理區間"
 
     pe_series = val_history_df["PE"].dropna()
-    if len(pe_series) < 5 or current_pe is None:
-        return "Data N/A", 0, current_pe, None, None, "歷史 P/E 資料不足。"
+    if len(pe_series) < min_history or current_pe is None:
+        return "Data N/A", 0, current_pe, None, None, "缺少足夠 P/E 歷史"
     mean_pe = float(pe_series.mean())
     std_pe = float(pe_series.std()) if not math.isnan(float(pe_series.std())) else 0.0
-    deep_value = mean_pe - 2.0 * std_pe
-    cheap = mean_pe - 1.0 * std_pe
-    expensive = mean_pe + 1.0 * std_pe
+    deep_value = mean_pe - deep_value_std * std_pe
+    cheap = mean_pe - cheap_std * std_pe
+    expensive = mean_pe + expensive_std * std_pe
 
     if current_pe < deep_value:
-        return "Deep Value", 25, current_pe, None, mean_pe, "本益比位於五年河流圖深度低檔。"
+        return "Deep Value", 25, current_pe, None, mean_pe, "目前 P/E 遠低於歷史中樞"
     if current_pe < cheap:
-        return "Cheap", 20, current_pe, None, mean_pe, "本益比低於五年均值一個標準差。"
+        return "Cheap", 20, current_pe, None, mean_pe, "目前 P/E 低於歷史均值"
     if current_pe > expensive:
-        return "Expensive", 5, current_pe, None, mean_pe, "本益比高於五年均值一個標準差。"
-    return "Fair", 12, current_pe, None, mean_pe, "本益比位於合理河道。"
+        return "Expensive", 5, current_pe, None, mean_pe, "目前 P/E 高於歷史區間"
+    return "Fair", 12, current_pe, None, mean_pe, "目前 P/E 接近歷史合理區間"
 
 
-def _classify_peg(ticker, daily_stats_df, revenue_metrics):
+def _classify_peg(ticker, daily_stats_df, revenue_metrics, criteria):
     if ticker not in daily_stats_df.index:
-        return "Data N/A", 0, None, "缺少即時 P/E。"
+        return "Data N/A", 0, None, "缺少即時 P/E"
+
     pe_value = _safe_float(daily_stats_df.loc[ticker, "PE"])
     growth = _safe_float(revenue_metrics.get("avg_3m_revenue_yoy"))
+    min_growth = criteria["peg_min_growth"]
+    undervalued_max = criteria["peg_undervalued_max"]
+    fair_value_max = criteria["peg_fair_value_max"]
+    overvalued_min = criteria["peg_overvalued_min"]
+
     if pe_value is None:
-        return "Data N/A", 0, None, "缺少即時 P/E。"
-    if growth is None or growth <= 0:
-        return "Data N/A", 4, None, "缺少有效的近 3 個月平均月營收 YoY，PEG 採保守分數。"
+        return "Data N/A", 0, None, "缺少即時 P/E"
+    if growth is None or growth <= min_growth:
+        return "Data N/A", 4, None, "成長率不足，PEG 不具參考性"
 
     peg = pe_value / growth
-    if peg < 0.75:
-        return "Undervalued", 15, peg, "PEG < 0.75，屬強買訊號。"
-    if peg <= 1.2:
-        return "Fair Value", 10, peg, "PEG 位於合理區間。"
-    if peg > 1.5:
-        return "Overvalued", 3, peg, "PEG 偏高。"
-    return "Fair Value", 7, peg, "PEG 略高於中性區。"
+    if peg <= undervalued_max:
+        return "Undervalued", 15, peg, "PEG 落在低估區間"
+    if peg <= fair_value_max:
+        return "Fair Value", 10, peg, "PEG 落在合理區間"
+    if peg >= overvalued_min:
+        return "Overvalued", 3, peg, "PEG 顯示偏高估"
+    return "Fair Value", 7, peg, "PEG 介於合理與高估之間"
 
 
-def _classify_yield_support(ticker, daily_stats_df):
+def _classify_yield_support(ticker, daily_stats_df, criteria):
     if ticker not in daily_stats_df.index:
-        return "Data N/A", 0, None, "缺少殖利率資料。"
+        return "Data N/A", 0, None, "缺少殖利率資料"
+
     current_yield = _safe_float(daily_stats_df.loc[ticker, "Yield"])
+    yield_floor_min = criteria["yield_floor_min"]
+    yield_neutral_min = criteria["yield_neutral_min"]
+
     if current_yield is None:
-        return "Data N/A", 0, None, "缺少殖利率資料。"
-    if current_yield >= 6.0:
-        return "Floor Reached", 15, current_yield, "殖利率偏高，具防守支撐。"
-    if current_yield >= 4.0:
-        return "Neutral", 10, current_yield, "殖利率位於可接受區間。"
-    return "Ceiling", 4, current_yield, "殖利率偏低，防守支撐有限。"
+        return "Data N/A", 0, None, "缺少殖利率資料"
+    if current_yield >= yield_floor_min:
+        return "Floor Reached", 15, current_yield, "殖利率達到明顯支撐區"
+    if current_yield >= yield_neutral_min:
+        return "Neutral", 10, current_yield, "殖利率處於中性區"
+    return "Ceiling", 4, current_yield, "殖利率偏低，保護性不足"
 
 
-def _classify_momentum(price_df, benchmark_df):
-    if price_df.empty or benchmark_df.empty or len(price_df) < 30 or len(benchmark_df) < 30:
-        return "Data N/A", 0, None, None, "價格歷史不足，無法判斷動能。"
+def _classify_momentum(price_df, benchmark_df, criteria):
+    ma_window = int(criteria["momentum_ma_window"])
+    lookback_days = int(criteria["momentum_lookback_days"])
+    required_rows = max(30, lookback_days + 1)
+
+    if price_df.empty or benchmark_df.empty or len(price_df) < required_rows or len(benchmark_df) < required_rows:
+        return "Data N/A", 0, None, None, "缺少足夠股價資料"
 
     close = price_df["Close"].astype(float).dropna().reset_index(drop=True)
     bench = benchmark_df["Close"].astype(float).dropna().reset_index(drop=True)
-    if len(close) < 30 or len(bench) < 30:
-        return "Data N/A", 0, None, None, "價格歷史不足，無法判斷動能。"
+    if len(close) < required_rows or len(bench) < required_rows:
+        return "Data N/A", 0, None, None, "缺少足夠股價資料"
 
-    ma200 = close.rolling(200).mean().iloc[-1] if len(close) >= 200 else None
+    moving_average = close.rolling(ma_window).mean().iloc[-1] if len(close) >= ma_window else None
     latest_price = float(close.iloc[-1])
-    above_ma200 = ma200 is not None and latest_price > float(ma200)
+    above_ma = moving_average is not None and latest_price > float(moving_average)
 
-    stock_4w = latest_price / float(close.iloc[-21]) - 1 if len(close) >= 21 else None
-    bench_4w = float(bench.iloc[-1]) / float(bench.iloc[-21]) - 1 if len(bench) >= 21 else None
+    stock_return = latest_price / float(close.iloc[-(lookback_days + 1)]) - 1 if len(close) >= (lookback_days + 1) else None
+    bench_return = float(bench.iloc[-1]) / float(bench.iloc[-(lookback_days + 1)]) - 1 if len(bench) >= (lookback_days + 1) else None
     relative_strength = None
     outperform = None
-    if stock_4w is not None and bench_4w is not None:
-        relative_strength = stock_4w - bench_4w
+    if stock_return is not None and bench_return is not None:
+        relative_strength = stock_return - bench_return
         outperform = relative_strength > 0
 
     score = 0
-    if above_ma200:
+    if above_ma:
         score += 10
     if outperform:
         score += 10
 
     if score >= 20:
-        signal = "Uptrend / Outperform"
-        note = "股價位於 MA200 之上且近四週強於大盤。"
-    elif score >= 10:
-        signal = "Mixed"
-        note = "動能中性，僅部分條件成立。"
-    else:
-        signal = "Weak"
-        note = "動能偏弱，尚未形成價值與動能共振。"
-    return signal, score, above_ma200, relative_strength, note
+        return "Uptrend / Outperform", score, above_ma, relative_strength, "股價站上長期均線且強於大盤"
+    if score >= 10:
+        return "Mixed", score, above_ma, relative_strength, "動能強弱參半"
+    return "Weak", score, above_ma, relative_strength, "尚未出現明確強勢動能"
 
 
-def _action_from_score(score, quality_status):
+def _action_from_score(score, quality_status, criteria):
+    strong_buy_min = criteria["action_strong_buy_min"]
+    accumulate_min = criteria["action_accumulate_min"]
+    hold_min = criteria["action_hold_min"]
+    trim_min = criteria["action_trim_min"]
+
     if quality_status == "VALUE TRAP":
         return "SELL / AVOID"
-    if score >= 80:
+    if score >= strong_buy_min:
         return "STRONG BUY"
-    if score >= 65:
+    if score >= accumulate_min:
         return "ACCUMULATE"
-    if score >= 45:
+    if score >= hold_min:
         return "HOLD"
-    if score >= 25:
+    if score >= trim_min:
         return "TRIM / REDUCE"
     return "SELL / AVOID"
 
@@ -174,33 +204,36 @@ def evaluate_stock_strict_mode(
     revenue_metrics,
     price_df,
     benchmark_df,
+    criteria=None,
 ):
+    criteria = criteria or get_default_filter_criteria()
+
     quality_status, quality_score, latest_roe, roe_ttm, roe_trend, quality_note = _classify_quality(
-        financials_df, revenue_metrics
+        financials_df, revenue_metrics, criteria
     )
     river_signal, river_score, current_pe, current_pb, hist_center, river_note = _classify_river(
-        ticker, sector, valuation_df, daily_stats_df
+        ticker, sector, valuation_df, daily_stats_df, criteria
     )
-    peg_signal, peg_score, peg_value, peg_note = _classify_peg(ticker, daily_stats_df, revenue_metrics)
-    yield_signal, yield_score, current_yield, yield_note = _classify_yield_support(ticker, daily_stats_df)
+    peg_signal, peg_score, peg_value, peg_note = _classify_peg(ticker, daily_stats_df, revenue_metrics, criteria)
+    yield_signal, yield_score, current_yield, yield_note = _classify_yield_support(ticker, daily_stats_df, criteria)
     momentum_signal, momentum_score, above_ma200, relative_strength, momentum_note = _classify_momentum(
-        price_df, benchmark_df
+        price_df, benchmark_df, criteria
     )
 
     composite_score = quality_score + river_score + peg_score + yield_score + momentum_score
-    action = _action_from_score(composite_score, quality_status)
+    action = _action_from_score(composite_score, quality_status, criteria)
 
     notes = [
         ("品質", quality_score, quality_note),
-        ("河流圖估值", river_score, river_note),
-        ("即時 PEG", peg_score, peg_note),
-        ("殖利率支撐", yield_score, yield_note),
+        ("估值", river_score, river_note),
+        ("PEG", peg_score, peg_note),
+        ("殖利率", yield_score, yield_note),
         ("動能", momentum_score, momentum_note),
     ]
     primary_driver = max(notes, key=lambda item: item[1])[2]
-    key_risk = "月營收與前瞻股利資料目前為 Data N/A，嚴格模式中的部分子模型以保守中性分處理。"
+    key_risk = "請留意財報與估值資料可能不完整，並搭配產業與市場情境交叉判讀"
     if action in {"TRIM / REDUCE", "SELL / AVOID"}:
-        key_risk = "估值與品質沒有形成足夠安全邊際，且動能保護有限。"
+        key_risk = "目前品質、估值或動能未能支撐積極加碼"
 
     return {
         "ticker": ticker,
