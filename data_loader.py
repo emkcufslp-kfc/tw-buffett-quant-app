@@ -17,11 +17,34 @@ def get_stock_universe(api):
             "Please verify your FinMind API token and try again."
         )
 
-    info = info[~info['stock_name'].str.contains("KY", na=False)]
-    info['start_date'] = pd.to_datetime(info['start_date'])
-    info['listing_years'] = (pd.Timestamp.today() - info['start_date']).dt.days / 365
-    info = info[info['listing_years'] >= 10]
-    return info[['stock_id', 'industry_category']]
+    if 'stock_name' in info.columns:
+        info = info[~info['stock_name'].str.contains("KY", na=False)]
+
+    date_column = None
+    for candidate in ['start_date', 'listing_date', 'issue_date', '上市日期', '上市日']:
+        if candidate in info.columns:
+            date_column = candidate
+            break
+
+    if date_column is not None:
+        info['start_date'] = pd.to_datetime(info[date_column], errors='coerce')
+        if info['start_date'].notna().any():
+            info['listing_years'] = (pd.Timestamp.today() - info['start_date']).dt.days / 365
+            info = info[info['listing_years'] >= 10]
+    else:
+        # No date column found, keep the universe but continue without the 10-year filter
+        info = info.copy()
+
+    expected_columns = {'stock_id', 'industry_category'}
+    missing = expected_columns - set(info.columns)
+    if missing:
+        raise RuntimeError(
+            "FinMind response is missing expected columns: "
+            f"{', '.join(sorted(missing))}. "
+            f"Available columns: {', '.join(info.columns)}"
+        )
+
+    return info[['stock_id', 'industry_category']].drop_duplicates()
 
 def get_price_history(ticker):
     ticker_tw = ticker + ".TW"
