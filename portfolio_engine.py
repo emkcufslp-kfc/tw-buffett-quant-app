@@ -6,9 +6,11 @@ def build_portfolio(stocks, sector_map):
     weights = {}
     sector_weights = defaultdict(float)
     n = len(stocks)
+    if n == 0:
+        return weights
     base_weight = min(1/n, max_stock_weight)
     for s in stocks:
-        sector = sector_map[s]
+        sector = sector_map.get(s, "unknown")
         if sector_weights[sector] + base_weight <= max_sector_weight:
             weights[s] = base_weight
             sector_weights[sector] += base_weight

@@ -66,7 +66,13 @@ if api_key:
             v = valuation_filter(api, ticker)
             if entry_rule(q, v, regime):
                 selected.append(ticker)
-    portfolio = build_portfolio(selected, sector_map)
+
+    if not selected:
+        st.warning("No stocks qualified after filtering. Please check your FinMind data or API key.")
+        portfolio = {}
+    else:
+        portfolio = build_portfolio(selected, sector_map)
+
     st.write("Qualified Stocks:", selected)
     st.write("Portfolio Weights:", portfolio)
     
@@ -83,16 +89,19 @@ if api_key:
     st.write("5. Rebalance positions.")
     
     if run_backtest:
-        st.header("Historical Backtest (2006-2026)")
-        twii = yf.download("^TWII", start=START_DATE, end=END_DATE, progress=False)['Close']
-        returns = compute_returns(twii)
-        port_return = portfolio_return(portfolio, returns)
-        fig, ax = plt.subplots()
-        ax.plot(returns.cumsum(), label="TWII")
-        ax.plot(port_return.cumsum(), label="Strategy")
-        ax.legend()
-        st.pyplot(fig)
-        st.write("CAGR: ~14-16%, Max Drawdown: ~-28% (estimated)")
+        if not portfolio:
+            st.warning("No portfolio available for backtesting. Please check your filters and FinMind data.")
+        else:
+            st.header("Historical Backtest (2006-2026)")
+            twii = yf.download("^TWII", start=START_DATE, end=END_DATE, progress=False)['Close']
+            returns = compute_returns(twii)
+            port_return = portfolio_return(portfolio, returns)
+            fig, ax = plt.subplots()
+            ax.plot(returns.cumsum(), label="TWII")
+            ax.plot(port_return.cumsum(), label="Strategy")
+            ax.legend()
+            st.pyplot(fig)
+            st.write("CAGR: ~14-16%, Max Drawdown: ~-28% (estimated)")
 
 else:
     st.warning("Please enter FinMind API Key.")
