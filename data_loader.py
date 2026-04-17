@@ -1,39 +1,101 @@
-import pandas as pd
-import yfinance as yf
-import requests
-import pickle
 import os
+import pickle
 import time
-from datetime import datetime, timedelta
 import urllib3
-urllib3.disable_warnings()
 
-# ------------------------------------------------------------------------
-# Institutional TSE 150 Universe (Main Exchange - No OTC, No KY)
-# ------------------------------------------------------------------------
-TSE_150_TICKERS = [
-    '2330', '2317', '2454', '2308', '2881', '2882', '2412', '2303', '2886', '2891',
-    '3711', '2884', '1216', '2892', '2408', '2885', '2382', '2409', '2357', '2002',
-    '1301', '1303', '1326', '6505', '2880', '2883', '2379', '2603', '2474', '2327',
-    '2887', '2912', '1101', '2890', '1402', '2609', '2301', '1102', '2207', '2801',
-    '2345', '2615', '1227', '5880', '2888', '5871', '1590', '4966', '3034', '3037',
-    '2324', '1605', '2618', '2610', '2353', '2352', '1476', '2377', '3231',
-    '2356', '2376', '2354', '3481', '3045', '4904', '2313', '2355', '2383', '2385', 
-    '2449', '2451', '3005', '3017', '3023', '3035', '3044', '3406', '3443',
-    '3532', '3533', '3596', '3653', '3661', '3702', '4414', '4919', '4927', '4938',
-    '4958', '4961', '5269', '5434', '6176', '6205', '6213', '6239', '6271', '6278',
-    '6409', '6414', '6415', '6456', '6669', '8046', '8081', '8150', '8210', '8454',
-    '9904', '9910', '9921', '9945', '1210', '2105', '2601', '2633', '2707', '9917', '9933'
-]
+import pandas as pd
+import requests
+import yfinance as yf
+urllib3.disable_warnings()
 
 CACHE_FILE = "data_cache.pkl"
 CACHE_EXPIRY_DAYS = 7
+UNIVERSE_CACHE_FILE = "universe_cache.pkl"
+UNIVERSE_CACHE_EXPIRY_DAYS = 30
+DEFAULT_TOP_N_PER_SECTOR = 100
 
 C_ROE = 'ROE'
 C_OCF = 'OperatingCashFlow'
 C_CAPEX = 'CapitalExpenditure'
 C_FCF = 'FCF'
 C_NET_INCOME = 'NetIncome'
+
+TWSE_LISTED_INFO_URL = "https://openapi.twse.com.tw/v1/opendata/t187ap03_L"
+
+STOCK_ID_COLUMNS = ["公司代號", "股票代號", "證券代號", "stock_id"]
+STOCK_NAME_COLUMNS = ["公司名稱", "股票名稱", "證券名稱", "stock_name"]
+INDUSTRY_COLUMNS = ["產業別", "industry_category", "industry"]
+LISTING_DATE_COLUMNS = ["上市日期", "成立日期", "start_date"]
+
+
+def _pick_first_available(df, candidates, default=None):
+    for column in candidates:
+        if column in df.columns:
+            return df[column]
+    if default is None:
+        return pd.Series(index=df.index, dtype="object")
+    return pd.Series([default] * len(df), index=df.index)
+
+
+def _safe_market_cap(ticker):
+    ticker_tw = ticker + ".TW"
+    try:
+        yf_ticker = yf.Ticker(ticker_tw)
+        fast_info = getattr(yf_ticker, "fast_info", None)
+        if fast_info:
+            market_cap = fast_info.get("market_cap")
+            if market_cap:
+                return float(market_cap)
+        info = yf_ticker.info
+        market_cap = info.get("marketCap")
+        if market_cap:
+            return float(market_cap)
+    except Exception:
+        return None
+    return None
+
+
+def _load_cached_universe():
+    if os.path.exists(UNIVERSE_CACHE_FILE):
+        with open(UNIVERSE_CACHE_FILE, "rb") as f:
+            cache = pickle.load(f)
+        ts = cache.get("timestamp", 0)
+        if (time.time() - ts) < (UNIVERSE_CACHE_EXPIRY_DAYS * 86400):
+            return cache.get("data")
+    return None
+
+
+def _save_cached_universe(df):
+    payload = {"timestamp": time.time(), "data": df}
+    with open(UNIVERSE_CACHE_FILE, "wb") as f:
+        pickle.dump(payload, f)
+
+
+def _fetch_twse_stock_info():
+    response = requests.get(TWSE_LISTED_INFO_URL, verify=False, timeout=20)
+    response.raise_for_status()
+    raw = response.json()
+    df = pd.DataFrame(raw)
+    if df.empty:
+        return pd.DataFrame(columns=["stock_id", "stock_name", "industry_category", "listing_date"])
+
+    stock_id = _pick_first_available(df, STOCK_ID_COLUMNS, "")
+    stock_name = _pick_first_available(df, STOCK_NAME_COLUMNS, "")
+    industry = _pick_first_available(df, INDUSTRY_COLUMNS, "Unknown")
+    listing_date = _pick_first_available(df, LISTING_DATE_COLUMNS)
+
+    result = pd.DataFrame(
+        {
+            "stock_id": stock_id.astype(str).str.strip(),
+            "stock_name": stock_name.astype(str).str.strip(),
+            "industry_category": industry.astype(str).str.strip().replace("", "Unknown"),
+            "listing_date": pd.to_datetime(listing_date, errors="coerce"),
+        }
+    )
+
+    result = result[result["stock_id"].str.fullmatch(r"\d{4}", na=False)]
+    result = result[~result["stock_name"].str.contains("KY", case=False, na=False)]
+    return result.reset_index(drop=True)
 
 class CacheManager:
     @staticmethod
@@ -74,15 +136,40 @@ def fetch_twse_daily_stats():
         print(f"TWSE OpenAPI Error: {e}")
         return pd.DataFrame()
 
-def get_stock_universe():
-    unique_tickers = sorted(list(set(TSE_150_TICKERS)))
-    # In a production environment, we'd filter for KY-stocks and listing dates via an official API.
-    # For this version, the TSE_150_TICKERS list is pre-vetted for survivor stability (>10 yrs).
-    df = pd.DataFrame({
-        'stock_id': unique_tickers,
-        'industry_category': ['Main Exchange (TSE)'] * len(unique_tickers)
-    })
-    return df
+def get_stock_universe(top_n_per_sector=DEFAULT_TOP_N_PER_SECTOR, min_listing_years=10, force_refresh=False):
+    if not force_refresh:
+        cached = _load_cached_universe()
+        if cached is not None:
+            return (
+                cached.sort_values(["industry_category", "market_cap"], ascending=[True, False])
+                .groupby("industry_category", dropna=False)
+                .head(top_n_per_sector)
+                .reset_index(drop=True)
+            )
+
+    info = _fetch_twse_stock_info()
+    if info.empty:
+        return pd.DataFrame(columns=["stock_id", "stock_name", "industry_category", "listing_date", "market_cap"])
+
+    listing_age_years = (
+        (pd.Timestamp.today().normalize() - info["listing_date"]).dt.days / 365.25
+    )
+    info["listing_age_years"] = listing_age_years
+    info = info[info["listing_age_years"] >= min_listing_years].copy()
+
+    market_caps = []
+    for ticker in info["stock_id"]:
+        market_caps.append(_safe_market_cap(ticker))
+    info["market_cap"] = market_caps
+    info["market_cap"] = pd.to_numeric(info["market_cap"], errors="coerce").fillna(0.0)
+
+    ranked = info.sort_values(
+        ["industry_category", "market_cap", "stock_id"],
+        ascending=[True, False, True],
+    ).reset_index(drop=True)
+    _save_cached_universe(ranked)
+
+    return ranked.groupby("industry_category", dropna=False).head(top_n_per_sector).reset_index(drop=True)
 
 def get_financials(ticker):
     """

@@ -17,6 +17,7 @@ st.caption("Taiwan value-quality stock screen with live TWSE valuation data and 
 
 with st.sidebar:
     st.header("Screen Settings")
+    top_n_per_sector = st.slider("Top stocks per sector", 20, 150, 100, 10)
     roe_avg_tgt = st.slider("Average ROE threshold (%)", 5, 25, 15)
     roe_min_tgt = st.slider("Minimum acceptable ROE (%)", 0, 15, 10)
     roe_min_count = st.slider("Max low-ROE years allowed", 0, 5, 2)
@@ -46,6 +47,7 @@ with st.expander("Strategy Logic", expanded=True):
         - Quality: high average ROE, limited weak ROE years, and consistently positive operating/free cash flow.
         - Valuation: financials use historical P/B bands, while non-financials use historical P/E plus yield support.
         - Regime: the dashboard reports the broad market regime using the Taiwan index versus its 200-day moving average.
+        - Universe: the app builds a listed-stock universe and keeps the top names in each sector by market cap.
         - Portfolio: weights respect hard per-stock and per-sector caps. Unused capital stays undeployed rather than violating the caps.
         """
     )
@@ -60,6 +62,7 @@ if run_scan:
             cache=st.session_state.cache,
             daily_stats_df=st.session_state.daily_stats,
             force_refresh=force_refresh,
+            top_n_per_sector=top_n_per_sector,
             roe_avg_tgt=roe_avg_tgt,
             roe_min_tgt=roe_min_tgt,
             roe_min_count=roe_min_count,
