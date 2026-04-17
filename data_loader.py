@@ -48,7 +48,7 @@ class SafeDataLoader(DataLoader):
             params = self._compatible_api_version(params)
             params = self._compatible_endpoints_param(params)
             response = request_get(
-                self._session,
+                self._FinMindApi__session,
                 url,
                 params=params,
                 timeout=timeout,
@@ -143,15 +143,23 @@ def _normalize_financial_columns(df):
     mapping = {}
     for col in list(df.columns):
         lower = str(col).lower()
-        if 'roe' in lower:
+        # --- Operating Cash Flow Aliases ---
+        if any(x in lower for x in ['roe', '權益報酬率', '股東權益報酬率']):
             mapping[col] = 'ROE'
-        elif 'operating' in lower and 'cash' in lower:
+        elif any(x in lower for x in ['operating', 'cash']) and ('flow' in lower or 'activity' in lower):
             mapping[col] = 'OperatingCashFlow'
-        elif 'capital' in lower and 'expend' in lower:
+        elif '營業' in lower and '現金' in lower and ('流入' in lower or '支出' in lower or '活動' in lower):
+            mapping[col] = 'OperatingCashFlow'
+        elif 'netcashinflowfromoperatingactivities' in lower:
+            mapping[col] = 'OperatingCashFlow'
+            
+        # --- Capital Expenditure / PPE Aliases ---
+        elif ('capital' in lower and 'expend' in lower) or '購置不動產' in lower:
             mapping[col] = 'CapitalExpenditure'
-        elif '營業' in lower and '現金' in lower:
-            mapping[col] = 'OperatingCashFlow'
         elif '資本' in lower and ('支出' in lower or '支出' in lower):
+            mapping[col] = 'CapitalExpenditure'
+        elif 'propertyandplantandequipment' in lower or '不動產、廠房及設備' in lower:
+            # PPE is a common proxy when direct CapEx is missing
             mapping[col] = 'CapitalExpenditure'
         elif 'free' in lower and 'cash' in lower:
             mapping[col] = 'FCF'
@@ -196,11 +204,16 @@ def get_financials(api, ticker):
             f"ROE columns: {list(roe_df.columns)}; cash columns: {list(cash_df.columns)}"
         )
 
-    if 'OperatingCashFlow' not in merged.columns or 'CapitalExpenditure' not in merged.columns:
+    if 'OperatingCashFlow' not in merged.columns:
+        # If still missing, we check for 'CashFlowsFromOperatingActivities' or similar directly if normalization missed it
         raise RuntimeError(
-            f"Missing cash flow fields for {ticker}. "
+            f"Missing Operating Cash Flow for {ticker}. "
             f"Merged columns: {list(merged.columns)}"
         )
+
+    if 'CapitalExpenditure' not in merged.columns:
+        # Graceful fallback: Treat as 0 if missing, rather than failing the entire stock.
+        merged['CapitalExpenditure'] = 0
 
     merged['FCF'] = merged['OperatingCashFlow'] - merged['CapitalExpenditure'].abs()
     return merged

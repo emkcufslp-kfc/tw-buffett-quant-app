@@ -8,6 +8,10 @@ import yfinance as yf
 from FinMind.data import DataLoader
 import warnings
 warnings.filterwarnings('ignore')
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from config import *
 from data_loader import *
@@ -43,7 +47,7 @@ TECH_SECTORS = {
 
 st.title("TW Buffett Quant Framework (2006-2026)")
 
-secret_api_key = st.secrets.get("FINMIND_API_KEY", "")
+secret_api_key = st.secrets.get("FINMIND_API_KEY", os.getenv("FINMIND_TOKEN", ""))
 api_key = st.sidebar.text_input(
     "FinMind API Key",
     type="password",
