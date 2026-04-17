@@ -68,12 +68,12 @@ def _pivot_financial_df(df):
 
 def get_financials(api, ticker):
     try:
-        roe_df = api.taiwan_stock_financial_statement(stock_id=ticker)
-        cash_df = api.taiwan_stock_cash_flows_statement(stock_id=ticker)
+        roe_df = api.taiwan_stock_financial_statement(stock_id=ticker, start_date="2006-01-01")
+        cash_df = api.taiwan_stock_cash_flows_statement(stock_id=ticker, start_date="2006-01-01")
     except Exception as exc:
         raise RuntimeError(
             f"Failed to load financials for {ticker}. "
-            "Please verify the FinMind API token and ticker value."
+            f"Please verify the FinMind API token and ticker value. ({exc})"
         ) from exc
 
     roe_df = _pivot_financial_df(roe_df)
