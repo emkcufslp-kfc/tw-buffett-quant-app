@@ -1,23 +1,28 @@
 import os
+
 from dotenv import load_dotenv
-from data_loader import SafeDataLoader, get_stock_universe
+
+from data_loader import fetch_twse_daily_stats, get_stock_universe
+
 
 def test():
     load_dotenv()
-    token = os.getenv("FINMIND_TOKEN")
-    if not token:
-        print("❌ No FINMIND_TOKEN found in .env")
-        return
+    token = os.getenv("FINMIND_API_KEY") or os.getenv("FINMIND_TOKEN")
+    if token:
+        print("Found a configured FinMind token/secret in the environment.")
+    else:
+        print("No FinMind token configured. This app currently relies on TWSE OpenAPI and yfinance.")
 
-    print(f"Testing FinMind API with token: {token[:10]}...")
     try:
-        api = SafeDataLoader(token)
-        universe = get_stock_universe(api)
+        universe = get_stock_universe()
+        daily_stats = fetch_twse_daily_stats()
         print(f"Success! Loaded {len(universe)} stocks in the universe.")
-        print("\nFirst 5 stocks:")
+        print(f"TWSE daily stats rows: {len(daily_stats)}")
+        print("\nFirst 5 universe rows:")
         print(universe.head())
     except Exception as e:
-        print(f"API Test Failed: {e}")
+        print(f"Data source smoke test failed: {e}")
+
 
 if __name__ == "__main__":
     test()

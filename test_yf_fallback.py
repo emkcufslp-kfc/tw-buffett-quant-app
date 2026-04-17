@@ -1,25 +1,26 @@
-import os
-from data_loader import get_financials_yf, SafeDataLoader, get_financials
-from dotenv import load_dotenv
+from data_loader import get_financials, get_historical_valuation, get_industry_info
+
 
 def test_yf_fallback():
-    print("Test 1: Core YFinance Extraction...")
+    print("Test 1: Core yfinance financial extraction...")
     try:
-        df, source = get_financials_yf("2330")
-        print(f"Success! Fetched {len(df)} lines from {source}.")
-        print("Last 3 entries:")
-        print(df[['date', 'ROE', 'FCF']].tail(3))
+        df = get_financials("2330")
+        print(f"Success! Fetched {len(df)} financial rows.")
+        print(df[["date", "ROE", "FCF"]].tail(3))
     except Exception as e:
-        print(f"Failed YFinance Extraction: {e}")
+        print(f"Failed yfinance extraction: {e}")
 
-    print("\nTest 2: Universal Fallback Driver...")
-    # Using a fake API key to force fallback
-    api = SafeDataLoader("FAIL_ME")
+    print("\nTest 2: Valuation and sector metadata...")
     try:
-        df, source = get_financials(api, "2330")
-        print(f"Success! Universal driver fell back to: {source}")
+        df = get_financials("2330")
+        val_history = get_historical_valuation("2330", df)
+        sector, name = get_industry_info("2330")
+        print(f"Sector: {sector}")
+        print(f"Name: {name}")
+        print(f"Historical valuation rows: {len(val_history)}")
     except Exception as e:
-        print(f"Universal Fallback Failed: {e}")
+        print(f"Metadata/valuation test failed: {e}")
+
 
 if __name__ == "__main__":
     test_yf_fallback()
