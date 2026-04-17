@@ -8,13 +8,14 @@ def get_stock_universe(api):
     except Exception as exc:
         raise RuntimeError(
             "Failed to load FinMind stock universe. "
-            "Please verify your FinMind API token and network access."
+            "Please verify your FinMind API key, network access, and FinMind token permissions. "
+            f"Error: {exc.__class__.__name__}: {exc}"
         ) from exc
 
     if info is None or info.empty:
         raise RuntimeError(
             "FinMind taiwan_stock_info returned no data. "
-            "Please verify your FinMind API token and try again."
+            "Please verify your FinMind API key and try again."
         )
 
     if 'stock_name' in info.columns:
