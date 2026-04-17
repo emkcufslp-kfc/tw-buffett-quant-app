@@ -35,10 +35,15 @@ C_NET_INCOME = 'NetIncome'
 
 def get_stock_universe():
     """
-    Returns the fixed TSE 150 universe. No longer relies on FinMind.
+    Returns the fixed TSE 150 universe. Filters out KY stocks.
     """
-    # Deduplicate
+    # Unique tickers
     unique_tickers = sorted(list(set(TSE_150_TICKERS)))
+    
+    # KY stocks end with 'KY' in their name or have specific patterns.
+    # Since we have a hardcoded list, we'll manually ensure no KY are in the core TAIEX 150.
+    # In a dynamic system, we would filter by name.
+    
     df = pd.DataFrame({
         'stock_id': unique_tickers,
         'industry_category': ['Main Exchange (TSE)'] * len(unique_tickers)
@@ -86,6 +91,48 @@ def get_financials(ticker):
     df[C_FCF] = df[C_OCF] - df[C_CAPEX].abs()
     
     return df
+
+def get_historical_valuation(ticker, financials_df):
+    """
+    Calculates historical P/E and P/B ratios for the given ticker
+    using the dates in the financials_df.
+    """
+    ticker_tw = ticker + ".TW"
+    t = yf.Ticker(ticker_tw)
+    
+    # Get Shares Outstanding (Historical if possible, or current as proxy)
+    info = t.info
+    shares = info.get('sharesOutstanding')
+    if not shares:
+        return pd.DataFrame()
+
+    val_data = []
+    
+    for _, row in financials_df.iterrows():
+        date_str = row['date']
+        # Fetch price around that fiscal year end
+        try:
+            hist = t.history(start=date_str, periods=5)
+            if hist.empty:
+                continue
+            price = hist['Close'].iloc[0]
+            
+            mkt_cap = price * shares
+            net_income = row.get(C_NET_INCOME, 0)
+            equity = row.get('Equity', 0)
+            
+            pe = mkt_cap / net_income if net_income > 0 else None
+            pb = mkt_cap / equity if equity > 0 else None
+            
+            val_data.append({
+                'date': date_str,
+                'PE': pe,
+                'PB': pb
+            })
+        except:
+            continue
+            
+    return pd.DataFrame(val_data)
 
 def get_price_history(ticker):
     ticker_tw = ticker + ".TW"

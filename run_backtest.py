@@ -25,12 +25,11 @@ def run():
         try:
             df = get_financials(ticker)
             if validate_financial_data(df):
-                q = quality_filter(df)
-                v = valuation_filter(ticker)
-                
-                if entry_rule(q, v, regime):
-                    print(f"💎 Stock Qualified: {ticker}")
-                    selected.append(ticker)
+                if quality_filter(df):
+                    val_history = get_historical_valuation(ticker, df)
+                    if valuation_filter(ticker, val_history):
+                        print(f"💎 Stock Qualified: {ticker}")
+                        selected.append(ticker)
         except Exception as e:
             # Silent skip for batch processing
             continue
