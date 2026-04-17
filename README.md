@@ -16,6 +16,21 @@ A production-grade quantitative value investment framework for Taiwan stocks, in
 ## Deployment
 Deploy to Streamlit Cloud via GitHub.
 
+### Streamlit Secrets
+To keep your FinMind API key secure, add it to Streamlit Secrets instead of entering it manually in the app.
+
+1. In Streamlit Cloud, open your app.
+2. Go to "Settings" > "Secrets".
+3. Add this key/value pair:
+
+```toml
+FINMIND_API_KEY = "your-finmind-api-key"
+```
+
+4. Save and redeploy.
+
+The app will automatically use `FINMIND_API_KEY` from Streamlit Secrets if available.
+
 ## Data Sources
 - FinMind API for financial data.
 - yfinance for price data.

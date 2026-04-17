@@ -3,7 +3,20 @@ from FinMind.data import DataLoader
 import yfinance as yf
 
 def get_stock_universe(api):
-    info = api.taiwan_stock_info()
+    try:
+        info = api.taiwan_stock_info()
+    except Exception as exc:
+        raise RuntimeError(
+            "Failed to load FinMind stock universe. "
+            "Please verify your FinMind API token and network access."
+        ) from exc
+
+    if info is None or info.empty:
+        raise RuntimeError(
+            "FinMind taiwan_stock_info returned no data. "
+            "Please verify your FinMind API token and try again."
+        )
+
     info = info[~info['stock_name'].str.contains("KY", na=False)]
     info['start_date'] = pd.to_datetime(info['start_date'])
     info['listing_years'] = (pd.Timestamp.today() - info['start_date']).dt.days / 365

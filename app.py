@@ -25,7 +25,14 @@ TECH_SECTORS = {
 
 st.title("TW Buffett Quant Framework (2006-2026)")
 
-api_key = st.sidebar.text_input("FinMind API Key", type="password")
+secret_api_key = st.secrets.get("FINMIND_API_KEY", "")
+api_key = st.sidebar.text_input(
+    "FinMind API Key",
+    type="password",
+    value=secret_api_key,
+)
+if secret_api_key:
+    st.sidebar.caption("Using FinMind API key from Streamlit Secrets.")
 as_of_date = st.sidebar.date_input("As Of Date", datetime.today())
 run_backtest = st.sidebar.button("Run Backtest")
 
@@ -33,7 +40,15 @@ if api_key:
     api = DataLoader(api_key)
     
     st.header("Current Status")
-    universe = get_stock_universe(api)
+    try:
+        universe = get_stock_universe(api)
+    except Exception as exc:
+        st.error(
+            "Unable to load stock universe from FinMind: "
+            f"{exc}"
+        )
+        st.stop()
+
     regime = market_regime()
     selected = []
     sector_map = {}
