@@ -1,5 +1,6 @@
 import os
 import pickle
+import re
 import time
 import urllib3
 
@@ -36,6 +37,14 @@ def _pick_first_available(df, candidates, default=None):
     if default is None:
         return pd.Series(index=df.index, dtype="object")
     return pd.Series([default] * len(df), index=df.index)
+
+
+def _normalize_industry_name(value):
+    text = str(value).strip()
+    if not text:
+        return "未知"
+    text = re.sub(r"^\s*\d+\s*[.\-、．]+\s*", "", text)
+    return text or "未知"
 
 
 def _safe_market_cap(ticker):
@@ -90,7 +99,7 @@ def _fetch_twse_stock_info():
         {
             "stock_id": stock_id.astype(str).str.strip(),
             "stock_name": stock_name.astype(str).str.strip(),
-            "industry_category": industry.astype(str).str.strip().replace("", "未知"),
+            "industry_category": industry.map(_normalize_industry_name),
             "listing_date": pd.to_datetime(listing_date, errors="coerce"),
         }
     )
