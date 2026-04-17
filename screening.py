@@ -19,6 +19,7 @@ def scan_universe(
     cache=None,
     daily_stats_df=None,
     force_refresh=False,
+    top_n_per_sector=100,
     roe_avg_tgt=15,
     roe_min_tgt=10,
     roe_min_count=2,
@@ -31,8 +32,12 @@ def scan_universe(
     if daily_stats_df is None:
         daily_stats_df = fetch_twse_daily_stats()
 
-    universe_df = get_stock_universe()
+    universe_df = get_stock_universe(
+        top_n_per_sector=top_n_per_sector,
+        force_refresh=force_refresh,
+    )
     universe = universe_df["stock_id"].tolist()
+    universe_sector_map = universe_df.set_index("stock_id")["industry_category"].to_dict()
     regime = market_regime()
 
     selected = []
@@ -64,7 +69,9 @@ def scan_universe(
                     continue
 
                 val_history = get_historical_valuation(ticker, df)
-                sector, _ = get_industry_info(ticker)
+                sector = universe_sector_map.get(ticker, "Unknown")
+                if sector == "Unknown":
+                    sector, _ = get_industry_info(ticker)
                 cache[ticker] = {
                     "financials": df,
                     "valuation": val_history,
