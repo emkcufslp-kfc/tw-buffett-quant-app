@@ -113,6 +113,7 @@ def get_financials(ticker):
         df[C_ROE] = 0
         
     df = df.reset_index()
+    df = df.sort_values("date").reset_index(drop=True)
     df['date'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
     df[C_FCF] = df[C_OCF] - df[C_CAPEX].abs()
     

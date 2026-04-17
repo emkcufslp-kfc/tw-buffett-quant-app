@@ -35,9 +35,4 @@ def build_portfolio(stocks, sector_map, max_stock_weight=0.10, max_sector_weight
             else:
                 weights[s] = 0.0
                 
-    # Normalize weights to sum to ~1.0 if possible
-    total = sum(weights.values())
-    if total > 0:
-        weights = {k: v / total for k, v in weights.items()}
-        
     return weights

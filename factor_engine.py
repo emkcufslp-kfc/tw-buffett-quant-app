@@ -21,7 +21,7 @@ def quality_filter(df, roe_avg_tgt=15, roe_min_tgt=10, roe_min_count=2, fcf_cons
     # 3. Cash Flow Consistency (OCF & FCF)
     # Check last N years
     lookback = min(len(df), fcf_consecutive)
-    recent_df = df.head(lookback)
+    recent_df = df.tail(lookback)
     
     if not (recent_df['OperatingCashFlow'] > 0).all():
         return False, "OCF Negative"
