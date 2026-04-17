@@ -1,6 +1,75 @@
 import pandas as pd
 from FinMind.data import DataLoader
+from FinMind.utility.request import request_get
 import yfinance as yf
+
+class SafeDataLoader(DataLoader):
+    def get_data(
+        self,
+        dataset,
+        data_id: str = "",
+        securities_trader_id: str = "",
+        stock_id: str = "",
+        start_date: str = "",
+        data_id_list: list = None,
+        securities_trader_id_list: list = None,
+        end_date: str = "",
+        timeout: int = 60,
+        use_async: bool = False,
+        max_retry_times: int = 30,
+    ) -> pd.DataFrame:
+        try:
+            return super().get_data(
+                dataset=dataset,
+                data_id=data_id,
+                securities_trader_id=securities_trader_id,
+                stock_id=stock_id,
+                start_date=start_date,
+                data_id_list=data_id_list,
+                securities_trader_id_list=securities_trader_id_list,
+                end_date=end_date,
+                timeout=timeout,
+                use_async=use_async,
+                max_retry_times=max_retry_times,
+            )
+        except KeyError:
+            url = self._dispatcher_url(dataset)
+            params = dict(
+                dataset=dataset,
+                data_id=data_id,
+                securities_trader_id=securities_trader_id,
+                stock_id=stock_id,
+                start_date=start_date,
+                end_date=end_date,
+                user_id=self._FinMindApi__user_id,
+                password=self._FinMindApi__password,
+                device=self._FinMindApi__device,
+            )
+            params = self._compatible_api_version(params)
+            params = self._compatible_endpoints_param(params)
+            response = request_get(
+                self._session,
+                url,
+                params=params,
+                timeout=timeout,
+            )
+            response_json = response.json()
+            if isinstance(response_json, dict):
+                if 'data' in response_json:
+                    return pd.DataFrame(response_json['data'])
+                for fallback_key in ['result', 'items', 'dataList', 'stock_data', 'stockInfo']:
+                    if fallback_key in response_json and isinstance(response_json[fallback_key], list):
+                        return pd.DataFrame(response_json[fallback_key])
+                if len(response_json) == 1:
+                    value = list(response_json.values())[0]
+                    if isinstance(value, list):
+                        return pd.DataFrame(value)
+            if isinstance(response_json, list):
+                return pd.DataFrame(response_json)
+            raise RuntimeError(
+                f"FinMind get_data returned unexpected response shape: {response_json}"
+            )
+
 
 def get_stock_universe(api):
     try:

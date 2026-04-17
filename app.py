@@ -55,7 +55,7 @@ as_of_date = st.sidebar.date_input("As Of Date", datetime.today())
 run_backtest = st.sidebar.button("Run Backtest")
 
 if api_key:
-    api = DataLoader(api_key)
+    api = SafeDataLoader(api_key)
     
     st.header("Current Status")
     try:
