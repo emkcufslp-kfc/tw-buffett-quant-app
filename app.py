@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+from collections import defaultdict
 from datetime import datetime
 import yfinance as yf
 from FinMind.data import DataLoader
@@ -17,6 +18,23 @@ from regime_filter import *
 from strategy import *
 from portfolio_engine import *
 from backtest_engine import *
+
+
+def safe_build_portfolio(stocks, sector_map):
+    weights = {}
+    if not stocks:
+        return weights
+
+    max_stock_weight = 0.10
+    max_sector_weight = 0.40
+    sector_weights = defaultdict(float)
+    base_weight = min(1 / len(stocks), max_stock_weight)
+    for s in stocks:
+        sector = sector_map.get(s, "unknown")
+        if sector_weights[sector] + base_weight <= max_sector_weight:
+            weights[s] = base_weight
+            sector_weights[sector] += base_weight
+    return weights
 
 TECH_SECTORS = {
     "半導體", "電子零組件", "電腦及週邊", "光電", "通信網路", "其他電子",
@@ -71,7 +89,11 @@ if api_key:
         st.warning("No stocks qualified after filtering. Please check your FinMind data or API key.")
         portfolio = {}
     else:
-        portfolio = build_portfolio(selected, sector_map)
+        try:
+            portfolio = safe_build_portfolio(selected, sector_map)
+        except Exception as exc:
+            st.error(f"Portfolio construction failed: {exc}")
+            portfolio = {}
 
     st.write("Qualified Stocks:", selected)
     st.write("Portfolio Weights:", portfolio)
