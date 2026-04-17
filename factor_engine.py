@@ -1,28 +1,51 @@
 import numpy as np
 
-def quality_filter(df, roe_avg_threshold=15, roe_min_threshold=10):
+def quality_filter(df, roe_avg_tgt=15, roe_min_tgt=10, roe_min_count=2, fcf_consecutive=10):
     """
-    Modular Quality Filter with dynamic thresholds.
-    Ensures 10-year ROE consistency and positive cash flows.
+    Hardened Quality Filter:
+    - 過去 10 年平均 ROE > roe_avg_tgt
+    - ROE 低於 roe_min_tgt 次數 <= roe_min_count
+    - 連續 fcf_consecutive 年 OCF > 0 且 FCF > 0
     """
     if df.empty or len(df) < 5:
-        return False
+        return False, "Data Insufficient"
         
-    # Standardize ROE logic
-    roe = df['ROE']
+    # 1. ROE Avg
+    if df['ROE'].mean() < roe_avg_tgt:
+        return False, "Avg ROE Low"
+        
+    # 2. ROE Stability
+    if (df['ROE'] < roe_min_tgt).sum() > roe_min_count:
+        return False, "ROE Stability Fail"
+        
+    # 3. Cash Flow Consistency (OCF & FCF)
+    # Check last N years
+    lookback = min(len(df), fcf_consecutive)
+    recent_df = df.head(lookback)
     
-    # Condition 1: 10-year Average ROE > Threshold
-    cond1 = roe.mean() > roe_avg_threshold
-    
-    # Condition 2: No more than 2 years below ROE Min Threshold
-    cond2 = (roe < roe_min_threshold).sum() <= 2
-    
-    # Condition 3: Mandatory positive Operating Cash Flow for all years
-    ocf = df['OperatingCashFlow']
-    cond3 = (ocf > 0).all()
-    
-    # Condition 4: Mandatory positive Free Cash Flow for all years
-    fcf = df['FCF']
-    cond4 = (fcf > 0).all()
-    
-    return cond1 and cond2 and cond3 and cond4
+    if not (recent_df['OperatingCashFlow'] > 0).all():
+        return False, "OCF Negative"
+        
+    if not (recent_df['FCF'] > 0).all():
+        return False, "FCF Negative"
+        
+    return True, "Pass"
+
+def fundamental_exit_check(df, roe_exit_threshold=10, fcf_exit_true=True):
+    """
+    Rational Exit Rule for Fundamentals:
+    - ROE < 10% (last 2 periods)
+    - Free Cash Flow turns negative
+    """
+    if df.empty or len(df) < 2:
+        return False, "Keep"
+        
+    # Check ROE collapse
+    if (df['ROE'].iloc[-2:] < roe_exit_threshold).all():
+        return True, "ROE Collapse"
+        
+    # Check FCF turn negative
+    if fcf_exit_true and df['FCF'].iloc[-1] < 0:
+        return True, "FCF Turned Negative"
+        
+    return False, "Keep"
