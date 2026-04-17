@@ -56,6 +56,23 @@ api_key = st.sidebar.text_input(
 if secret_api_key:
     st.sidebar.caption("Using FinMind API key from Streamlit Secrets.")
 as_of_date = st.sidebar.date_input("As Of Date", datetime.today())
+
+with st.sidebar.expander("📊 Strategy Blueprint: TW Buffett 2.0", expanded=False):
+    st.markdown("""
+    ### 1. Quality Filter
+    - **Consistent ROE**: Average > 15% over 10 years.
+    - **ROE Stability**: No more than 2 years below 10%.
+    - **Cash Flow Health**: Mandatory positive Operating and Free Cash Flow (FCF) for all 10 years.
+    
+    ### 2. Valuation Anchor
+    - **Mean Reversion**: Current P/E must be below the 10-year Median.
+    - **Dividend Safety**: Minimum 4% Average Dividend Yield.
+    
+    ### 3. Execution Logic
+    - **Market Regime**: Only enters when TAIEX is above its 200-day SMA.
+    - **Exit Disciplne**: Triggered by ROE falling below 10% for 2 years, negative FCF, or P/E exceeding the 90th percentile.
+    """)
+
 run_backtest = st.sidebar.button("Run Backtest")
 
 if api_key:
