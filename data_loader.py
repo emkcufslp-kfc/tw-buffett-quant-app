@@ -1,5 +1,6 @@
 import os
 import pickle
+import re
 import time
 import urllib3
 
@@ -38,16 +39,24 @@ def _pick_first_available(df, candidates, default=None):
     return pd.Series([default] * len(df), index=df.index)
 
 
+def _normalize_industry_name(value):
+    text = str(value).strip()
+    if not text:
+        return "未知"
+    text = re.sub(r"^\s*\d+\s*[.\-、．]+\s*", "", text)
+    return text or "未知"
+
+
 def _safe_market_cap(ticker):
     ticker_tw = ticker + ".TW"
     try:
-        yf_ticker = yf.Ticker(ticker_tw)
-        fast_info = getattr(yf_ticker, "fast_info", None)
+        ticker_obj = yf.Ticker(ticker_tw)
+        fast_info = getattr(ticker_obj, "fast_info", None)
         if fast_info:
             market_cap = fast_info.get("market_cap")
             if market_cap:
                 return float(market_cap)
-        info = yf_ticker.info
+        info = ticker_obj.info
         market_cap = info.get("marketCap")
         if market_cap:
             return float(market_cap)
@@ -77,7 +86,6 @@ def _fetch_twse_stock_info():
     response.raise_for_status()
     raw = response.json()
     df = pd.DataFrame(raw)
-
     if df.empty:
         return pd.DataFrame(columns=["stock_id", "stock_name", "industry_category", "listing_date"])
 
@@ -90,11 +98,10 @@ def _fetch_twse_stock_info():
         {
             "stock_id": stock_id.astype(str).str.strip(),
             "stock_name": stock_name.astype(str).str.strip(),
-            "industry_category": industry.astype(str).str.strip().replace("", "未知"),
+            "industry_category": industry.map(_normalize_industry_name),
             "listing_date": pd.to_datetime(listing_date, errors="coerce"),
         }
     )
-
     result = result[result["stock_id"].str.fullmatch(r"\d{4}", na=False)]
     result = result[~result["stock_name"].str.contains("KY", case=False, na=False)]
     return result.reset_index(drop=True)
@@ -119,14 +126,10 @@ class CacheManager:
 
 
 def fetch_twse_daily_stats():
-    """
-    Fetch Daily P/E, P/B and yield data from TWSE OpenAPI.
-    """
     url = "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL"
     try:
         response = requests.get(url, verify=False, timeout=10)
-        data = response.json()
-        df = pd.DataFrame(data)
+        df = pd.DataFrame(response.json())
         df = df.rename(
             columns={
                 "Code": "stock_id",
@@ -166,10 +169,10 @@ def get_stock_universe(top_n_per_sector=DEFAULT_TOP_N_PER_SECTOR, min_listing_ye
     )
     info = info[info["listing_age_years"] >= min_listing_years].copy()
 
-    market_caps = []
-    for ticker in info["stock_id"]:
-        market_caps.append(_safe_market_cap(ticker))
-    info["market_cap"] = pd.to_numeric(market_caps, errors="coerce").fillna(0.0)
+    info["market_cap"] = pd.to_numeric(
+        [_safe_market_cap(ticker) for ticker in info["stock_id"]],
+        errors="coerce",
+    ).fillna(0.0)
 
     ranked = info.sort_values(
         ["industry_category", "market_cap", "stock_id"],
@@ -186,7 +189,6 @@ def get_universe_reference(top_n_per_sector=DEFAULT_TOP_N_PER_SECTOR, min_listin
         min_listing_years=min_listing_years,
         force_refresh=force_refresh,
     ).copy()
-
     if universe_df.empty:
         return universe_df
 
@@ -223,12 +225,7 @@ def get_universe_reference(top_n_per_sector=DEFAULT_TOP_N_PER_SECTOR, min_listin
 
 
 def get_financials(ticker):
-    """
-    Fetch annual financials from Yahoo Finance.
-    """
-    ticker_tw = ticker + ".TW"
-    ticker_obj = yf.Ticker(ticker_tw)
-
+    ticker_obj = yf.Ticker(ticker + ".TW")
     income = ticker_obj.financials.T
     cashflow = ticker_obj.cashflow.T
     balance = ticker_obj.balance_sheet.T
@@ -238,7 +235,6 @@ def get_financials(ticker):
 
     df = pd.DataFrame(index=income.index)
     df.index.name = "date"
-
     df[C_NET_INCOME] = income.get("Net Income", 0)
     df[C_OCF] = cashflow.get("Operating Cash Flow", 0)
     df[C_CAPEX] = cashflow.get("Capital Expenditure", 0)
@@ -254,41 +250,51 @@ def get_financials(ticker):
     df = df.sort_values("date").reset_index(drop=True)
     df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
     df[C_FCF] = df[C_OCF] - df[C_CAPEX].abs()
-
     return df
 
 
 def get_historical_valuation(ticker, financials_df):
-    """
-    Build ticker historical PE/PB series using Yahoo Finance prices and shares outstanding.
-    """
-    ticker_tw = ticker + ".TW"
-    ticker_obj = yf.Ticker(ticker_tw)
+    ticker_obj = yf.Ticker(ticker + ".TW")
     shares = ticker_obj.info.get("sharesOutstanding")
     if not shares:
         return pd.DataFrame()
 
-    val_data = []
+    valuation_rows = []
     for _, row in financials_df.iterrows():
         try:
-            date_str = row["date"]
-            hist = ticker_obj.history(start=date_str, periods=5)
+            hist = ticker_obj.history(start=row["date"], periods=5)
             if hist.empty:
                 continue
             price = hist["Close"].iloc[0]
             market_cap = price * shares
             pe = market_cap / row[C_NET_INCOME] if row[C_NET_INCOME] > 0 else None
             pb = market_cap / row["Equity"] if row["Equity"] > 0 else None
-            val_data.append({"date": date_str, "PE": pe, "PB": pb})
+            valuation_rows.append({"date": row["date"], "PE": pe, "PB": pb})
         except Exception:
             continue
+    return pd.DataFrame(valuation_rows)
 
-    return pd.DataFrame(val_data)
+
+def get_price_history(ticker, period="1y", interval="1d"):
+    try:
+        data = yf.download(f"{ticker}.TW", period=period, interval=interval, progress=False, auto_adjust=False)
+        if isinstance(data.columns, pd.MultiIndex):
+            data.columns = data.columns.get_level_values(0)
+        return data.reset_index()
+    except Exception:
+        return pd.DataFrame()
+
+
+def get_taiex_history(period="1y", interval="1d"):
+    try:
+        data = yf.download("^TWII", period=period, interval=interval, progress=False, auto_adjust=False)
+        if isinstance(data.columns, pd.MultiIndex):
+            data.columns = data.columns.get_level_values(0)
+        return data.reset_index()
+    except Exception:
+        return pd.DataFrame()
 
 
 def get_industry_info(ticker):
-    """
-    Fetch industry and company name from Yahoo Finance.
-    """
     info = yf.Ticker(ticker + ".TW").info
     return info.get("sector", "Unknown"), info.get("longName", ticker)

@@ -5,14 +5,14 @@ from data_loader import (
     fetch_twse_daily_stats,
     get_financials,
     get_historical_valuation,
-    get_industry_info,
+    get_price_history,
     get_stock_universe,
+    get_taiex_history,
 )
 from data_validation import validate_financial_data
-from factor_engine import quality_filter
 from portfolio_engine import build_portfolio
 from regime_filter import market_regime
-from valuation_engine import valuation_filter
+from strict_mode_engine import evaluate_stock_strict_mode
 
 
 def scan_universe(
@@ -20,11 +20,6 @@ def scan_universe(
     daily_stats_df=None,
     force_refresh=False,
     top_n_per_sector=100,
-    roe_avg_tgt=15,
-    roe_min_tgt=10,
-    roe_min_count=2,
-    fcf_years=10,
-    yield_tgt=4.0,
     max_stock_weight=0.10,
     max_sector_weight=0.40,
 ):
@@ -36,93 +31,107 @@ def scan_universe(
         top_n_per_sector=top_n_per_sector,
         force_refresh=force_refresh,
     )
-    universe = universe_df["stock_id"].tolist()
-    universe_sector_map = universe_df.set_index("stock_id")["industry_category"].to_dict()
     regime = market_regime()
+    benchmark_df = get_taiex_history(period="1y")
 
-    selected = []
-    sector_map = {}
+    ranked_rows = []
     diagnostics = []
     errors = []
+    selected = []
+    sector_map = {}
 
-    for ticker in universe:
+    for row in universe_df.itertuples(index=False):
+        ticker = row.stock_id
+        sector = row.industry_category
+        name = getattr(row, "stock_name", ticker)
+
         try:
             if ticker in cache and not force_refresh:
                 cached = cache[ticker]
-                df = cached["financials"]
-                val_history = cached["valuation"]
-                sector = cached["sector"]
+                financials_df = cached["financials"]
+                valuation_df = cached["valuation"]
+                price_df = cached.get("price_history", pd.DataFrame())
                 source = "cache"
             else:
-                df = get_financials(ticker)
-                if df.empty:
-                    diagnostics.append(
-                        {
-                            "ticker": ticker,
-                            "sector": "Unknown",
-                            "data_source": "yfinance",
-                            "quality": "No financial data",
-                            "valuation": "Not evaluated",
-                            "selected": False,
-                        }
-                    )
-                    continue
-
-                val_history = get_historical_valuation(ticker, df)
-                sector = universe_sector_map.get(ticker, "Unknown")
-                if sector == "Unknown":
-                    sector, _ = get_industry_info(ticker)
+                financials_df = get_financials(ticker)
+                valuation_df = get_historical_valuation(ticker, financials_df) if not financials_df.empty else pd.DataFrame()
+                price_df = get_price_history(ticker, period="1y")
                 cache[ticker] = {
-                    "financials": df,
-                    "valuation": val_history,
+                    "financials": financials_df,
+                    "valuation": valuation_df,
                     "sector": sector,
+                    "price_history": price_df,
                 }
                 source = "live"
 
-            if not validate_financial_data(df):
+            if financials_df.empty:
                 diagnostics.append(
                     {
                         "ticker": ticker,
+                        "name": name,
                         "sector": sector,
                         "data_source": source,
-                        "quality": "Financial data validation failed",
-                        "valuation": "Not evaluated",
+                        "quality": "No financial data",
+                        "valuation": "Data N/A",
+                        "action_plan": "SELL / AVOID",
                         "selected": False,
                     }
                 )
                 continue
 
-            q_pass, q_msg = quality_filter(
-                df,
-                roe_avg_tgt=roe_avg_tgt,
-                roe_min_tgt=roe_min_tgt,
-                roe_min_count=roe_min_count,
-                fcf_consecutive=fcf_years,
+            if not validate_financial_data(financials_df):
+                diagnostics.append(
+                    {
+                        "ticker": ticker,
+                        "name": name,
+                        "sector": sector,
+                        "data_source": source,
+                        "quality": "Financial data validation failed",
+                        "valuation": "Data N/A",
+                        "action_plan": "SELL / AVOID",
+                        "selected": False,
+                    }
+                )
+                continue
+
+            evaluation = evaluate_stock_strict_mode(
+                ticker=ticker,
+                sector=sector,
+                financials_df=financials_df,
+                valuation_df=valuation_df,
+                daily_stats_df=daily_stats_df,
+                price_df=price_df,
+                benchmark_df=benchmark_df,
             )
-            v_pass, v_msg = valuation_filter(
-                ticker,
-                val_history,
-                daily_stats_df,
-                sector,
-                yield_tgt=yield_tgt,
-            )
-            selected_flag = q_pass and v_pass
-            if selected_flag:
-                selected.append(ticker)
-                sector_map[ticker] = sector
+            evaluation["name"] = name
+            evaluation["data_source"] = source
+            ranked_rows.append(evaluation)
 
             diagnostics.append(
                 {
                     "ticker": ticker,
+                    "name": name,
                     "sector": sector,
                     "data_source": source,
-                    "quality": q_msg,
-                    "valuation": v_msg,
-                    "selected": selected_flag,
+                    "quality": evaluation["quality_status"],
+                    "valuation": evaluation["river_signal"],
+                    "action_plan": evaluation["action_plan"],
+                    "selected": evaluation["selected"],
                 }
             )
+
+            if evaluation["selected"]:
+                selected.append(ticker)
+                sector_map[ticker] = sector
         except Exception as exc:
-            errors.append({"ticker": ticker, "error": str(exc)})
+            errors.append({"ticker": ticker, "name": name, "sector": sector, "error": str(exc)})
+
+    ranked_df = pd.DataFrame(ranked_rows)
+    if not ranked_df.empty:
+        ranked_df = ranked_df.sort_values(
+            ["composite_score", "quality_score", "momentum_score"],
+            ascending=[False, False, False],
+        ).reset_index(drop=True)
 
     portfolio = build_portfolio(
         selected,
@@ -134,12 +143,15 @@ def scan_universe(
 
     return {
         "regime": regime,
-        "universe_size": len(universe),
+        "universe_size": len(universe_df),
         "selected": selected,
         "sector_map": sector_map,
         "portfolio": portfolio,
+        "ranked": ranked_df,
+        "best_pick": ranked_df.head(1) if not ranked_df.empty else pd.DataFrame(),
         "diagnostics": pd.DataFrame(diagnostics),
         "errors": pd.DataFrame(errors),
         "daily_stats": daily_stats_df,
         "cache": cache,
+        "universe": universe_df,
     }
