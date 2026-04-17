@@ -55,7 +55,12 @@ if api_key:
     for _, row in universe.iterrows():
         ticker = row['stock_id']
         sector_map[ticker] = row['industry_category']
-        df = get_financials(api, ticker)
+        try:
+            df = get_financials(api, ticker)
+        except Exception as exc:
+            st.warning(f"Skipping {ticker}: {exc}")
+            continue
+
         if validate_financial_data(df):
             q = quality_filter(df)
             v = valuation_filter(api, ticker)

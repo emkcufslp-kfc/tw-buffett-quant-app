@@ -51,10 +51,54 @@ def get_price_history(ticker):
     data = yf.download(ticker_tw, start="2006-01-01", progress=False)
     return data
 
-def get_financials(api, ticker):
-    roe = api.taiwan_stock_financial_statement(stock_id=ticker, dataset="FinancialStatements", data_id="ROE")
-    ocf = api.taiwan_stock_cash_flows(stock_id=ticker, data_id="OperatingCashFlow")
-    capex = api.taiwan_stock_cash_flows(stock_id=ticker, data_id="CapitalExpenditure")
-    df = roe.merge(ocf, on="date").merge(capex, on="date")
-    df['FCF'] = df['OperatingCashFlow'] - abs(df['CapitalExpenditure'])
+def _pivot_financial_df(df):
+    if df is None or df.empty:
+        return pd.DataFrame()
+
+    if 'date' in df.columns and 'value' in df.columns:
+        pivot_column = 'type' if 'type' in df.columns else 'origin_name' if 'origin_name' in df.columns else None
+        if pivot_column is not None:
+            df = df.pivot(index='date', columns=pivot_column, values='value')
+            df.columns = [col if isinstance(col, str) else str(col) for col in df.columns]
+            df = df.reset_index()
+            return df
+
     return df
+
+
+def get_financials(api, ticker):
+    try:
+        roe_df = api.taiwan_stock_financial_statement(stock_id=ticker)
+        cash_df = api.taiwan_stock_cash_flows_statement(stock_id=ticker)
+    except Exception as exc:
+        raise RuntimeError(
+            f"Failed to load financials for {ticker}. "
+            "Please verify the FinMind API token and ticker value."
+        ) from exc
+
+    roe_df = _pivot_financial_df(roe_df)
+    cash_df = _pivot_financial_df(cash_df)
+
+    if roe_df.empty or cash_df.empty:
+        raise RuntimeError(
+            f"No financial or cash flow data returned for {ticker}."
+        )
+
+    if 'date' not in roe_df.columns or 'date' not in cash_df.columns:
+        raise RuntimeError(
+            f"Unexpected financial data format for {ticker}."
+        )
+
+    merged = pd.merge(roe_df, cash_df, on='date', how='inner')
+    if merged.empty:
+        raise RuntimeError(
+            f"No merged financial data available for {ticker}."
+        )
+
+    if 'OperatingCashFlow' not in merged.columns or 'CapitalExpenditure' not in merged.columns:
+        raise RuntimeError(
+            f"Missing cash flow fields for {ticker}."
+        )
+
+    merged['FCF'] = merged['OperatingCashFlow'] - merged['CapitalExpenditure'].abs()
+    return merged
