@@ -5,10 +5,18 @@ __pycache__/
 
 # Virtual environment
 venv/
+.venv/
+.deps/
 .env
 
 # Streamlit
 .streamlit/
+
+# Local caches
+*_cache.pkl
+data_cache.pkl
+universe_cache.pkl
+monthly_revenue_cache.pkl
 
 # Editor files
 *.swp

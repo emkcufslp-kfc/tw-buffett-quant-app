@@ -42,6 +42,7 @@ def scan_universe(
     errors = []
     selected = []
     sector_map = {}
+    regime_blocked_count = 0
 
     for row in universe_df.itertuples(index=False):
         ticker = row.stock_id
@@ -109,6 +110,13 @@ def scan_universe(
             )
             evaluation["name"] = name
             evaluation["data_source"] = source
+            pre_regime_selected = bool(evaluation["selected"])
+            evaluation["regime"] = regime
+            evaluation["regime_blocked"] = bool(pre_regime_selected and not regime)
+            evaluation["selected"] = bool(pre_regime_selected and regime)
+            if evaluation["regime_blocked"]:
+                evaluation["action_plan"] = "等待大盤轉強"
+                regime_blocked_count += 1
             ranked_rows.append(evaluation)
 
             diagnostics.append(
@@ -158,4 +166,5 @@ def scan_universe(
         "daily_stats": daily_stats_df,
         "cache": cache,
         "universe": universe_df,
+        "regime_blocked_count": regime_blocked_count,
     }

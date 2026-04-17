@@ -9,30 +9,41 @@ def build_portfolio(stocks, sector_map, max_stock_weight=0.10, max_sector_weight
     if not stocks:
         return {}
 
-    weights = {}
+    weights = {stock: 0.0 for stock in stocks}
     sector_weights = defaultdict(float)
-    
-    # Simple Equal Weight with Constraints
-    # We attempt to distribute weights equally, capping at the limits.
-    target_weight = 1.0 / len(stocks)
-    
-    # 1. Apply Individual Cap
-    individual_weight = min(target_weight, max_stock_weight)
-    
-    # 2. Iterate and apply Industry Cap
-    for s in stocks:
-        sector = sector_map.get(s, "Unknown")
-        # Can we add this stock without breaking industry cap?
-        if sector_weights[sector] + individual_weight <= max_sector_weight:
-            weights[s] = individual_weight
-            sector_weights[sector] += individual_weight
-        else:
-            # Add up to the cap
-            remaining_room = max_sector_weight - sector_weights[sector]
-            if remaining_room > 0:
-                weights[s] = remaining_room
-                sector_weights[sector] += remaining_room
-            else:
-                weights[s] = 0.0
-                
+
+    remaining_capital = 1.0
+    min_step = 1e-9
+
+    while remaining_capital > min_step:
+        eligible = []
+        for stock in stocks:
+            sector = sector_map.get(stock, "Unknown")
+            stock_room = max_stock_weight - weights[stock]
+            sector_room = max_sector_weight - sector_weights[sector]
+            alloc_room = min(stock_room, sector_room)
+            if alloc_room > min_step:
+                eligible.append((stock, sector, alloc_room))
+
+        if not eligible:
+            break
+
+        target_weight = remaining_capital / len(eligible)
+        allocated_this_round = 0.0
+
+        for stock, sector, _ in eligible:
+            stock_room = max_stock_weight - weights[stock]
+            sector_room = max_sector_weight - sector_weights[sector]
+            allocation = min(target_weight, stock_room, sector_room, remaining_capital)
+            if allocation <= min_step:
+                continue
+
+            weights[stock] += allocation
+            sector_weights[sector] += allocation
+            remaining_capital -= allocation
+            allocated_this_round += allocation
+
+        if allocated_this_round <= min_step:
+            break
+
     return weights

@@ -2,13 +2,17 @@ import os
 import pickle
 import re
 import time
-import urllib3
+try:
+    import urllib3
+except Exception:
+    urllib3 = None
 
 import pandas as pd
 import requests
 import yfinance as yf
 
-urllib3.disable_warnings()
+if urllib3 is not None and hasattr(urllib3, "disable_warnings"):
+    urllib3.disable_warnings()
 
 CACHE_FILE = "data_cache.pkl"
 CACHE_EXPIRY_DAYS = 7
@@ -293,10 +297,12 @@ def get_stock_universe(top_n_per_sector=DEFAULT_TOP_N_PER_SECTOR, min_listing_ye
     )
     info = info[info["listing_age_years"] >= min_listing_years].copy()
 
-    info["market_cap"] = pd.to_numeric(
+    market_cap_series = pd.Series(
         [_safe_market_cap(ticker) for ticker in info["stock_id"]],
-        errors="coerce",
-    ).fillna(0.0)
+        index=info.index,
+        dtype="float64",
+    )
+    info["market_cap"] = market_cap_series.fillna(0.0)
 
     ranked = info.sort_values(
         ["industry_category", "market_cap", "stock_id"],

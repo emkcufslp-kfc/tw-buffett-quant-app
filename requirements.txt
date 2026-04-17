@@ -6,3 +6,5 @@ tqdm
 matplotlib
 streamlit
 python-dotenv
+requests
+urllib3
