@@ -1,4 +1,5 @@
 import yfinance as yf
+import pandas as pd
 
 def market_regime():
     data = yf.download("^TWII", start="2006-01-01", progress=False)
