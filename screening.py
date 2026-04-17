@@ -5,6 +5,8 @@ from data_loader import (
     fetch_twse_daily_stats,
     get_financials,
     get_historical_valuation,
+    get_latest_monthly_revenue_metrics,
+    fetch_monthly_revenue_history,
     get_price_history,
     get_stock_universe,
     get_taiex_history,
@@ -33,6 +35,7 @@ def scan_universe(
     )
     regime = market_regime()
     benchmark_df = get_taiex_history(period="1y")
+    revenue_history_df = fetch_monthly_revenue_history(force_refresh=force_refresh)
 
     ranked_rows = []
     diagnostics = []
@@ -100,6 +103,7 @@ def scan_universe(
                 financials_df=financials_df,
                 valuation_df=valuation_df,
                 daily_stats_df=daily_stats_df,
+                revenue_metrics=get_latest_monthly_revenue_metrics(ticker, revenue_history_df),
                 price_df=price_df,
                 benchmark_df=benchmark_df,
             )

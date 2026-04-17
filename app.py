@@ -56,6 +56,9 @@ def _localize_ranked_table(df):
         "peg_signal": "即時 PEG",
         "yield_signal": "殖利率支撐",
         "momentum_signal": "動能",
+        "latest_revenue_month": "最新月營收月份",
+        "latest_revenue_yoy": "最新月營收 YoY(%)",
+        "avg_3m_revenue_yoy": "近3月平均營收 YoY(%)",
         "composite_score": "綜合分數",
         "action_plan": "機構動作",
         "primary_driver": "主要驅動因子",
@@ -86,6 +89,22 @@ def _localize_ranked_table(df):
     ordered = [column for column in preferred_columns if column in table.columns]
     remainder = [column for column in table.columns if column not in ordered]
     return table[ordered + remainder]
+
+
+def _build_snapshot_table(best_pick_df):
+    if best_pick_df.empty:
+        return pd.DataFrame()
+
+    row = best_pick_df.iloc[0]
+    snapshot_rows = [
+        {"指標": "ROE 品質趨勢", "資料 / 計算": f"{row.get('quality_status', 'Data N/A')} / 近期待表 ROE {row.get('roe_ttm', 'Data N/A')}", "訊號": "Bull" if row.get("quality_score", 0) >= 20 else "Bear"},
+        {"指標": "河流圖位置", "資料 / 計算": row.get("river_signal", "Data N/A"), "訊號": "Bull" if row.get("river_signal") in {"Cheap", "Deep Value"} else "Bear"},
+        {"指標": "即時 PEG", "資料 / 計算": f"{row.get('peg_signal', 'Data N/A')} / {row.get('peg_value', 'Data N/A')}", "訊號": "Bull" if row.get("peg_signal") == "Undervalued" else "Bear"},
+        {"指標": "月營收動能", "資料 / 計算": f"{row.get('latest_revenue_month', 'Data N/A')} / 近3月平均 YoY {row.get('avg_3m_revenue_yoy', 'Data N/A')}", "訊號": "Bull" if (row.get("avg_3m_revenue_yoy") or 0) > 0 else "Bear"},
+        {"指標": "殖利率支撐", "資料 / 計算": f"{row.get('yield_signal', 'Data N/A')} / 殖利率 {row.get('current_yield', 'Data N/A')}", "訊號": "Bull" if row.get("yield_signal") == "Floor Reached" else "Bear"},
+        {"指標": "動能", "資料 / 計算": row.get("momentum_signal", "Data N/A"), "訊號": "Bull" if row.get("momentum_score", 0) >= 10 else "Bear"},
+    ]
+    return pd.DataFrame(snapshot_rows)
 
 
 def _localize_diagnostics(df):
@@ -218,6 +237,25 @@ if run_scan:
     if not best_pick_df.empty:
         st.subheader("今日最佳買進標的")
         st.dataframe(best_pick_df, use_container_width=True, hide_index=True)
+
+        raw_best = results["best_pick"].iloc[0]
+        st.subheader("估值快照")
+        st.dataframe(_build_snapshot_table(results["best_pick"]), use_container_width=True, hide_index=True)
+
+        st.subheader("機構判斷")
+        st.markdown(
+            f"""
+            **綜合分數：** {raw_best.get('composite_score', 'Data N/A')}  
+            **主要驅動因子：** {raw_best.get('primary_driver', 'Data N/A')}  
+            **機構動作：** {raw_best.get('action_plan', 'Data N/A')}
+            """
+        )
+
+        st.subheader("行動計畫")
+        st.write(raw_best.get("primary_driver", "Data N/A"))
+
+        st.subheader("關鍵風險")
+        st.write(raw_best.get("key_risk", "Data N/A"))
 
     if not ranked_df.empty:
         st.subheader("全市場最佳買點排名")

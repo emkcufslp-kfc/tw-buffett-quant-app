@@ -12,11 +12,12 @@ def _safe_float(value):
         return None
 
 
-def _classify_quality(df):
+def _classify_quality(df, revenue_metrics):
     latest_roe = _safe_float(df["ROE"].iloc[-1]) if not df.empty else None
     recent = df["ROE"].tail(min(4, len(df))).astype(float) if not df.empty else pd.Series(dtype=float)
     roe_trend = _safe_float(recent.diff().mean()) if len(recent) >= 2 else None
     roe_ttm = _safe_float(recent.mean()) if not recent.empty else None
+    avg_3m_revenue_yoy = _safe_float(revenue_metrics.get("avg_3m_revenue_yoy"))
 
     if roe_ttm is None:
         return "Data N/A", 0, latest_roe, roe_ttm, roe_trend, "缺少足夠 ROE 資料。"
@@ -25,8 +26,12 @@ def _classify_quality(df):
         return "COMPOUNDER", 30, latest_roe, roe_ttm, roe_trend, "ROE 高且維持穩定，屬高品質複利型公司。"
     if 8 <= roe_ttm <= 15 and (roe_trend is None or roe_trend >= -1.0):
         return "INVESTABLE", 20, latest_roe, roe_ttm, roe_trend, "ROE 處於可投資區間，品質尚可。"
+    if roe_ttm < 8 and avg_3m_revenue_yoy is not None and avg_3m_revenue_yoy > 20:
+        return "TURNAROUND", 12, latest_roe, roe_ttm, roe_trend, "ROE 偏低，但近 3 個月月營收 YoY 明顯加速，具轉機特徵。"
     if roe_ttm < 8:
-        return "VALUE TRAP", 5, latest_roe, roe_ttm, roe_trend, "ROE 偏低，且目前資料源沒有 PIT 月營收可證明轉機。"
+        if avg_3m_revenue_yoy is not None and avg_3m_revenue_yoy < 0:
+            return "VALUE TRAP", 5, latest_roe, roe_ttm, roe_trend, "ROE 偏低且近 3 個月月營收 YoY 下滑，疑似價值陷阱。"
+        return "VALUE TRAP", 5, latest_roe, roe_ttm, roe_trend, "ROE 偏低，轉機證據不足。"
     return "INVESTABLE", 15, latest_roe, roe_ttm, roe_trend, "品質中性。"
 
 
@@ -74,13 +79,24 @@ def _classify_river(ticker, sector, val_history_df, daily_stats_df):
     return "Fair", 12, current_pe, None, mean_pe, "本益比位於合理河道。"
 
 
-def _classify_peg(ticker, daily_stats_df):
+def _classify_peg(ticker, daily_stats_df, revenue_metrics):
     if ticker not in daily_stats_df.index:
-        return "Data N/A", 5, None, "目前資料源未含 PIT 月營收，無法計算即時 PEG。"
+        return "Data N/A", 0, None, "缺少即時 P/E。"
     pe_value = _safe_float(daily_stats_df.loc[ticker, "PE"])
+    growth = _safe_float(revenue_metrics.get("avg_3m_revenue_yoy"))
     if pe_value is None:
-        return "Data N/A", 5, None, "缺少即時 P/E，無法計算 PEG。"
-    return "Data N/A", 5, None, "目前資料源未含 PIT 月營收，PEG 以中性分處理。"
+        return "Data N/A", 0, None, "缺少即時 P/E。"
+    if growth is None or growth <= 0:
+        return "Data N/A", 4, None, "缺少有效的近 3 個月平均月營收 YoY，PEG 採保守分數。"
+
+    peg = pe_value / growth
+    if peg < 0.75:
+        return "Undervalued", 15, peg, "PEG < 0.75，屬強買訊號。"
+    if peg <= 1.2:
+        return "Fair Value", 10, peg, "PEG 位於合理區間。"
+    if peg > 1.5:
+        return "Overvalued", 3, peg, "PEG 偏高。"
+    return "Fair Value", 7, peg, "PEG 略高於中性區。"
 
 
 def _classify_yield_support(ticker, daily_stats_df):
@@ -149,12 +165,23 @@ def _action_from_score(score, quality_status):
     return "SELL / AVOID"
 
 
-def evaluate_stock_strict_mode(ticker, sector, financials_df, valuation_df, daily_stats_df, price_df, benchmark_df):
-    quality_status, quality_score, latest_roe, roe_ttm, roe_trend, quality_note = _classify_quality(financials_df)
+def evaluate_stock_strict_mode(
+    ticker,
+    sector,
+    financials_df,
+    valuation_df,
+    daily_stats_df,
+    revenue_metrics,
+    price_df,
+    benchmark_df,
+):
+    quality_status, quality_score, latest_roe, roe_ttm, roe_trend, quality_note = _classify_quality(
+        financials_df, revenue_metrics
+    )
     river_signal, river_score, current_pe, current_pb, hist_center, river_note = _classify_river(
         ticker, sector, valuation_df, daily_stats_df
     )
-    peg_signal, peg_score, peg_value, peg_note = _classify_peg(ticker, daily_stats_df)
+    peg_signal, peg_score, peg_value, peg_note = _classify_peg(ticker, daily_stats_df, revenue_metrics)
     yield_signal, yield_score, current_yield, yield_note = _classify_yield_support(ticker, daily_stats_df)
     momentum_signal, momentum_score, above_ma200, relative_strength, momentum_note = _classify_momentum(
         price_df, benchmark_df
@@ -191,6 +218,10 @@ def evaluate_stock_strict_mode(ticker, sector, financials_df, valuation_df, dail
         "yield_signal": yield_signal,
         "current_yield": current_yield,
         "momentum_signal": momentum_signal,
+        "latest_revenue_month": revenue_metrics.get("latest_revenue_month"),
+        "latest_revenue": revenue_metrics.get("latest_revenue"),
+        "latest_revenue_yoy": revenue_metrics.get("latest_revenue_yoy"),
+        "avg_3m_revenue_yoy": revenue_metrics.get("avg_3m_revenue_yoy"),
         "above_ma200": above_ma200,
         "relative_strength_4w": relative_strength,
         "composite_score": composite_score,

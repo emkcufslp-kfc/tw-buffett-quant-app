@@ -14,6 +14,8 @@ CACHE_FILE = "data_cache.pkl"
 CACHE_EXPIRY_DAYS = 7
 UNIVERSE_CACHE_FILE = "universe_cache.pkl"
 UNIVERSE_CACHE_EXPIRY_DAYS = 30
+MONTHLY_REVENUE_CACHE_FILE = "monthly_revenue_cache.pkl"
+MONTHLY_REVENUE_CACHE_EXPIRY_HOURS = 24
 DEFAULT_TOP_N_PER_SECTOR = 100
 
 C_ROE = "ROE"
@@ -23,6 +25,7 @@ C_FCF = "FCF"
 C_NET_INCOME = "NetIncome"
 
 TWSE_LISTED_INFO_URL = "https://openapi.twse.com.tw/v1/opendata/t187ap03_L"
+MOPS_MONTHLY_REVENUE_URL_TEMPLATE = "https://mops.twse.com.tw/nas/t21/sii/t21sc03_{roc_year}_{month}_0.html"
 
 STOCK_ID_COLUMNS = ["公司代號", "股票代號", "證券代號", "stock_id"]
 STOCK_NAME_COLUMNS = ["公司名稱", "股票名稱", "證券名稱", "stock_name"]
@@ -75,9 +78,25 @@ def _load_cached_universe():
     return None
 
 
+def _load_monthly_revenue_cache():
+    if os.path.exists(MONTHLY_REVENUE_CACHE_FILE):
+        with open(MONTHLY_REVENUE_CACHE_FILE, "rb") as f:
+            cache = pickle.load(f)
+        ts = cache.get("timestamp", 0)
+        if (time.time() - ts) < (MONTHLY_REVENUE_CACHE_EXPIRY_HOURS * 3600):
+            return cache.get("data")
+    return None
+
+
 def _save_cached_universe(df):
     payload = {"timestamp": time.time(), "data": df}
     with open(UNIVERSE_CACHE_FILE, "wb") as f:
+        pickle.dump(payload, f)
+
+
+def _save_monthly_revenue_cache(df):
+    payload = {"timestamp": time.time(), "data": df}
+    with open(MONTHLY_REVENUE_CACHE_FILE, "wb") as f:
         pickle.dump(payload, f)
 
 
@@ -105,6 +124,111 @@ def _fetch_twse_stock_info():
     result = result[result["stock_id"].str.fullmatch(r"\d{4}", na=False)]
     result = result[~result["stock_name"].str.contains("KY", case=False, na=False)]
     return result.reset_index(drop=True)
+
+
+def _parse_monthly_revenue_table(df, year, month):
+    if df.empty:
+        return pd.DataFrame()
+
+    columns = [str(col).strip() for col in df.columns]
+    df.columns = columns
+
+    stock_id_col = next((col for col in columns if "公司代號" in col or "股票代號" in col), None)
+    revenue_col = next((col for col in columns if "當月營收" in col), None)
+    yoy_col = next((col for col in columns if "去年同月增減" in col), None)
+    stock_name_col = next((col for col in columns if "公司名稱" in col or "公司簡稱" in col), None)
+
+    if not stock_id_col or not revenue_col:
+        return pd.DataFrame()
+
+    parsed = pd.DataFrame(
+        {
+            "stock_id": df[stock_id_col].astype(str).str.strip(),
+            "stock_name": df[stock_name_col].astype(str).str.strip() if stock_name_col else "",
+            "monthly_revenue": pd.to_numeric(
+                df[revenue_col].astype(str).str.replace(",", "", regex=False),
+                errors="coerce",
+            ),
+            "revenue_yoy": pd.to_numeric(
+                df[yoy_col].astype(str).str.replace("%", "", regex=False) if yoy_col else None,
+                errors="coerce",
+            ),
+            "year": year,
+            "month": month,
+        }
+    )
+
+    parsed = parsed[parsed["stock_id"].str.fullmatch(r"\d{4}", na=False)]
+    parsed["period"] = pd.to_datetime(
+        parsed["year"].astype(str) + "-" + parsed["month"].astype(str).str.zfill(2) + "-01",
+        errors="coerce",
+    )
+    return parsed.dropna(subset=["period"]).reset_index(drop=True)
+
+
+def fetch_monthly_revenue_history(months=15, force_refresh=False):
+    if not force_refresh:
+        cached = _load_monthly_revenue_cache()
+        if cached is not None:
+            return cached
+
+    today = pd.Timestamp.today().normalize()
+    month_starts = pd.date_range(end=today, periods=months, freq="MS")
+    frames = []
+
+    for month_start in month_starts:
+        roc_year = month_start.year - 1911
+        month = month_start.month
+        url = MOPS_MONTHLY_REVENUE_URL_TEMPLATE.format(roc_year=roc_year, month=month)
+        try:
+            response = requests.get(url, verify=False, timeout=20)
+            response.encoding = "big5"
+            tables = pd.read_html(response.text)
+            for table in tables:
+                parsed = _parse_monthly_revenue_table(table, month_start.year, month)
+                if not parsed.empty:
+                    frames.append(parsed)
+                    break
+        except Exception:
+            continue
+
+    if not frames:
+        return pd.DataFrame(columns=["stock_id", "stock_name", "monthly_revenue", "revenue_yoy", "year", "month", "period"])
+
+    history = pd.concat(frames, ignore_index=True)
+    history = history.sort_values(["stock_id", "period"]).drop_duplicates(["stock_id", "period"], keep="last").reset_index(drop=True)
+    _save_monthly_revenue_cache(history)
+    return history
+
+
+def get_latest_monthly_revenue_metrics(ticker, revenue_history_df):
+    if revenue_history_df.empty:
+        return {}
+
+    stock_df = revenue_history_df[revenue_history_df["stock_id"] == ticker].sort_values("period").tail(12).copy()
+    if stock_df.empty:
+        return {}
+
+    recent_three = stock_df.tail(3)
+    latest_row = stock_df.iloc[-1]
+    latest_yoy = pd.to_numeric(latest_row.get("revenue_yoy"), errors="coerce")
+    avg_3m_yoy = pd.to_numeric(recent_three["revenue_yoy"], errors="coerce").mean()
+
+    return {
+        "latest_revenue_month": latest_row["period"].strftime("%Y-%m"),
+        "latest_revenue": _safe_number(latest_row.get("monthly_revenue")),
+        "latest_revenue_yoy": _safe_number(latest_yoy),
+        "avg_3m_revenue_yoy": _safe_number(avg_3m_yoy),
+    }
+
+
+def _safe_number(value):
+    try:
+        if pd.isna(value):
+            return None
+        return float(value)
+    except Exception:
+        return None
 
 
 class CacheManager:
