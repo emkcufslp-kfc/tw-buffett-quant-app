@@ -8,14 +8,15 @@ from backtest_engine import *
 
 def run():
     api = DataLoader()  # Assume API key set
-    universe = get_stock_universe(api)
+    universe, uni_source = get_stock_universe(api)
+    print(f"Using Universe Source: {uni_source}")
     regime = market_regime()
     selected = []
     sector_map = {}
     for _, row in universe.iterrows():
         ticker = row['stock_id']
         sector_map[ticker] = row['industry_category']
-        df = get_financials(api, ticker)
+        df, source = get_financials(api, ticker)
         if not validate_financial_data(df):
             continue
         q = quality_filter(df)

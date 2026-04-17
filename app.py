@@ -56,6 +56,8 @@ api_key = st.sidebar.text_input(
 if secret_api_key:
     st.sidebar.caption("Using FinMind API key from Streamlit Secrets.")
 as_of_date = st.sidebar.date_input("As Of Date", datetime.today())
+st.sidebar.markdown("---")
+st.sidebar.info("📡 **Core Data Source**: FinMind (Primary) with Yahoo Finance Auto-Fallback.")
 
 with st.sidebar.expander("📊 Strategy Blueprint: TW Buffett 2.0", expanded=False):
     st.markdown("""
@@ -93,10 +95,14 @@ if api_key:
     
     st.header("Current Status")
     try:
-        universe = get_stock_universe(api)
+        universe, uni_source = get_stock_universe(api)
+        if "Static" in uni_source:
+             st.warning(f"⚠️ **{uni_source}**: FinMind limit reached. Scanning Taiwan Top 50 Blue Chips instead.")
+        else:
+             st.success(f"✅ **{uni_source}**: Scanning full Taiwan Market universe.")
     except Exception as exc:
         st.error(
-            "Unable to load stock universe from FinMind: "
+            "Unable to load stock universe: "
             f"{exc}"
         )
         st.stop()
@@ -108,7 +114,7 @@ if api_key:
         ticker = row['stock_id']
         sector_map[ticker] = row['industry_category']
         try:
-            df = get_financials(api, ticker)
+            df, source = get_financials(api, ticker)
         except Exception as exc:
             st.warning(f"Skipping {ticker}: {exc}")
             continue
@@ -118,6 +124,7 @@ if api_key:
             v = valuation_filter(api, ticker)
             if entry_rule(q, v, regime):
                 selected.append(ticker)
+                st.caption(f"Loaded {ticker} via {source}")
 
     if not selected:
         st.warning("No stocks qualified after filtering. Please check your FinMind data or API key.")

@@ -71,10 +71,25 @@ class SafeDataLoader(DataLoader):
             )
 
 
+# Taiwan Top 50 (Blue Chip) Fallback Universe
+STATIC_UNIVERSE_TW50 = [
+    '2330', '2317', '2454', '2308', '2881', '2882', '2412', '2303', '2886', '2891',
+    '3711', '2884', '1216', '2892', '2408', '2885', '2382', '2409', '2357', '2002',
+    '1301', '1303', '1326', '6505', '2880', '2883', '2379', '2603', '2474', '2327',
+    '2887', '2912', '1101', '2890', '1402', '2609', '2301', '1102', '2207', '2801',
+    '2345', '2615', '1227', '5880', '2888', '5871', '1590', '4966', '3034', '3037'
+]
+
+
 def get_stock_universe(api):
     try:
         info = api.taiwan_stock_info()
     except Exception as exc:
+        # Fallback to Static Taiwan 50 Universe if API is limited (e.g. 402 Error)
+        return pd.DataFrame({
+            'stock_id': STATIC_UNIVERSE_TW50,
+            'industry_category': ['Blue Chip Fallback'] * len(STATIC_UNIVERSE_TW50)
+        }), "Static (Taiwan 50 Fallback)"
         raise RuntimeError(
             "Failed to load FinMind stock universe. "
             "Please verify your FinMind API key, network access, and FinMind token permissions. "
@@ -114,7 +129,7 @@ def get_stock_universe(api):
             f"Available columns: {', '.join(info.columns)}"
         )
 
-    return info[['stock_id', 'industry_category']].drop_duplicates()
+    return info[['stock_id', 'industry_category']].drop_duplicates(), "FinMind (Primary)"
 
 def get_price_history(ticker):
     ticker_tw = ticker + ".TW"
@@ -171,51 +186,86 @@ def _normalize_financial_columns(df):
     return df
 
 
+def get_financials_yf(ticker):
+    """
+    Fallback driver using yfinance to extract fundamental data.
+    """
+    ticker_tw = ticker + ".TW"
+    t = yf.Ticker(ticker_tw)
+    
+    # Fetch Annual Data
+    income = t.financials.T
+    cashflow = t.cashflow.T
+    balance = t.balance_sheet.T
+    
+    if income.empty or cashflow.empty or balance.empty:
+        raise RuntimeError(f"YFinance returned empty data for {ticker}")
+
+    # Map YFinance fields to Internal Schema
+    df = pd.DataFrame(index=income.index)
+    df.index.name = "date"
+    
+    # Basic Income & Cash Flow
+    df['NetIncome'] = income.get('Net Income', 0)
+    df['OperatingCashFlow'] = cashflow.get('Operating Cash Flow', 0)
+    df['CapitalExpenditure'] = cashflow.get('Capital Expenditure', 0)
+    
+    # Calculate ROE from Net Income / Stockholders Equity
+    equity = balance.get('Stockholders Equity', 0)
+    if isinstance(equity, pd.Series):
+        # Align dates: YFinance might have different dates across statements
+        df = df.join(equity.to_frame('Equity'), how='left')
+        df['ROE'] = (df['NetIncome'] / df['Equity'] * 100).fillna(0)
+    else:
+        df['ROE'] = 0
+        
+    df = df.reset_index()
+    df['date'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
+    
+    # Calculate FCF
+    df['FCF'] = df['OperatingCashFlow'] - df['CapitalExpenditure'].abs()
+    
+    return df, "Yahoo Finance (Fallback)"
+
+
+
 def get_financials(api, ticker):
+    """
+    Universal entry point with automatic High-Availability Fallback.
+    """
+    # 1. Primary Driver: FinMind
     try:
         roe_df = api.taiwan_stock_financial_statement(stock_id=ticker, start_date="2006-01-01")
         cash_df = api.taiwan_stock_cash_flows_statement(stock_id=ticker, start_date="2006-01-01")
+        
+        roe_df = _pivot_financial_df(roe_df)
+        cash_df = _pivot_financial_df(cash_df)
+        roe_df = _normalize_financial_columns(roe_df)
+        cash_df = _normalize_financial_columns(cash_df)
+
+        if roe_df.empty or cash_df.empty:
+            raise KeyError("Empty FinMind response")
+
+        merged = pd.merge(roe_df, cash_df, on='date', how='inner')
+        if merged.empty:
+            raise KeyError("No overlap in FinMind data")
+
+        if 'OperatingCashFlow' not in merged.columns:
+             raise KeyError("Missing OCF")
+
+        if 'CapitalExpenditure' not in merged.columns:
+            merged['CapitalExpenditure'] = 0
+
+        merged['FCF'] = merged['OperatingCashFlow'] - merged['CapitalExpenditure'].abs()
+        return merged, "FinMind (Primary)"
+
     except Exception as exc:
-        raise RuntimeError(
-            f"Failed to load financials for {ticker}. "
-            f"Please verify the FinMind API token and ticker value. ({exc})"
-        ) from exc
-
-    roe_df = _pivot_financial_df(roe_df)
-    cash_df = _pivot_financial_df(cash_df)
-
-    roe_df = _normalize_financial_columns(roe_df)
-    cash_df = _normalize_financial_columns(cash_df)
-
-    if roe_df.empty or cash_df.empty:
-        raise RuntimeError(
-            f"No financial or cash flow data returned for {ticker}. "
-            f"ROE columns: {list(roe_df.columns)}; cash columns: {list(cash_df.columns)}"
-        )
-
-    if 'date' not in roe_df.columns or 'date' not in cash_df.columns:
-        raise RuntimeError(
-            f"Unexpected financial data format for {ticker}. "
-            f"ROE columns: {list(roe_df.columns)}; cash columns: {list(cash_df.columns)}"
-        )
-
-    merged = pd.merge(roe_df, cash_df, on='date', how='inner')
-    if merged.empty:
-        raise RuntimeError(
-            f"No merged financial data available for {ticker}. "
-            f"ROE columns: {list(roe_df.columns)}; cash columns: {list(cash_df.columns)}"
-        )
-
-    if 'OperatingCashFlow' not in merged.columns:
-        # If still missing, we check for 'CashFlowsFromOperatingActivities' or similar directly if normalization missed it
-        raise RuntimeError(
-            f"Missing Operating Cash Flow for {ticker}. "
-            f"Merged columns: {list(merged.columns)}"
-        )
-
-    if 'CapitalExpenditure' not in merged.columns:
-        # Graceful fallback: Treat as 0 if missing, rather than failing the entire stock.
-        merged['CapitalExpenditure'] = 0
-
-    merged['FCF'] = merged['OperatingCashFlow'] - merged['CapitalExpenditure'].abs()
-    return merged
+        # 2. Secondary Driver: Yahoo Finance Fallback
+        # We trigger fallback for 402 errors or any data availability issue
+        try:
+            return get_financials_yf(ticker)
+        except Exception as yf_exc:
+            raise RuntimeError(
+                f"Both FinMind and Yahoo Finance failed for {ticker}. "
+                f"FinMind Error: {exc} | YFinance Error: {yf_exc}"
+            ) from yf_exc
