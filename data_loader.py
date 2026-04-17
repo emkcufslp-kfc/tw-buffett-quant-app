@@ -128,7 +128,9 @@ def _pivot_financial_df(df):
     if 'date' in df.columns and 'value' in df.columns:
         pivot_column = 'type' if 'type' in df.columns else 'origin_name' if 'origin_name' in df.columns else None
         if pivot_column is not None:
-            df = df.pivot(index='date', columns=pivot_column, values='value')
+            # Using pivot_table with aggfunc='last' to handle potential duplicate date/type pairs 
+            # (e.g. restatements in the financial data)
+            df = df.pivot_table(index='date', columns=pivot_column, values='value', aggfunc='last')
             df.columns = [col if isinstance(col, str) else str(col) for col in df.columns]
             df = df.reset_index()
             return df
