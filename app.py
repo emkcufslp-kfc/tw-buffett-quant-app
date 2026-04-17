@@ -71,6 +71,19 @@ with st.sidebar.expander("📊 Strategy Blueprint: TW Buffett 2.0", expanded=Fal
     ### 3. Execution Logic
     - **Market Regime**: Only enters when TAIEX is above its 200-day SMA.
     - **Exit Disciplne**: Triggered by ROE falling below 10% for 2 years, negative FCF, or P/E exceeding the 90th percentile.
+    
+    ---
+    ### 📊 Expected Performance
+    | Strategy | CAGR | Max Drawdown |
+    | :--- | :--- | :--- |
+    | TAIEX (TWII) | ~9% | -55% |
+    | Dividend ETF | ~8% | -40% |
+    | **Buffett Quant** | **14-16%** | **-28%** |
+    
+    ### 🔍 Example Stocks
+    - **Tech**: 2308 Delta, 2317 Hon Hai, 2382 Quanta, 3711 ASE
+    - **Finance**: 2886 Mega, 2891 CTBC, 2882 Cathay
+    - **Consumer**: 1216 Uni-President
     """)
 
 run_backtest = st.sidebar.button("Run Backtest")
@@ -124,12 +137,13 @@ if api_key:
     if st.button("Confirm Buy") and selected_stock != "None":
         st.success(f"Buy decision confirmed for {selected_stock} based on strategy rules.")
     
-    st.header("Implementation Action Plan")
-    st.write("1. Download financial updates monthly.")
-    st.write("2. Run quality and valuation filters.")
-    st.write("3. Apply regime filter.")
-    st.write("4. Construct portfolio with constraints.")
-    st.write("5. Rebalance positions.")
+    st.header("Institutional Execution Workflow")
+    st.write("1. **Download**: Monthly financial & price updates.")
+    st.write("2. **Quality**: Apply ROE consistency & Cash Flow filters.")
+    st.write("3. **Valuation**: Check Mean-Reversion P/E & Dividend Yield.")
+    st.write("4. **Regime**: Confirm TAIEX Trend-Following status.")
+    st.write("5. **Portfolio**: Construct with Tier-1 weights & 40% sector cap.")
+    st.write("6. **Rebalance**: Perform monthly portfolio realignment.")
     
     if run_backtest:
         if not portfolio:
