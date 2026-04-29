@@ -72,24 +72,26 @@ def _safe_market_cap(ticker):
     return None
 
 
-def _load_cached_universe():
-    if os.path.exists(UNIVERSE_CACHE_FILE):
-        with open(UNIVERSE_CACHE_FILE, "rb") as f:
+def _load_cache_file(path, max_age_seconds=None):
+    if os.path.exists(path):
+        with open(path, "rb") as f:
             cache = pickle.load(f)
         ts = cache.get("timestamp", 0)
-        if (time.time() - ts) < (UNIVERSE_CACHE_EXPIRY_DAYS * 86400):
+        if max_age_seconds is None or (time.time() - ts) < max_age_seconds:
             return cache.get("data")
     return None
+
+
+def _load_cached_universe(allow_stale=False):
+    max_age_seconds = None if allow_stale else UNIVERSE_CACHE_EXPIRY_DAYS * 86400
+    return _load_cache_file(UNIVERSE_CACHE_FILE, max_age_seconds=max_age_seconds)
 
 
 def _load_monthly_revenue_cache():
-    if os.path.exists(MONTHLY_REVENUE_CACHE_FILE):
-        with open(MONTHLY_REVENUE_CACHE_FILE, "rb") as f:
-            cache = pickle.load(f)
-        ts = cache.get("timestamp", 0)
-        if (time.time() - ts) < (MONTHLY_REVENUE_CACHE_EXPIRY_HOURS * 3600):
-            return cache.get("data")
-    return None
+    return _load_cache_file(
+        MONTHLY_REVENUE_CACHE_FILE,
+        max_age_seconds=MONTHLY_REVENUE_CACHE_EXPIRY_HOURS * 3600,
+    )
 
 
 def _save_cached_universe(df):
@@ -104,10 +106,39 @@ def _save_monthly_revenue_cache(df):
         pickle.dump(payload, f)
 
 
-def _fetch_twse_stock_info():
-    response = requests.get(TWSE_LISTED_INFO_URL, verify=False, timeout=20)
+def _summarize_response(response, max_preview_chars=180):
+    content_type = response.headers.get("Content-Type", "")
+    preview = response.text.strip().replace("\n", " ").replace("\r", " ")
+    if len(preview) > max_preview_chars:
+        preview = preview[:max_preview_chars] + "..."
+    return f"status={response.status_code}, content_type={content_type!r}, body_preview={preview!r}"
+
+
+def _get_json_response(url, source_name, timeout=20):
+    response = requests.get(url, verify=False, timeout=timeout)
     response.raise_for_status()
-    raw = response.json()
+
+    if not response.text or not response.text.strip():
+        print(f"{source_name} returned an empty response. {_summarize_response(response)}")
+        return None
+
+    try:
+        return response.json()
+    except ValueError as exc:
+        print(f"{source_name} returned invalid JSON: {exc}. {_summarize_response(response)}")
+        return None
+
+
+def _fetch_twse_stock_info():
+    try:
+        raw = _get_json_response(TWSE_LISTED_INFO_URL, "TWSE listed info API", timeout=20)
+    except requests.RequestException as exc:
+        print(f"TWSE listed info API request failed: {exc}")
+        raw = None
+
+    if not raw:
+        return pd.DataFrame(columns=["stock_id", "stock_name", "industry_category", "listing_date"])
+
     df = pd.DataFrame(raw)
     if df.empty:
         return pd.DataFrame(columns=["stock_id", "stock_name", "industry_category", "listing_date"])
@@ -256,8 +287,10 @@ class CacheManager:
 def fetch_twse_daily_stats():
     url = "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL"
     try:
-        response = requests.get(url, verify=False, timeout=10)
-        df = pd.DataFrame(response.json())
+        raw = _get_json_response(url, "TWSE daily stats API", timeout=10)
+        if not raw:
+            return pd.DataFrame()
+        df = pd.DataFrame(raw)
         df = df.rename(
             columns={
                 "Code": "stock_id",
@@ -288,6 +321,15 @@ def get_stock_universe(top_n_per_sector=DEFAULT_TOP_N_PER_SECTOR, min_listing_ye
 
     info = _fetch_twse_stock_info()
     if info.empty:
+        stale_cached = _load_cached_universe(allow_stale=True)
+        if stale_cached is not None and not stale_cached.empty:
+            print("Using stale universe cache because TWSE listed info API is unavailable.")
+            return (
+                stale_cached.sort_values(["industry_category", "market_cap"], ascending=[True, False])
+                .groupby("industry_category", dropna=False)
+                .head(top_n_per_sector)
+                .reset_index(drop=True)
+            )
         return pd.DataFrame(
             columns=["stock_id", "stock_name", "industry_category", "listing_date", "listing_age_years", "market_cap"]
         )
