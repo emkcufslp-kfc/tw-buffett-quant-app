@@ -1,0 +1,8578 @@
+[
+  {
+    "Date": "1150428",
+    "Code": "1101",
+    "Name": "台泥",
+    "PEratio": "",
+    "DividendYield": "3.28",
+    "PBratio": "0.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1102",
+    "Name": "亞泥",
+    "PEratio": "12.47",
+    "DividendYield": "6.52",
+    "PBratio": "0.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1103",
+    "Name": "嘉泥",
+    "PEratio": "16.13",
+    "DividendYield": "4.06",
+    "PBratio": "0.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1104",
+    "Name": "環泥",
+    "PEratio": "11.13",
+    "DividendYield": "6.49",
+    "PBratio": "0.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1108",
+    "Name": "幸福",
+    "PEratio": "6.67",
+    "DividendYield": "6.87",
+    "PBratio": "1.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1109",
+    "Name": "信大",
+    "PEratio": "15.05",
+    "DividendYield": "5.81",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1110",
+    "Name": "東泥",
+    "PEratio": "41.81",
+    "DividendYield": "1.99",
+    "PBratio": "0.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1201",
+    "Name": "味全",
+    "PEratio": "31.75",
+    "DividendYield": "1.65",
+    "PBratio": "0.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1203",
+    "Name": "味王",
+    "PEratio": "24.28",
+    "DividendYield": "2.28",
+    "PBratio": "1.64"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1210",
+    "Name": "大成",
+    "PEratio": "12.49",
+    "DividendYield": "5.55",
+    "PBratio": "1.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1213",
+    "Name": "大飲",
+    "PEratio": "",
+    "DividendYield": "3.96",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1215",
+    "Name": "卜蜂",
+    "PEratio": "13.38",
+    "DividendYield": "5.04",
+    "PBratio": "3.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1216",
+    "Name": "統一",
+    "PEratio": "20.46",
+    "DividendYield": "4.25",
+    "PBratio": "2.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1217",
+    "Name": "愛之味",
+    "PEratio": "23.74",
+    "DividendYield": "2.51",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1218",
+    "Name": "泰山",
+    "PEratio": "11.98",
+    "DividendYield": "6.93",
+    "PBratio": "0.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1219",
+    "Name": "福壽",
+    "PEratio": "30.11",
+    "DividendYield": "3.69",
+    "PBratio": "1.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1220",
+    "Name": "台榮",
+    "PEratio": "155.00",
+    "DividendYield": "1.61",
+    "PBratio": "0.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1225",
+    "Name": "福懋油",
+    "PEratio": "19.48",
+    "DividendYield": "3.17",
+    "PBratio": "1.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1227",
+    "Name": "佳格",
+    "PEratio": "21.99",
+    "DividendYield": "4.58",
+    "PBratio": "1.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1229",
+    "Name": "聯華",
+    "PEratio": "16.26",
+    "DividendYield": "4.78",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1231",
+    "Name": "聯華食",
+    "PEratio": "22.83",
+    "DividendYield": "2.87",
+    "PBratio": "3.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1232",
+    "Name": "大統益",
+    "PEratio": "18.10",
+    "DividendYield": "4.82",
+    "PBratio": "4.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1233",
+    "Name": "天仁",
+    "PEratio": "38.47",
+    "DividendYield": "0.69",
+    "PBratio": "1.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1234",
+    "Name": "黑松",
+    "PEratio": "17.60",
+    "DividendYield": "4.69",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1235",
+    "Name": "興泰",
+    "PEratio": "",
+    "DividendYield": "5.51",
+    "PBratio": "0.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1236",
+    "Name": "宏亞",
+    "PEratio": "",
+    "DividendYield": "6.43",
+    "PBratio": "0.88"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1256",
+    "Name": "鮮活果汁-KY",
+    "PEratio": "15.01",
+    "DividendYield": "4.11",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1301",
+    "Name": "台塑",
+    "PEratio": "",
+    "DividendYield": "0.98",
+    "PBratio": "0.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1303",
+    "Name": "南亞",
+    "PEratio": "157.02",
+    "DividendYield": "0.89",
+    "PBratio": "2.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1304",
+    "Name": "台聚",
+    "PEratio": "",
+    "DividendYield": "1.07",
+    "PBratio": "0.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1305",
+    "Name": "華夏",
+    "PEratio": "",
+    "DividendYield": "0.70",
+    "PBratio": "1.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1307",
+    "Name": "三芳",
+    "PEratio": "10.89",
+    "DividendYield": "7.09",
+    "PBratio": "1.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1308",
+    "Name": "亞聚",
+    "PEratio": "",
+    "DividendYield": "1.35",
+    "PBratio": "0.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1309",
+    "Name": "台達化",
+    "PEratio": "",
+    "DividendYield": "0.77",
+    "PBratio": "1.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1310",
+    "Name": "台苯",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1312",
+    "Name": "國喬",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1313",
+    "Name": "聯成",
+    "PEratio": "",
+    "DividendYield": "0.87",
+    "PBratio": "0.52"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1314",
+    "Name": "中石化",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.37"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1315",
+    "Name": "達新",
+    "PEratio": "40.52",
+    "DividendYield": "7.17",
+    "PBratio": "0.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1316",
+    "Name": "上曜",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1319",
+    "Name": "東陽",
+    "PEratio": "11.77",
+    "DividendYield": "6.61",
+    "PBratio": "1.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1321",
+    "Name": "大洋",
+    "PEratio": "",
+    "DividendYield": "1.23",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1323",
+    "Name": "永裕",
+    "PEratio": "79.62",
+    "DividendYield": "4.35",
+    "PBratio": "0.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1324",
+    "Name": "地球",
+    "PEratio": "",
+    "DividendYield": "1.87",
+    "PBratio": "0.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1325",
+    "Name": "恆大",
+    "PEratio": "",
+    "DividendYield": "1.16",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1326",
+    "Name": "台化",
+    "PEratio": "",
+    "DividendYield": "1.17",
+    "PBratio": "0.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1337",
+    "Name": "再生-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1338",
+    "Name": "廣華-KY",
+    "PEratio": "",
+    "DividendYield": "1.78",
+    "PBratio": "0.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1339",
+    "Name": "昭輝",
+    "PEratio": "17.16",
+    "DividendYield": "6.05",
+    "PBratio": "0.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1340",
+    "Name": "勝悅-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1341",
+    "Name": "富林-KY",
+    "PEratio": "16.44",
+    "DividendYield": "6.56",
+    "PBratio": "2.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1342",
+    "Name": "八貫",
+    "PEratio": "16.16",
+    "DividendYield": "6.54",
+    "PBratio": "2.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1402",
+    "Name": "遠東新",
+    "PEratio": "17.84",
+    "DividendYield": "4.80",
+    "PBratio": "0.61"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1409",
+    "Name": "新纖",
+    "PEratio": "13.96",
+    "DividendYield": "5.37",
+    "PBratio": "0.65"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1410",
+    "Name": "南染",
+    "PEratio": "47.46",
+    "DividendYield": "0.71",
+    "PBratio": "1.64"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1413",
+    "Name": "宏洲",
+    "PEratio": "21.53",
+    "DividendYield": "",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1414",
+    "Name": "東和",
+    "PEratio": "79.29",
+    "DividendYield": "1.20",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1416",
+    "Name": "廣豐",
+    "PEratio": "14.07",
+    "DividendYield": "5.00",
+    "PBratio": "0.48"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1417",
+    "Name": "嘉裕",
+    "PEratio": "14.34",
+    "DividendYield": "2.81",
+    "PBratio": "0.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1418",
+    "Name": "東華",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1419",
+    "Name": "新紡",
+    "PEratio": "15.33",
+    "DividendYield": "2.38",
+    "PBratio": "1.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1423",
+    "Name": "利華",
+    "PEratio": "9.64",
+    "DividendYield": "8.56",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1432",
+    "Name": "大魯閣",
+    "PEratio": "2.75",
+    "DividendYield": "12.05",
+    "PBratio": "1.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1434",
+    "Name": "福懋",
+    "PEratio": "31.18",
+    "DividendYield": "3.14",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1435",
+    "Name": "中福",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1436",
+    "Name": "華友聯",
+    "PEratio": "10.04",
+    "DividendYield": "10.04",
+    "PBratio": "1.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1437",
+    "Name": "勤益控",
+    "PEratio": "12.40",
+    "DividendYield": "3.20",
+    "PBratio": "0.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1438",
+    "Name": "三地開發",
+    "PEratio": "13.71",
+    "DividendYield": "",
+    "PBratio": "0.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1439",
+    "Name": "雋揚",
+    "PEratio": "8.21",
+    "DividendYield": "1.90",
+    "PBratio": "0.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1440",
+    "Name": "南紡",
+    "PEratio": "",
+    "DividendYield": "2.33",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1441",
+    "Name": "大東",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1442",
+    "Name": "名軒",
+    "PEratio": "8.91",
+    "DividendYield": "8.89",
+    "PBratio": "1.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1443",
+    "Name": "立益物流",
+    "PEratio": "19.03",
+    "DividendYield": "",
+    "PBratio": "1.27"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1444",
+    "Name": "力麗",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.64"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1445",
+    "Name": "大宇",
+    "PEratio": "",
+    "DividendYield": "3.89",
+    "PBratio": "0.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1446",
+    "Name": "宏和",
+    "PEratio": "9.81",
+    "DividendYield": "9.43",
+    "PBratio": "0.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1447",
+    "Name": "力鵬",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1449",
+    "Name": "佳和",
+    "PEratio": "122.27",
+    "DividendYield": "",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1451",
+    "Name": "年興",
+    "PEratio": "9.57",
+    "DividendYield": "5.93",
+    "PBratio": "0.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1452",
+    "Name": "宏益",
+    "PEratio": "",
+    "DividendYield": "1.75",
+    "PBratio": "0.56"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1453",
+    "Name": "大將",
+    "PEratio": "296.25",
+    "DividendYield": "2.53",
+    "PBratio": "0.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1454",
+    "Name": "台富",
+    "PEratio": "",
+    "DividendYield": "0.75",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1455",
+    "Name": "集盛",
+    "PEratio": "",
+    "DividendYield": "1.88",
+    "PBratio": "0.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1456",
+    "Name": "怡華",
+    "PEratio": "3.94",
+    "DividendYield": "",
+    "PBratio": "0.65"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1457",
+    "Name": "宜進",
+    "PEratio": "12.37",
+    "DividendYield": "6.85",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1459",
+    "Name": "聯發",
+    "PEratio": "14.38",
+    "DividendYield": "1.72",
+    "PBratio": "1.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1460",
+    "Name": "宏遠",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1463",
+    "Name": "強盛新",
+    "PEratio": "151.54",
+    "DividendYield": "0.66",
+    "PBratio": "1.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1464",
+    "Name": "得力",
+    "PEratio": "28.71",
+    "DividendYield": "2.49",
+    "PBratio": "0.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1465",
+    "Name": "偉全",
+    "PEratio": "",
+    "DividendYield": "2.46",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1466",
+    "Name": "聚隆",
+    "PEratio": "",
+    "DividendYield": "1.24",
+    "PBratio": "1.16"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1467",
+    "Name": "南緯",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1468",
+    "Name": "昶和",
+    "PEratio": "58.33",
+    "DividendYield": "",
+    "PBratio": "1.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1470",
+    "Name": "大統新創",
+    "PEratio": "29.81",
+    "DividendYield": "2.80",
+    "PBratio": "1.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1471",
+    "Name": "首利",
+    "PEratio": "390.00",
+    "DividendYield": "",
+    "PBratio": "1.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1472",
+    "Name": "三洋實業",
+    "PEratio": "14.27",
+    "DividendYield": "6.57",
+    "PBratio": "2.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1473",
+    "Name": "台南",
+    "PEratio": "38.68",
+    "DividendYield": "2.27",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1474",
+    "Name": "弘裕",
+    "PEratio": "29.41",
+    "DividendYield": "2.50",
+    "PBratio": "0.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1475",
+    "Name": "業旺",
+    "PEratio": "10.11",
+    "DividendYield": "5.45",
+    "PBratio": "1.17"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1476",
+    "Name": "儒鴻",
+    "PEratio": "16.62",
+    "DividendYield": "4.49",
+    "PBratio": "3.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1477",
+    "Name": "聚陽",
+    "PEratio": "14.85",
+    "DividendYield": "6.90",
+    "PBratio": "3.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1503",
+    "Name": "士電",
+    "PEratio": "30.06",
+    "DividendYield": "2.65",
+    "PBratio": "2.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1504",
+    "Name": "東元",
+    "PEratio": "27.23",
+    "DividendYield": "3.28",
+    "PBratio": "1.56"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1506",
+    "Name": "正道",
+    "PEratio": "185.83",
+    "DividendYield": "",
+    "PBratio": "1.20"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1512",
+    "Name": "瑞利",
+    "PEratio": "38.68",
+    "DividendYield": "",
+    "PBratio": "1.10"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1513",
+    "Name": "中興電",
+    "PEratio": "18.46",
+    "DividendYield": "4.03",
+    "PBratio": "3.56"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1514",
+    "Name": "亞力",
+    "PEratio": "33.48",
+    "DividendYield": "1.99",
+    "PBratio": "4.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1515",
+    "Name": "力山",
+    "PEratio": "22.63",
+    "DividendYield": "2.73",
+    "PBratio": "1.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1516",
+    "Name": "川飛",
+    "PEratio": "403.00",
+    "DividendYield": "",
+    "PBratio": "3.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1517",
+    "Name": "利奇",
+    "PEratio": "",
+    "DividendYield": "1.93",
+    "PBratio": "0.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1519",
+    "Name": "華城",
+    "PEratio": "62.54",
+    "DividendYield": "1.37",
+    "PBratio": "26.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1521",
+    "Name": "大億",
+    "PEratio": "28.39",
+    "DividendYield": "3.04",
+    "PBratio": "1.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1522",
+    "Name": "堤維西",
+    "PEratio": "17.97",
+    "DividendYield": "3.82",
+    "PBratio": "1.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1524",
+    "Name": "耿鼎",
+    "PEratio": "14.23",
+    "DividendYield": "5.05",
+    "PBratio": "1.52"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1525",
+    "Name": "江申",
+    "PEratio": "19.10",
+    "DividendYield": "4.57",
+    "PBratio": "0.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1526",
+    "Name": "日馳",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1527",
+    "Name": "鑽全",
+    "PEratio": "21.38",
+    "DividendYield": "4.62",
+    "PBratio": "0.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1528",
+    "Name": "恩德",
+    "PEratio": "",
+    "DividendYield": "0.38",
+    "PBratio": "2.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1529",
+    "Name": "樂事綠能",
+    "PEratio": "21.88",
+    "DividendYield": "4.52",
+    "PBratio": "1.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1530",
+    "Name": "亞崴",
+    "PEratio": "",
+    "DividendYield": "3.79",
+    "PBratio": "0.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1531",
+    "Name": "高林股",
+    "PEratio": "",
+    "DividendYield": "7.72",
+    "PBratio": "0.66"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1532",
+    "Name": "勤美",
+    "PEratio": "21.06",
+    "DividendYield": "3.84",
+    "PBratio": "0.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1533",
+    "Name": "車王電",
+    "PEratio": "57.41",
+    "DividendYield": "",
+    "PBratio": "1.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1535",
+    "Name": "中宇",
+    "PEratio": "12.68",
+    "DividendYield": "5.92",
+    "PBratio": "1.64"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1536",
+    "Name": "和大",
+    "PEratio": "",
+    "DividendYield": "1.58",
+    "PBratio": "1.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1537",
+    "Name": "廣隆",
+    "PEratio": "15.53",
+    "DividendYield": "5.83",
+    "PBratio": "2.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1538",
+    "Name": "正峰",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1539",
+    "Name": "巨庭",
+    "PEratio": "77.14",
+    "DividendYield": "5.25",
+    "PBratio": "0.66"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1540",
+    "Name": "喬福",
+    "PEratio": "19.01",
+    "DividendYield": "4.74",
+    "PBratio": "1.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1541",
+    "Name": "錩泰",
+    "PEratio": "10.47",
+    "DividendYield": "2.06",
+    "PBratio": "0.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1558",
+    "Name": "伸興",
+    "PEratio": "16.08",
+    "DividendYield": "5.49",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1560",
+    "Name": "中砂",
+    "PEratio": "57.36",
+    "DividendYield": "0.94",
+    "PBratio": "9.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1563",
+    "Name": "巧新",
+    "PEratio": "28.23",
+    "DividendYield": "4.92",
+    "PBratio": "1.03"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1568",
+    "Name": "倉佑",
+    "PEratio": "21.32",
+    "DividendYield": "3.45",
+    "PBratio": "1.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1582",
+    "Name": "信錦",
+    "PEratio": "26.00",
+    "DividendYield": "3.34",
+    "PBratio": "1.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1583",
+    "Name": "程泰",
+    "PEratio": "",
+    "DividendYield": "2.11",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1587",
+    "Name": "吉茂",
+    "PEratio": "86.89",
+    "DividendYield": "1.56",
+    "PBratio": "1.64"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1590",
+    "Name": "亞德客-KY",
+    "PEratio": "33.45",
+    "DividendYield": "2.03",
+    "PBratio": "5.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1597",
+    "Name": "直得",
+    "PEratio": "133.52",
+    "DividendYield": "0.58",
+    "PBratio": "4.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1598",
+    "Name": "岱宇",
+    "PEratio": "",
+    "DividendYield": "2.39",
+    "PBratio": "0.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1603",
+    "Name": "華電",
+    "PEratio": "9.75",
+    "DividendYield": "6.29",
+    "PBratio": "0.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1604",
+    "Name": "聲寶",
+    "PEratio": "13.56",
+    "DividendYield": "6.51",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1605",
+    "Name": "華新",
+    "PEratio": "42.36",
+    "DividendYield": "1.64",
+    "PBratio": "0.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1608",
+    "Name": "華榮",
+    "PEratio": "5.95",
+    "DividendYield": "6.12",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1609",
+    "Name": "大亞",
+    "PEratio": "19.48",
+    "DividendYield": "2.18",
+    "PBratio": "1.47"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1611",
+    "Name": "中電",
+    "PEratio": "400.00",
+    "DividendYield": "6.67",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1612",
+    "Name": "宏泰",
+    "PEratio": "12.80",
+    "DividendYield": "7.05",
+    "PBratio": "1.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1614",
+    "Name": "三洋電",
+    "PEratio": "32.99",
+    "DividendYield": "3.03",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1615",
+    "Name": "大山",
+    "PEratio": "9.60",
+    "DividendYield": "5.41",
+    "PBratio": "2.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1616",
+    "Name": "億泰",
+    "PEratio": "14.39",
+    "DividendYield": "6.10",
+    "PBratio": "1.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1617",
+    "Name": "榮星",
+    "PEratio": "22.13",
+    "DividendYield": "3.99",
+    "PBratio": "1.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1618",
+    "Name": "合機",
+    "PEratio": "9.31",
+    "DividendYield": "4.34",
+    "PBratio": "1.15"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1623",
+    "Name": "大東電",
+    "PEratio": "17.44",
+    "DividendYield": "3.37",
+    "PBratio": "4.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1626",
+    "Name": "艾美特-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1702",
+    "Name": "南僑",
+    "PEratio": "31.61",
+    "DividendYield": "4.52",
+    "PBratio": "0.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1707",
+    "Name": "葡萄王",
+    "PEratio": "13.87",
+    "DividendYield": "5.26",
+    "PBratio": "1.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1708",
+    "Name": "東鹼",
+    "PEratio": "12.88",
+    "DividendYield": "3.79",
+    "PBratio": "1.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1709",
+    "Name": "和益",
+    "PEratio": "15.53",
+    "DividendYield": "5.24",
+    "PBratio": "1.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1710",
+    "Name": "東聯",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1711",
+    "Name": "永光",
+    "PEratio": "",
+    "DividendYield": "0.53",
+    "PBratio": "3.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1712",
+    "Name": "興農",
+    "PEratio": "16.27",
+    "DividendYield": "5.91",
+    "PBratio": "2.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1713",
+    "Name": "國化",
+    "PEratio": "11.96",
+    "DividendYield": "6.70",
+    "PBratio": "1.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1714",
+    "Name": "和桐",
+    "PEratio": "19.12",
+    "DividendYield": "1.88",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1717",
+    "Name": "長興",
+    "PEratio": "54.11",
+    "DividendYield": "1.31",
+    "PBratio": "3.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1718",
+    "Name": "中纖",
+    "PEratio": "74.56",
+    "DividendYield": "",
+    "PBratio": "0.41"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1720",
+    "Name": "生達",
+    "PEratio": "11.77",
+    "DividendYield": "4.91",
+    "PBratio": "1.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1721",
+    "Name": "三晃",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1722",
+    "Name": "台肥",
+    "PEratio": "46.63",
+    "DividendYield": "4.51",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1723",
+    "Name": "中碳",
+    "PEratio": "31.57",
+    "DividendYield": "2.36",
+    "PBratio": "2.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1725",
+    "Name": "元禎",
+    "PEratio": "20.52",
+    "DividendYield": "3.41",
+    "PBratio": "0.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1726",
+    "Name": "永記",
+    "PEratio": "13.82",
+    "DividendYield": "4.87",
+    "PBratio": "1.18"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1727",
+    "Name": "中華化",
+    "PEratio": "1892.50",
+    "DividendYield": "0.20",
+    "PBratio": "4.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1730",
+    "Name": "花仙子",
+    "PEratio": "11.67",
+    "DividendYield": "5.71",
+    "PBratio": "1.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1731",
+    "Name": "美吾華",
+    "PEratio": "16.03",
+    "DividendYield": "5.60",
+    "PBratio": "1.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1732",
+    "Name": "毛寶",
+    "PEratio": "36.81",
+    "DividendYield": "2.36",
+    "PBratio": "2.15"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1733",
+    "Name": "五鼎",
+    "PEratio": "17.61",
+    "DividendYield": "4.53",
+    "PBratio": "1.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1734",
+    "Name": "杏輝",
+    "PEratio": "16.54",
+    "DividendYield": "5.04",
+    "PBratio": "1.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1735",
+    "Name": "日勝化",
+    "PEratio": "35.19",
+    "DividendYield": "2.37",
+    "PBratio": "1.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1736",
+    "Name": "喬山",
+    "PEratio": "14.79",
+    "DividendYield": "2.99",
+    "PBratio": "2.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1737",
+    "Name": "臺鹽",
+    "PEratio": "15.85",
+    "DividendYield": "4.42",
+    "PBratio": "0.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1752",
+    "Name": "南光",
+    "PEratio": "13.99",
+    "DividendYield": "4.73",
+    "PBratio": "1.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1760",
+    "Name": "寶齡富錦",
+    "PEratio": "31.44",
+    "DividendYield": "2.87",
+    "PBratio": "3.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1762",
+    "Name": "中化生",
+    "PEratio": "",
+    "DividendYield": "0.67",
+    "PBratio": "0.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1773",
+    "Name": "勝一",
+    "PEratio": "23.59",
+    "DividendYield": "2.34",
+    "PBratio": "4.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1776",
+    "Name": "展宇",
+    "PEratio": "58.75",
+    "DividendYield": "3.65",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1783",
+    "Name": "和康生",
+    "PEratio": "12.87",
+    "DividendYield": "2.18",
+    "PBratio": "2.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1786",
+    "Name": "科妍",
+    "PEratio": "27.93",
+    "DividendYield": "3.15",
+    "PBratio": "2.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1789",
+    "Name": "神隆",
+    "PEratio": "121.18",
+    "DividendYield": "1.41",
+    "PBratio": "1.55"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1795",
+    "Name": "美時",
+    "PEratio": "12.47",
+    "DividendYield": "1.20",
+    "PBratio": "2.48"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1802",
+    "Name": "台玻",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1805",
+    "Name": "寶徠",
+    "PEratio": "56.32",
+    "DividendYield": "",
+    "PBratio": "0.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1806",
+    "Name": "冠軍",
+    "PEratio": "30.62",
+    "DividendYield": "1.69",
+    "PBratio": "0.65"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1808",
+    "Name": "潤隆",
+    "PEratio": "20.10",
+    "DividendYield": "6.81",
+    "PBratio": "2.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1809",
+    "Name": "中釉",
+    "PEratio": "138.95",
+    "DividendYield": "0.95",
+    "PBratio": "1.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1810",
+    "Name": "和成",
+    "PEratio": "349.00",
+    "DividendYield": "1.15",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1817",
+    "Name": "凱撒衛",
+    "PEratio": "10.68",
+    "DividendYield": "5.71",
+    "PBratio": "1.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1903",
+    "Name": "士紙",
+    "PEratio": "38.29",
+    "DividendYield": "",
+    "PBratio": "2.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1904",
+    "Name": "正隆",
+    "PEratio": "24.46",
+    "DividendYield": "2.49",
+    "PBratio": "0.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1905",
+    "Name": "華紙",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1906",
+    "Name": "寶隆",
+    "PEratio": "1130.00",
+    "DividendYield": "0.88",
+    "PBratio": "0.61"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1907",
+    "Name": "永豐餘",
+    "PEratio": "20.21",
+    "DividendYield": "4.16",
+    "PBratio": "0.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "1909",
+    "Name": "榮成",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2002",
+    "Name": "中鋼",
+    "PEratio": "",
+    "DividendYield": "0.80",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2006",
+    "Name": "東和鋼鐵",
+    "PEratio": "10.35",
+    "DividendYield": "6.27",
+    "PBratio": "1.54"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2007",
+    "Name": "燁興",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2008",
+    "Name": "高興昌",
+    "PEratio": "40.59",
+    "DividendYield": "3.62",
+    "PBratio": "1.41"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2009",
+    "Name": "第一銅",
+    "PEratio": "112.50",
+    "DividendYield": "1.05",
+    "PBratio": "1.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2010",
+    "Name": "春源",
+    "PEratio": "10.82",
+    "DividendYield": "7.97",
+    "PBratio": "1.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2012",
+    "Name": "春雨",
+    "PEratio": "74.75",
+    "DividendYield": "2.01",
+    "PBratio": "1.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2013",
+    "Name": "中鋼構",
+    "PEratio": "13.45",
+    "DividendYield": "5.59",
+    "PBratio": "1.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2014",
+    "Name": "中鴻",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.11"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2015",
+    "Name": "豐興",
+    "PEratio": "15.85",
+    "DividendYield": "5.37",
+    "PBratio": "1.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2017",
+    "Name": "官田鋼",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2020",
+    "Name": "美亞",
+    "PEratio": "10.45",
+    "DividendYield": "8.09",
+    "PBratio": "1.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2022",
+    "Name": "聚亨",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2023",
+    "Name": "燁輝",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2024",
+    "Name": "志聯",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2025",
+    "Name": "千興",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2027",
+    "Name": "大成鋼",
+    "PEratio": "13.40",
+    "DividendYield": "3.94",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2028",
+    "Name": "威致",
+    "PEratio": "63.39",
+    "DividendYield": "1.13",
+    "PBratio": "1.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2029",
+    "Name": "盛餘",
+    "PEratio": "27.30",
+    "DividendYield": "2.97",
+    "PBratio": "0.64"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2030",
+    "Name": "彰源",
+    "PEratio": "45.86",
+    "DividendYield": "3.12",
+    "PBratio": "0.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2031",
+    "Name": "新光鋼",
+    "PEratio": "12.12",
+    "DividendYield": "6.25",
+    "PBratio": "1.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2032",
+    "Name": "新鋼",
+    "PEratio": "28.93",
+    "DividendYield": "3.09",
+    "PBratio": "1.21"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2033",
+    "Name": "佳大",
+    "PEratio": "46.00",
+    "DividendYield": "1.24",
+    "PBratio": "1.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2034",
+    "Name": "允強",
+    "PEratio": "100.00",
+    "DividendYield": "4.76",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2038",
+    "Name": "海光",
+    "PEratio": "",
+    "DividendYield": "1.40",
+    "PBratio": "0.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2049",
+    "Name": "上銀",
+    "PEratio": "69.84",
+    "DividendYield": "0.66",
+    "PBratio": "2.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2059",
+    "Name": "川湖",
+    "PEratio": "38.55",
+    "DividendYield": "1.28",
+    "PBratio": "13.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2062",
+    "Name": "橋椿",
+    "PEratio": "54.36",
+    "DividendYield": "4.72",
+    "PBratio": "0.56"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2069",
+    "Name": "運錩",
+    "PEratio": "11.79",
+    "DividendYield": "4.71",
+    "PBratio": "0.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2072",
+    "Name": "世紀風電",
+    "PEratio": "14.61",
+    "DividendYield": "4.06",
+    "PBratio": "1.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2101",
+    "Name": "南港",
+    "PEratio": "29.91",
+    "DividendYield": "2.11",
+    "PBratio": "1.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2102",
+    "Name": "泰豐",
+    "PEratio": "3.05",
+    "DividendYield": "",
+    "PBratio": "0.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2103",
+    "Name": "台橡",
+    "PEratio": "36.48",
+    "DividendYield": "1.37",
+    "PBratio": "0.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2104",
+    "Name": "國際中橡",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.44"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2105",
+    "Name": "正新",
+    "PEratio": "20.90",
+    "DividendYield": "5.74",
+    "PBratio": "1.17"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2106",
+    "Name": "建大",
+    "PEratio": "134.62",
+    "DividendYield": "3.71",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2107",
+    "Name": "厚生",
+    "PEratio": "15.66",
+    "DividendYield": "5.35",
+    "PBratio": "0.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2108",
+    "Name": "南帝",
+    "PEratio": "32.53",
+    "DividendYield": "3.70",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2109",
+    "Name": "華豐",
+    "PEratio": "12.37",
+    "DividendYield": "6.97",
+    "PBratio": "1.15"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2114",
+    "Name": "鑫永銓",
+    "PEratio": "15.36",
+    "DividendYield": "5.63",
+    "PBratio": "2.18"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2115",
+    "Name": "六暉-KY",
+    "PEratio": "13.54",
+    "DividendYield": "5.61",
+    "PBratio": "0.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2201",
+    "Name": "裕隆",
+    "PEratio": "29.46",
+    "DividendYield": "2.07",
+    "PBratio": "0.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2204",
+    "Name": "中華",
+    "PEratio": "10.00",
+    "DividendYield": "6.68",
+    "PBratio": "0.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2206",
+    "Name": "三陽工業",
+    "PEratio": "9.79",
+    "DividendYield": "5.26",
+    "PBratio": "1.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2207",
+    "Name": "和泰車",
+    "PEratio": "14.28",
+    "DividendYield": "4.13",
+    "PBratio": "3.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2208",
+    "Name": "台船",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2211",
+    "Name": "長榮鋼",
+    "PEratio": "11.40",
+    "DividendYield": "6.63",
+    "PBratio": "1.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2227",
+    "Name": "裕日車",
+    "PEratio": "41.62",
+    "DividendYield": "7.21",
+    "PBratio": "0.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2228",
+    "Name": "劍麟",
+    "PEratio": "16.87",
+    "DividendYield": "5.09",
+    "PBratio": "1.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2231",
+    "Name": "為升",
+    "PEratio": "",
+    "DividendYield": "0.40",
+    "PBratio": "5.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2233",
+    "Name": "宇隆",
+    "PEratio": "37.31",
+    "DividendYield": "1.60",
+    "PBratio": "3.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2236",
+    "Name": "百達-KY",
+    "PEratio": "",
+    "DividendYield": "0.49",
+    "PBratio": "3.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2239",
+    "Name": "英利-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2241",
+    "Name": "艾姆勒",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2243",
+    "Name": "宏旭-KY",
+    "PEratio": "22.46",
+    "DividendYield": "",
+    "PBratio": "2.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2247",
+    "Name": "汎德永業",
+    "PEratio": "11.57",
+    "DividendYield": "6.84",
+    "PBratio": "1.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2248",
+    "Name": "華勝-KY",
+    "PEratio": "10.96",
+    "DividendYield": "5.40",
+    "PBratio": "1.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2250",
+    "Name": "IKKA-KY",
+    "PEratio": "15.98",
+    "DividendYield": "4.90",
+    "PBratio": "1.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2254",
+    "Name": "巨鎧精密-創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2258",
+    "Name": "鴻華先進-創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2301",
+    "Name": "光寶科",
+    "PEratio": "25.90",
+    "DividendYield": "2.90",
+    "PBratio": "4.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2302",
+    "Name": "麗正",
+    "PEratio": "37.76",
+    "DividendYield": "1.89",
+    "PBratio": "1.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2303",
+    "Name": "聯電",
+    "PEratio": "22.69",
+    "DividendYield": "3.46",
+    "PBratio": "2.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2305",
+    "Name": "全友",
+    "PEratio": "81.75",
+    "DividendYield": "",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2308",
+    "Name": "台達電",
+    "PEratio": "91.83",
+    "DividendYield": "0.55",
+    "PBratio": "20.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2312",
+    "Name": "金寶",
+    "PEratio": "28.94",
+    "DividendYield": "1.99",
+    "PBratio": "1.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2313",
+    "Name": "華通",
+    "PEratio": "43.47",
+    "DividendYield": "1.17",
+    "PBratio": "5.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2314",
+    "Name": "台揚",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "11.17"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2316",
+    "Name": "楠梓電",
+    "PEratio": "8.56",
+    "DividendYield": "1.75",
+    "PBratio": "1.65"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2317",
+    "Name": "鴻海",
+    "PEratio": "16.63",
+    "DividendYield": "3.19",
+    "PBratio": "1.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2321",
+    "Name": "東訊",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2323",
+    "Name": "中環",
+    "PEratio": "6.49",
+    "DividendYield": "1.95",
+    "PBratio": "0.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2324",
+    "Name": "仁寶",
+    "PEratio": "21.63",
+    "DividendYield": "3.69",
+    "PBratio": "0.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2327",
+    "Name": "國巨*",
+    "PEratio": "28.42",
+    "DividendYield": "1.84",
+    "PBratio": "3.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2328",
+    "Name": "廣宇",
+    "PEratio": "29.42",
+    "DividendYield": "1.96",
+    "PBratio": "1.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2329",
+    "Name": "華泰",
+    "PEratio": "27.62",
+    "DividendYield": "1.69",
+    "PBratio": "3.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2330",
+    "Name": "台積電",
+    "PEratio": "33.44",
+    "DividendYield": "0.99",
+    "PBratio": "10.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2331",
+    "Name": "精英",
+    "PEratio": "14.40",
+    "DividendYield": "1.03",
+    "PBratio": "1.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2332",
+    "Name": "友訊",
+    "PEratio": "",
+    "DividendYield": "0.72",
+    "PBratio": "1.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2337",
+    "Name": "旺宏",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2338",
+    "Name": "光罩",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2340",
+    "Name": "台亞",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2342",
+    "Name": "茂矽",
+    "PEratio": "",
+    "DividendYield": "0.95",
+    "PBratio": "2.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2344",
+    "Name": "華邦電",
+    "PEratio": "108.52",
+    "DividendYield": "0.52",
+    "PBratio": "3.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2345",
+    "Name": "智邦",
+    "PEratio": "48.70",
+    "DividendYield": "0.65",
+    "PBratio": "22.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2347",
+    "Name": "聯強",
+    "PEratio": "16.24",
+    "DividendYield": "5.09",
+    "PBratio": "1.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2348",
+    "Name": "海悅",
+    "PEratio": "12.06",
+    "DividendYield": "7.63",
+    "PBratio": "1.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2349",
+    "Name": "錸德",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.61"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2351",
+    "Name": "順德",
+    "PEratio": "88.25",
+    "DividendYield": "0.75",
+    "PBratio": "3.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2352",
+    "Name": "佳世達",
+    "PEratio": "33.61",
+    "DividendYield": "4.13",
+    "PBratio": "1.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2353",
+    "Name": "宏碁",
+    "PEratio": "21.63",
+    "DividendYield": "4.77",
+    "PBratio": "1.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2354",
+    "Name": "鴻準",
+    "PEratio": "21.94",
+    "DividendYield": "2.95",
+    "PBratio": "0.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2355",
+    "Name": "敬鵬",
+    "PEratio": "33.06",
+    "DividendYield": "1.89",
+    "PBratio": "1.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2356",
+    "Name": "英業達",
+    "PEratio": "19.15",
+    "DividendYield": "4.31",
+    "PBratio": "2.18"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2357",
+    "Name": "華碩",
+    "PEratio": "9.80",
+    "DividendYield": "7.14",
+    "PBratio": "1.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2359",
+    "Name": "所羅門",
+    "PEratio": "95.12",
+    "DividendYield": "0.85",
+    "PBratio": "3.48"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2360",
+    "Name": "致茂",
+    "PEratio": "74.82",
+    "DividendYield": "0.94",
+    "PBratio": "27.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2362",
+    "Name": "藍天",
+    "PEratio": "18.83",
+    "DividendYield": "5.15",
+    "PBratio": "0.52"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2363",
+    "Name": "矽統",
+    "PEratio": "34.71",
+    "DividendYield": "1.13",
+    "PBratio": "1.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2364",
+    "Name": "倫飛",
+    "PEratio": "15.21",
+    "DividendYield": "4.69",
+    "PBratio": "3.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2365",
+    "Name": "昆盈",
+    "PEratio": "115.16",
+    "DividendYield": "0.81",
+    "PBratio": "2.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2367",
+    "Name": "燿華",
+    "PEratio": "86.52",
+    "DividendYield": "0.34",
+    "PBratio": "3.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2368",
+    "Name": "金像電",
+    "PEratio": "73.12",
+    "DividendYield": "0.72",
+    "PBratio": "20.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2369",
+    "Name": "菱生",
+    "PEratio": "",
+    "DividendYield": "0.97",
+    "PBratio": "2.41"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2371",
+    "Name": "大同",
+    "PEratio": "",
+    "DividendYield": "10.30",
+    "PBratio": "1.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2373",
+    "Name": "震旦行",
+    "PEratio": "14.63",
+    "DividendYield": "6.50",
+    "PBratio": "1.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2374",
+    "Name": "佳能",
+    "PEratio": "30.08",
+    "DividendYield": "2.46",
+    "PBratio": "2.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2375",
+    "Name": "凱美",
+    "PEratio": "23.67",
+    "DividendYield": "1.36",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2376",
+    "Name": "技嘉",
+    "PEratio": "15.47",
+    "DividendYield": "3.55",
+    "PBratio": "3.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2377",
+    "Name": "微星",
+    "PEratio": "14.32",
+    "DividendYield": "4.31",
+    "PBratio": "1.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2379",
+    "Name": "瑞昱",
+    "PEratio": "19.60",
+    "DividendYield": "4.46",
+    "PBratio": "5.54"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2380",
+    "Name": "虹光",
+    "PEratio": "25.25",
+    "DividendYield": "",
+    "PBratio": "1.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2382",
+    "Name": "廣達",
+    "PEratio": "16.50",
+    "DividendYield": "4.86",
+    "PBratio": "5.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2383",
+    "Name": "台光電",
+    "PEratio": "107.02",
+    "DividendYield": "0.57",
+    "PBratio": "31.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2385",
+    "Name": "群光",
+    "PEratio": "13.48",
+    "DividendYield": "5.90",
+    "PBratio": "2.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2387",
+    "Name": "精元",
+    "PEratio": "11.73",
+    "DividendYield": "9.83",
+    "PBratio": "0.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2388",
+    "Name": "威盛",
+    "PEratio": "617.50",
+    "DividendYield": "0.27",
+    "PBratio": "1.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2390",
+    "Name": "云辰",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2392",
+    "Name": "正崴",
+    "PEratio": "",
+    "DividendYield": "2.69",
+    "PBratio": "0.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2393",
+    "Name": "億光",
+    "PEratio": "14.96",
+    "DividendYield": "6.54",
+    "PBratio": "1.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2395",
+    "Name": "研華",
+    "PEratio": "30.01",
+    "DividendYield": "3.05",
+    "PBratio": "5.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2397",
+    "Name": "友通",
+    "PEratio": "22.93",
+    "DividendYield": "4.29",
+    "PBratio": "1.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2399",
+    "Name": "映泰",
+    "PEratio": "278.67",
+    "DividendYield": "",
+    "PBratio": "3.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2401",
+    "Name": "凌陽",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2402",
+    "Name": "毅嘉",
+    "PEratio": "28.37",
+    "DividendYield": "2.88",
+    "PBratio": "2.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2404",
+    "Name": "漢唐",
+    "PEratio": "20.15",
+    "DividendYield": "4.13",
+    "PBratio": "9.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2405",
+    "Name": "輔信",
+    "PEratio": "",
+    "DividendYield": "0.66",
+    "PBratio": "1.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2406",
+    "Name": "國碩",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2408",
+    "Name": "南亞科",
+    "PEratio": "111.50",
+    "DividendYield": "0.63",
+    "PBratio": "4.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2409",
+    "Name": "友達",
+    "PEratio": "18.90",
+    "DividendYield": "2.33",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2412",
+    "Name": "中華電",
+    "PEratio": "27.45",
+    "DividendYield": "3.80",
+    "PBratio": "2.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2413",
+    "Name": "環科",
+    "PEratio": "108.78",
+    "DividendYield": "1.12",
+    "PBratio": "2.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2414",
+    "Name": "精技",
+    "PEratio": "14.40",
+    "DividendYield": "6.57",
+    "PBratio": "2.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2415",
+    "Name": "錩新",
+    "PEratio": "14.83",
+    "DividendYield": "5.92",
+    "PBratio": "1.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2417",
+    "Name": "圓剛",
+    "PEratio": "",
+    "DividendYield": "0.64",
+    "PBratio": "1.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2419",
+    "Name": "仲琦",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2420",
+    "Name": "新巨",
+    "PEratio": "14.02",
+    "DividendYield": "5.47",
+    "PBratio": "2.10"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2421",
+    "Name": "建準",
+    "PEratio": "17.99",
+    "DividendYield": "3.85",
+    "PBratio": "4.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2423",
+    "Name": "固緯",
+    "PEratio": "19.18",
+    "DividendYield": "4.46",
+    "PBratio": "2.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2424",
+    "Name": "隴華",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2425",
+    "Name": "承啟",
+    "PEratio": "",
+    "DividendYield": "0.33",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2426",
+    "Name": "鼎元",
+    "PEratio": "",
+    "DividendYield": "0.18",
+    "PBratio": "4.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2427",
+    "Name": "三商電",
+    "PEratio": "13.89",
+    "DividendYield": "3.29",
+    "PBratio": "1.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2428",
+    "Name": "興勤",
+    "PEratio": "14.97",
+    "DividendYield": "3.35",
+    "PBratio": "2.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2429",
+    "Name": "銘旺科",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2430",
+    "Name": "燦坤",
+    "PEratio": "29.78",
+    "DividendYield": "3.89",
+    "PBratio": "0.54"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2431",
+    "Name": "聯昌",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.10"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2432",
+    "Name": "倚天酷碁-創",
+    "PEratio": "14.63",
+    "DividendYield": "6.12",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2433",
+    "Name": "互盛電",
+    "PEratio": "14.87",
+    "DividendYield": "5.95",
+    "PBratio": "1.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2434",
+    "Name": "統懋",
+    "PEratio": "1510.00",
+    "DividendYield": "",
+    "PBratio": "2.37"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2436",
+    "Name": "偉詮電",
+    "PEratio": "26.32",
+    "DividendYield": "2.71",
+    "PBratio": "3.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2438",
+    "Name": "翔耀",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2439",
+    "Name": "美律",
+    "PEratio": "16.66",
+    "DividendYield": "4.56",
+    "PBratio": "1.27"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2440",
+    "Name": "太空梭",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.55"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2441",
+    "Name": "超豐",
+    "PEratio": "20.72",
+    "DividendYield": "3.36",
+    "PBratio": "2.10"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2442",
+    "Name": "新美齊",
+    "PEratio": "3.54",
+    "DividendYield": "14.79",
+    "PBratio": "0.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2444",
+    "Name": "兆勁",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.66"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2449",
+    "Name": "京元電子",
+    "PEratio": "31.47",
+    "DividendYield": "0.53",
+    "PBratio": "6.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2450",
+    "Name": "神腦",
+    "PEratio": "17.30",
+    "DividendYield": "5.21",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2451",
+    "Name": "創見",
+    "PEratio": "20.22",
+    "DividendYield": "4.51",
+    "PBratio": "4.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2453",
+    "Name": "凌群",
+    "PEratio": "17.31",
+    "DividendYield": "5.19",
+    "PBratio": "2.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2454",
+    "Name": "聯發科",
+    "PEratio": "39.63",
+    "DividendYield": "2.05",
+    "PBratio": "10.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2455",
+    "Name": "全新",
+    "PEratio": "107.43",
+    "DividendYield": "0.83",
+    "PBratio": "17.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2457",
+    "Name": "飛宏",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2458",
+    "Name": "義隆",
+    "PEratio": "16.00",
+    "DividendYield": "5.18",
+    "PBratio": "3.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2459",
+    "Name": "敦吉",
+    "PEratio": "13.08",
+    "DividendYield": "6.21",
+    "PBratio": "1.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2460",
+    "Name": "建通",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.35"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2461",
+    "Name": "光群雷",
+    "PEratio": "",
+    "DividendYield": "5.91",
+    "PBratio": "0.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2462",
+    "Name": "良得電",
+    "PEratio": "80.19",
+    "DividendYield": "0.92",
+    "PBratio": "1.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2464",
+    "Name": "盟立",
+    "PEratio": "",
+    "DividendYield": "0.47",
+    "PBratio": "4.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2465",
+    "Name": "麗臺",
+    "PEratio": "178.21",
+    "DividendYield": "",
+    "PBratio": "6.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2466",
+    "Name": "冠西電",
+    "PEratio": "224.58",
+    "DividendYield": "",
+    "PBratio": "4.66"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2467",
+    "Name": "志聖",
+    "PEratio": "100.00",
+    "DividendYield": "1.01",
+    "PBratio": "12.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2468",
+    "Name": "華經",
+    "PEratio": "27.08",
+    "DividendYield": "2.95",
+    "PBratio": "1.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2471",
+    "Name": "資通",
+    "PEratio": "14.26",
+    "DividendYield": "6.38",
+    "PBratio": "2.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2472",
+    "Name": "立隆電",
+    "PEratio": "20.05",
+    "DividendYield": "2.00",
+    "PBratio": "3.17"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2474",
+    "Name": "可成",
+    "PEratio": "19.00",
+    "DividendYield": "4.40",
+    "PBratio": "0.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2476",
+    "Name": "鉅祥",
+    "PEratio": "27.82",
+    "DividendYield": "2.53",
+    "PBratio": "2.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2477",
+    "Name": "美隆電",
+    "PEratio": "12.59",
+    "DividendYield": "6.62",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2478",
+    "Name": "大毅",
+    "PEratio": "19.74",
+    "DividendYield": "2.66",
+    "PBratio": "1.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2480",
+    "Name": "敦陽科",
+    "PEratio": "17.25",
+    "DividendYield": "5.65",
+    "PBratio": "4.17"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2481",
+    "Name": "強茂",
+    "PEratio": "31.79",
+    "DividendYield": "1.81",
+    "PBratio": "2.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2482",
+    "Name": "連宇",
+    "PEratio": "",
+    "DividendYield": "0.59",
+    "PBratio": "1.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2483",
+    "Name": "百容",
+    "PEratio": "37.08",
+    "DividendYield": "1.35",
+    "PBratio": "0.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2484",
+    "Name": "希華",
+    "PEratio": "62.31",
+    "DividendYield": "1.73",
+    "PBratio": "1.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2485",
+    "Name": "兆赫",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2486",
+    "Name": "一詮",
+    "PEratio": "1047.73",
+    "DividendYield": "0.22",
+    "PBratio": "10.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2488",
+    "Name": "漢平",
+    "PEratio": "11.32",
+    "DividendYield": "5.81",
+    "PBratio": "1.47"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2489",
+    "Name": "瑞軒",
+    "PEratio": "29.38",
+    "DividendYield": "3.14",
+    "PBratio": "1.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2491",
+    "Name": "吉祥全",
+    "PEratio": "10.66",
+    "DividendYield": "",
+    "PBratio": "1.35"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2492",
+    "Name": "華新科",
+    "PEratio": "29.96",
+    "DividendYield": "1.69",
+    "PBratio": "1.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2493",
+    "Name": "揚博",
+    "PEratio": "29.01",
+    "DividendYield": "3.16",
+    "PBratio": "4.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2495",
+    "Name": "普安",
+    "PEratio": "36.11",
+    "DividendYield": "1.96",
+    "PBratio": "2.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2496",
+    "Name": "卓越",
+    "PEratio": "10.54",
+    "DividendYield": "7.76",
+    "PBratio": "1.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2497",
+    "Name": "怡利電",
+    "PEratio": "23.37",
+    "DividendYield": "3.52",
+    "PBratio": "2.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2498",
+    "Name": "宏達電",
+    "PEratio": "5.51",
+    "DividendYield": "",
+    "PBratio": "1.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2501",
+    "Name": "國建",
+    "PEratio": "8.45",
+    "DividendYield": "4.18",
+    "PBratio": "0.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2504",
+    "Name": "國產",
+    "PEratio": "10.73",
+    "DividendYield": "7.34",
+    "PBratio": "1.54"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2505",
+    "Name": "國揚",
+    "PEratio": "7.59",
+    "DividendYield": "5.56",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2506",
+    "Name": "太設",
+    "PEratio": "437.00",
+    "DividendYield": "2.29",
+    "PBratio": "0.41"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2509",
+    "Name": "全坤建",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2511",
+    "Name": "太子",
+    "PEratio": "24.24",
+    "DividendYield": "3.75",
+    "PBratio": "0.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2514",
+    "Name": "龍邦",
+    "PEratio": "7.09",
+    "DividendYield": "",
+    "PBratio": "0.37"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2515",
+    "Name": "中工",
+    "PEratio": "33.50",
+    "DividendYield": "3.73",
+    "PBratio": "0.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2516",
+    "Name": "新建",
+    "PEratio": "10.98",
+    "DividendYield": "",
+    "PBratio": "1.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2520",
+    "Name": "冠德",
+    "PEratio": "11.49",
+    "DividendYield": "5.33",
+    "PBratio": "0.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2524",
+    "Name": "京城",
+    "PEratio": "21.45",
+    "DividendYield": "",
+    "PBratio": "0.64"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2527",
+    "Name": "宏璟",
+    "PEratio": "36.99",
+    "DividendYield": "4.36",
+    "PBratio": "0.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2528",
+    "Name": "皇普",
+    "PEratio": "6.39",
+    "DividendYield": "13.30",
+    "PBratio": "1.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2530",
+    "Name": "華建",
+    "PEratio": "10.44",
+    "DividendYield": "8.73",
+    "PBratio": "1.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2534",
+    "Name": "宏盛",
+    "PEratio": "9.22",
+    "DividendYield": "7.89",
+    "PBratio": "0.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2535",
+    "Name": "達欣工",
+    "PEratio": "11.55",
+    "DividendYield": "6.13",
+    "PBratio": "1.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2536",
+    "Name": "宏普",
+    "PEratio": "6.79",
+    "DividendYield": "2.31",
+    "PBratio": "0.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2537",
+    "Name": "聯上發",
+    "PEratio": "69.00",
+    "DividendYield": "",
+    "PBratio": "0.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2538",
+    "Name": "基泰",
+    "PEratio": "28.40",
+    "DividendYield": "7.04",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2539",
+    "Name": "櫻花建",
+    "PEratio": "11.92",
+    "DividendYield": "6.79",
+    "PBratio": "2.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2540",
+    "Name": "愛山林",
+    "PEratio": "86.03",
+    "DividendYield": "6.84",
+    "PBratio": "3.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2542",
+    "Name": "興富發",
+    "PEratio": "18.62",
+    "DividendYield": "6.39",
+    "PBratio": "1.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2543",
+    "Name": "皇昌",
+    "PEratio": "17.45",
+    "DividendYield": "10.73",
+    "PBratio": "2.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2545",
+    "Name": "皇翔",
+    "PEratio": "20.81",
+    "DividendYield": "12.08",
+    "PBratio": "0.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2546",
+    "Name": "根基",
+    "PEratio": "8.97",
+    "DividendYield": "7.03",
+    "PBratio": "1.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2547",
+    "Name": "日勝生",
+    "PEratio": "3.73",
+    "DividendYield": "7.66",
+    "PBratio": "0.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2548",
+    "Name": "華固",
+    "PEratio": "12.57",
+    "DividendYield": "6.67",
+    "PBratio": "1.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2597",
+    "Name": "潤弘",
+    "PEratio": "14.19",
+    "DividendYield": "6.34",
+    "PBratio": "5.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2601",
+    "Name": "益航",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2603",
+    "Name": "長榮",
+    "PEratio": "6.31",
+    "DividendYield": "8.00",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2605",
+    "Name": "新興",
+    "PEratio": "22.72",
+    "DividendYield": "3.03",
+    "PBratio": "1.10"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2606",
+    "Name": "裕民",
+    "PEratio": "14.01",
+    "DividendYield": "4.64",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2607",
+    "Name": "榮運",
+    "PEratio": "8.89",
+    "DividendYield": "5.60",
+    "PBratio": "0.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2608",
+    "Name": "嘉里大榮",
+    "PEratio": "15.23",
+    "DividendYield": "5.50",
+    "PBratio": "1.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2609",
+    "Name": "陽明",
+    "PEratio": "10.10",
+    "DividendYield": "4.04",
+    "PBratio": "0.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2610",
+    "Name": "華航",
+    "PEratio": "7.46",
+    "DividendYield": "4.54",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2611",
+    "Name": "志信",
+    "PEratio": "26.06",
+    "DividendYield": "3.84",
+    "PBratio": "0.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2612",
+    "Name": "中航",
+    "PEratio": "9.98",
+    "DividendYield": "4.04",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2613",
+    "Name": "中櫃",
+    "PEratio": "19.74",
+    "DividendYield": "4.44",
+    "PBratio": "0.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2614",
+    "Name": "東森",
+    "PEratio": "10.20",
+    "DividendYield": "5.91",
+    "PBratio": "1.55"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2615",
+    "Name": "萬海",
+    "PEratio": "6.69",
+    "DividendYield": "4.00",
+    "PBratio": "0.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2616",
+    "Name": "山隆",
+    "PEratio": "",
+    "DividendYield": "2.11",
+    "PBratio": "0.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2617",
+    "Name": "台航",
+    "PEratio": "8.96",
+    "DividendYield": "5.06",
+    "PBratio": "0.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2618",
+    "Name": "長榮航",
+    "PEratio": "6.89",
+    "DividendYield": "6.00",
+    "PBratio": "1.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2630",
+    "Name": "亞航",
+    "PEratio": "48.25",
+    "DividendYield": "1.87",
+    "PBratio": "2.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2633",
+    "Name": "台灣高鐵",
+    "PEratio": "22.61",
+    "DividendYield": "4.35",
+    "PBratio": "2.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2634",
+    "Name": "漢翔",
+    "PEratio": "60.90",
+    "DividendYield": "1.64",
+    "PBratio": "2.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2636",
+    "Name": "台驊控股",
+    "PEratio": "8.63",
+    "DividendYield": "7.49",
+    "PBratio": "0.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2637",
+    "Name": "慧洋-KY",
+    "PEratio": "13.57",
+    "DividendYield": "4.90",
+    "PBratio": "1.11"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2642",
+    "Name": "宅配通",
+    "PEratio": "",
+    "DividendYield": "2.29",
+    "PBratio": "1.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2645",
+    "Name": "長榮航太",
+    "PEratio": "28.66",
+    "DividendYield": "3.19",
+    "PBratio": "4.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2646",
+    "Name": "星宇航空",
+    "PEratio": "226.11",
+    "DividendYield": "",
+    "PBratio": "1.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2701",
+    "Name": "萬企",
+    "PEratio": "19.11",
+    "DividendYield": "2.62",
+    "PBratio": "0.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2702",
+    "Name": "華園",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2704",
+    "Name": "國賓",
+    "PEratio": "73.86",
+    "DividendYield": "1.19",
+    "PBratio": "0.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2705",
+    "Name": "六福",
+    "PEratio": "19.02",
+    "DividendYield": "",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2706",
+    "Name": "第一店",
+    "PEratio": "19.08",
+    "DividendYield": "2.82",
+    "PBratio": "0.61"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2707",
+    "Name": "晶華",
+    "PEratio": "15.05",
+    "DividendYield": "6.25",
+    "PBratio": "5.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2712",
+    "Name": "遠雄來",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2722",
+    "Name": "夏都",
+    "PEratio": "",
+    "DividendYield": "0.64",
+    "PBratio": "1.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2723",
+    "Name": "美食-KY",
+    "PEratio": "",
+    "DividendYield": "4.72",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2727",
+    "Name": "王品",
+    "PEratio": "14.26",
+    "DividendYield": "7.05",
+    "PBratio": "4.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2731",
+    "Name": "雄獅",
+    "PEratio": "9.12",
+    "DividendYield": "8.03",
+    "PBratio": "3.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2739",
+    "Name": "寒舍",
+    "PEratio": "14.68",
+    "DividendYield": "7.45",
+    "PBratio": "1.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2748",
+    "Name": "雲品",
+    "PEratio": "18.29",
+    "DividendYield": "4.41",
+    "PBratio": "1.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2753",
+    "Name": "八方雲集",
+    "PEratio": "13.86",
+    "DividendYield": "6.74",
+    "PBratio": "3.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2762",
+    "Name": "世界健身-KY",
+    "PEratio": "19.65",
+    "DividendYield": "8.10",
+    "PBratio": "2.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2801",
+    "Name": "彰銀",
+    "PEratio": "14.04",
+    "DividendYield": "4.72",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2812",
+    "Name": "台中銀",
+    "PEratio": "13.40",
+    "DividendYield": "5.27",
+    "PBratio": "1.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2816",
+    "Name": "旺旺保",
+    "PEratio": "6.46",
+    "DividendYield": "4.98",
+    "PBratio": "0.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2820",
+    "Name": "華票",
+    "PEratio": "12.69",
+    "DividendYield": "5.29",
+    "PBratio": "0.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2832",
+    "Name": "台產",
+    "PEratio": "10.61",
+    "DividendYield": "3.85",
+    "PBratio": "1.11"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2834",
+    "Name": "臺企銀",
+    "PEratio": "12.90",
+    "DividendYield": "6.15",
+    "PBratio": "1.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2836",
+    "Name": "高雄銀",
+    "PEratio": "17.43",
+    "DividendYield": "3.80",
+    "PBratio": "0.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2838",
+    "Name": "聯邦銀",
+    "PEratio": "15.00",
+    "DividendYield": "5.27",
+    "PBratio": "1.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2845",
+    "Name": "遠東銀",
+    "PEratio": "14.36",
+    "DividendYield": "5.10",
+    "PBratio": "0.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2849",
+    "Name": "安泰銀",
+    "PEratio": "17.59",
+    "DividendYield": "2.73",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2850",
+    "Name": "新產",
+    "PEratio": "10.22",
+    "DividendYield": "5.79",
+    "PBratio": "1.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2851",
+    "Name": "中再保",
+    "PEratio": "8.39",
+    "DividendYield": "7.17",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2852",
+    "Name": "第一保",
+    "PEratio": "8.94",
+    "DividendYield": "6.36",
+    "PBratio": "0.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2855",
+    "Name": "統一證",
+    "PEratio": "11.83",
+    "DividendYield": "5.94",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2867",
+    "Name": "三商壽",
+    "PEratio": "39.20",
+    "DividendYield": "",
+    "PBratio": "1.15"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2880",
+    "Name": "華南金",
+    "PEratio": "17.39",
+    "DividendYield": "4.08",
+    "PBratio": "1.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2881",
+    "Name": "富邦金",
+    "PEratio": "11.43",
+    "DividendYield": "4.80",
+    "PBratio": "1.41"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2882",
+    "Name": "國泰金",
+    "PEratio": "11.30",
+    "DividendYield": "4.69",
+    "PBratio": "1.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2883",
+    "Name": "凱基金",
+    "PEratio": "13.15",
+    "DividendYield": "4.46",
+    "PBratio": "1.21"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2884",
+    "Name": "玉山金",
+    "PEratio": "15.31",
+    "DividendYield": "4.31",
+    "PBratio": "1.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2885",
+    "Name": "元大金",
+    "PEratio": "19.05",
+    "DividendYield": "4.21",
+    "PBratio": "2.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2886",
+    "Name": "兆豐金",
+    "PEratio": "17.01",
+    "DividendYield": "3.99",
+    "PBratio": "1.52"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2887",
+    "Name": "台新新光金",
+    "PEratio": "17.18",
+    "DividendYield": "3.69",
+    "PBratio": "1.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2889",
+    "Name": "國票金",
+    "PEratio": "23.33",
+    "DividendYield": "4.01",
+    "PBratio": "1.16"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2890",
+    "Name": "永豐金",
+    "PEratio": "17.43",
+    "DividendYield": "4.08",
+    "PBratio": "1.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2891",
+    "Name": "中信金",
+    "PEratio": "13.33",
+    "DividendYield": "4.32",
+    "PBratio": "2.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2892",
+    "Name": "第一金",
+    "PEratio": "15.13",
+    "DividendYield": "4.24",
+    "PBratio": "1.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2897",
+    "Name": "王道銀行",
+    "PEratio": "16.92",
+    "DividendYield": "5.12",
+    "PBratio": "0.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2901",
+    "Name": "欣欣",
+    "PEratio": "61.84",
+    "DividendYield": "1.57",
+    "PBratio": "1.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2903",
+    "Name": "遠百",
+    "PEratio": "14.26",
+    "DividendYield": "5.62",
+    "PBratio": "1.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2904",
+    "Name": "匯僑",
+    "PEratio": "16.58",
+    "DividendYield": "4.31",
+    "PBratio": "0.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2905",
+    "Name": "三商",
+    "PEratio": "19.31",
+    "DividendYield": "2.16",
+    "PBratio": "0.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2906",
+    "Name": "高林",
+    "PEratio": "26.17",
+    "DividendYield": "4.88",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2908",
+    "Name": "特力",
+    "PEratio": "90.00",
+    "DividendYield": "2.66",
+    "PBratio": "1.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2910",
+    "Name": "統領",
+    "PEratio": "18.13",
+    "DividendYield": "4.66",
+    "PBratio": "1.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2911",
+    "Name": "麗嬰房",
+    "PEratio": "2.74",
+    "DividendYield": "",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2912",
+    "Name": "統一超",
+    "PEratio": "20.78",
+    "DividendYield": "4.02",
+    "PBratio": "5.47"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2913",
+    "Name": "農林",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2915",
+    "Name": "潤泰全",
+    "PEratio": "4.91",
+    "DividendYield": "4.26",
+    "PBratio": "0.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2923",
+    "Name": "鼎固-KY",
+    "PEratio": "",
+    "DividendYield": "0.54",
+    "PBratio": "0.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2929",
+    "Name": "淘帝-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2939",
+    "Name": "永邑-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.03"
+  },
+  {
+    "Date": "1150428",
+    "Code": "2945",
+    "Name": "三商家購",
+    "PEratio": "19.16",
+    "DividendYield": "3.66",
+    "PBratio": "1.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3002",
+    "Name": "歐格",
+    "PEratio": "50.69",
+    "DividendYield": "1.81",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3003",
+    "Name": "健和興",
+    "PEratio": "54.24",
+    "DividendYield": "1.86",
+    "PBratio": "1.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3004",
+    "Name": "豐達科",
+    "PEratio": "22.91",
+    "DividendYield": "2.16",
+    "PBratio": "2.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3005",
+    "Name": "神基",
+    "PEratio": "11.60",
+    "DividendYield": "6.97",
+    "PBratio": "2.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3006",
+    "Name": "晶豪科",
+    "PEratio": "205.00",
+    "DividendYield": "0.54",
+    "PBratio": "4.88"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3008",
+    "Name": "大立光",
+    "PEratio": "16.10",
+    "DividendYield": "3.10",
+    "PBratio": "1.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3010",
+    "Name": "華立",
+    "PEratio": "15.16",
+    "DividendYield": "3.96",
+    "PBratio": "1.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3011",
+    "Name": "今皓",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3013",
+    "Name": "晟銘電",
+    "PEratio": "27.67",
+    "DividendYield": "0.72",
+    "PBratio": "4.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3014",
+    "Name": "聯陽",
+    "PEratio": "13.38",
+    "DividendYield": "6.88",
+    "PBratio": "2.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3015",
+    "Name": "全漢",
+    "PEratio": "26.88",
+    "DividendYield": "4.40",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3016",
+    "Name": "嘉晶",
+    "PEratio": "1060.00",
+    "DividendYield": "0.67",
+    "PBratio": "4.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3017",
+    "Name": "奇鋐",
+    "PEratio": "56.83",
+    "DividendYield": "0.76",
+    "PBratio": "24.44"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3018",
+    "Name": "隆銘綠能",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3019",
+    "Name": "亞光",
+    "PEratio": "21.67",
+    "DividendYield": "3.22",
+    "PBratio": "2.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3021",
+    "Name": "鴻名",
+    "PEratio": "50.00",
+    "DividendYield": "3.64",
+    "PBratio": "0.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3022",
+    "Name": "威強電",
+    "PEratio": "14.88",
+    "DividendYield": "5.08",
+    "PBratio": "1.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3023",
+    "Name": "信邦",
+    "PEratio": "21.53",
+    "DividendYield": "3.64",
+    "PBratio": "3.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3024",
+    "Name": "憶聲",
+    "PEratio": "48.21",
+    "DividendYield": "1.63",
+    "PBratio": "1.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3025",
+    "Name": "星通",
+    "PEratio": "17.74",
+    "DividendYield": "5.23",
+    "PBratio": "3.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3026",
+    "Name": "禾伸堂",
+    "PEratio": "35.56",
+    "DividendYield": "2.48",
+    "PBratio": "3.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3027",
+    "Name": "盛達",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3028",
+    "Name": "增你強",
+    "PEratio": "22.48",
+    "DividendYield": "4.24",
+    "PBratio": "2.66"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3029",
+    "Name": "零壹",
+    "PEratio": "14.66",
+    "DividendYield": "5.75",
+    "PBratio": "2.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3030",
+    "Name": "德律",
+    "PEratio": "31.22",
+    "DividendYield": "2.14",
+    "PBratio": "8.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3031",
+    "Name": "佰鴻",
+    "PEratio": "30.96",
+    "DividendYield": "2.96",
+    "PBratio": "2.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3032",
+    "Name": "偉訓",
+    "PEratio": "",
+    "DividendYield": "4.35",
+    "PBratio": "2.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3033",
+    "Name": "威健",
+    "PEratio": "20.11",
+    "DividendYield": "5.75",
+    "PBratio": "1.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3034",
+    "Name": "聯詠",
+    "PEratio": "15.35",
+    "DividendYield": "5.58",
+    "PBratio": "3.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3035",
+    "Name": "智原",
+    "PEratio": "62.81",
+    "DividendYield": "1.02",
+    "PBratio": "3.52"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3036",
+    "Name": "文曄",
+    "PEratio": "21.38",
+    "DividendYield": "3.77",
+    "PBratio": "2.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3037",
+    "Name": "欣興",
+    "PEratio": "190.97",
+    "DividendYield": "0.24",
+    "PBratio": "12.66"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3038",
+    "Name": "全台",
+    "PEratio": "20.68",
+    "DividendYield": "5.23",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3040",
+    "Name": "遠見",
+    "PEratio": "142.74",
+    "DividendYield": "7.91",
+    "PBratio": "1.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3041",
+    "Name": "揚智",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3042",
+    "Name": "晶技",
+    "PEratio": "28.15",
+    "DividendYield": "3.21",
+    "PBratio": "3.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3043",
+    "Name": "科風",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3044",
+    "Name": "健鼎",
+    "PEratio": "23.29",
+    "DividendYield": "2.80",
+    "PBratio": "4.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3045",
+    "Name": "台灣大",
+    "PEratio": "23.27",
+    "DividendYield": "4.32",
+    "PBratio": "3.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3046",
+    "Name": "建碁",
+    "PEratio": "11.82",
+    "DividendYield": "6.33",
+    "PBratio": "2.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3047",
+    "Name": "訊舟",
+    "PEratio": "",
+    "DividendYield": "2.05",
+    "PBratio": "1.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3048",
+    "Name": "益登",
+    "PEratio": "19.63",
+    "DividendYield": "2.53",
+    "PBratio": "1.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3049",
+    "Name": "精金",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3050",
+    "Name": "鈺德",
+    "PEratio": "311.25",
+    "DividendYield": "2.01",
+    "PBratio": "0.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3051",
+    "Name": "力特",
+    "PEratio": "25.98",
+    "DividendYield": "1.89",
+    "PBratio": "1.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3052",
+    "Name": "夆典",
+    "PEratio": "9.73",
+    "DividendYield": "5.61",
+    "PBratio": "0.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3054",
+    "Name": "立萬利",
+    "PEratio": "20.74",
+    "DividendYield": "1.14",
+    "PBratio": "4.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3055",
+    "Name": "蔚華科",
+    "PEratio": "",
+    "DividendYield": "1.29",
+    "PBratio": "5.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3056",
+    "Name": "富華新",
+    "PEratio": "13.08",
+    "DividendYield": "4.36",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3057",
+    "Name": "喬鼎",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3058",
+    "Name": "立德",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3059",
+    "Name": "華晶科",
+    "PEratio": "32.68",
+    "DividendYield": "2.49",
+    "PBratio": "1.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3060",
+    "Name": "銘異",
+    "PEratio": "",
+    "DividendYield": "0.73",
+    "PBratio": "1.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3062",
+    "Name": "建漢",
+    "PEratio": "37.79",
+    "DividendYield": "",
+    "PBratio": "1.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3090",
+    "Name": "日電貿",
+    "PEratio": "22.87",
+    "DividendYield": "4.81",
+    "PBratio": "2.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3092",
+    "Name": "鴻碩",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3094",
+    "Name": "聯傑",
+    "PEratio": "108.75",
+    "DividendYield": "0.96",
+    "PBratio": "2.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3130",
+    "Name": "一零四",
+    "PEratio": "15.02",
+    "DividendYield": "6.65",
+    "PBratio": "4.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3135",
+    "Name": "凌航",
+    "PEratio": "24.22",
+    "DividendYield": "3.36",
+    "PBratio": "5.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3138",
+    "Name": "耀登",
+    "PEratio": "102.94",
+    "DividendYield": "1.06",
+    "PBratio": "3.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3149",
+    "Name": "正達",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3150",
+    "Name": "鈺寶-創",
+    "PEratio": "",
+    "DividendYield": "2.61",
+    "PBratio": "1.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3164",
+    "Name": "景岳",
+    "PEratio": "27.20",
+    "DividendYield": "4.46",
+    "PBratio": "1.16"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3167",
+    "Name": "大量",
+    "PEratio": "91.60",
+    "DividendYield": "0.54",
+    "PBratio": "19.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3168",
+    "Name": "眾福科",
+    "PEratio": "16.48",
+    "DividendYield": "6.84",
+    "PBratio": "1.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3189",
+    "Name": "景碩",
+    "PEratio": "145.56",
+    "DividendYield": "0.34",
+    "PBratio": "7.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3209",
+    "Name": "全科",
+    "PEratio": "17.77",
+    "DividendYield": "4.67",
+    "PBratio": "2.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3229",
+    "Name": "晟鈦",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3231",
+    "Name": "緯創",
+    "PEratio": "16.30",
+    "DividendYield": "3.91",
+    "PBratio": "2.52"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3257",
+    "Name": "虹冠電",
+    "PEratio": "15.85",
+    "DividendYield": "5.17",
+    "PBratio": "2.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3266",
+    "Name": "昇陽",
+    "PEratio": "23.45",
+    "DividendYield": "3.68",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3296",
+    "Name": "勝德",
+    "PEratio": "32.54",
+    "DividendYield": "",
+    "PBratio": "1.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3305",
+    "Name": "昇貿",
+    "PEratio": "35.17",
+    "DividendYield": "2.18",
+    "PBratio": "2.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3308",
+    "Name": "聯德",
+    "PEratio": "31.18",
+    "DividendYield": "",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3311",
+    "Name": "閎暉",
+    "PEratio": "23.17",
+    "DividendYield": "0.97",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3312",
+    "Name": "弘憶股",
+    "PEratio": "26.17",
+    "DividendYield": "3.14",
+    "PBratio": "1.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3321",
+    "Name": "同泰",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3338",
+    "Name": "泰碩",
+    "PEratio": "41.94",
+    "DividendYield": "1.72",
+    "PBratio": "3.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3346",
+    "Name": "麗清",
+    "PEratio": "159.55",
+    "DividendYield": "0.63",
+    "PBratio": "0.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3356",
+    "Name": "奇偶",
+    "PEratio": "8.44",
+    "DividendYield": "6.68",
+    "PBratio": "1.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3376",
+    "Name": "新日興",
+    "PEratio": "125.77",
+    "DividendYield": "2.93",
+    "PBratio": "2.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3380",
+    "Name": "明泰",
+    "PEratio": "",
+    "DividendYield": "1.43",
+    "PBratio": "2.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3406",
+    "Name": "玉晶光",
+    "PEratio": "15.23",
+    "DividendYield": "3.40",
+    "PBratio": "2.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3413",
+    "Name": "京鼎",
+    "PEratio": "14.47",
+    "DividendYield": "3.57",
+    "PBratio": "2.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3416",
+    "Name": "融程電",
+    "PEratio": "21.12",
+    "DividendYield": "3.29",
+    "PBratio": "3.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3419",
+    "Name": "譁裕",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3432",
+    "Name": "台端",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3437",
+    "Name": "榮創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3443",
+    "Name": "創意",
+    "PEratio": "148.95",
+    "DividendYield": "0.48",
+    "PBratio": "43.48"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3447",
+    "Name": "展達",
+    "PEratio": "23.30",
+    "DividendYield": "2.97",
+    "PBratio": "2.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3450",
+    "Name": "聯鈞",
+    "PEratio": "60.98",
+    "DividendYield": "0.33",
+    "PBratio": "8.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3481",
+    "Name": "群創",
+    "PEratio": "811.67",
+    "DividendYield": "4.11",
+    "PBratio": "0.88"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3494",
+    "Name": "誠研",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3501",
+    "Name": "維熹",
+    "PEratio": "15.67",
+    "DividendYield": "4.26",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3504",
+    "Name": "揚明光",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.61"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3515",
+    "Name": "華擎",
+    "PEratio": "15.71",
+    "DividendYield": "4.58",
+    "PBratio": "2.47"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3518",
+    "Name": "柏騰",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3528",
+    "Name": "安馳",
+    "PEratio": "34.22",
+    "DividendYield": "1.75",
+    "PBratio": "2.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3530",
+    "Name": "晶相光",
+    "PEratio": "36.26",
+    "DividendYield": "1.27",
+    "PBratio": "1.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3532",
+    "Name": "台勝科",
+    "PEratio": "112.66",
+    "DividendYield": "0.56",
+    "PBratio": "2.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3533",
+    "Name": "嘉澤",
+    "PEratio": "38.00",
+    "DividendYield": "1.31",
+    "PBratio": "7.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3535",
+    "Name": "晶彩科",
+    "PEratio": "",
+    "DividendYield": "0.40",
+    "PBratio": "9.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3543",
+    "Name": "州巧",
+    "PEratio": "",
+    "DividendYield": "1.52",
+    "PBratio": "1.44"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3545",
+    "Name": "敦泰",
+    "PEratio": "",
+    "DividendYield": "1.60",
+    "PBratio": "1.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3550",
+    "Name": "聯穎",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3557",
+    "Name": "嘉威",
+    "PEratio": "3055.00",
+    "DividendYield": "0.98",
+    "PBratio": "1.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3563",
+    "Name": "牧德",
+    "PEratio": "56.58",
+    "DividendYield": "1.57",
+    "PBratio": "10.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3576",
+    "Name": "聯合再生",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3583",
+    "Name": "辛耘",
+    "PEratio": "53.40",
+    "DividendYield": "0.81",
+    "PBratio": "9.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3588",
+    "Name": "通嘉",
+    "PEratio": "129.18",
+    "DividendYield": "0.79",
+    "PBratio": "2.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3591",
+    "Name": "艾笛森",
+    "PEratio": "",
+    "DividendYield": "3.27",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3592",
+    "Name": "瑞鼎",
+    "PEratio": "13.13",
+    "DividendYield": "6.10",
+    "PBratio": "1.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3593",
+    "Name": "力銘",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3596",
+    "Name": "智易",
+    "PEratio": "12.98",
+    "DividendYield": "5.50",
+    "PBratio": "2.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3605",
+    "Name": "宏致",
+    "PEratio": "20.69",
+    "DividendYield": "2.01",
+    "PBratio": "1.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3607",
+    "Name": "谷崧",
+    "PEratio": "740.00",
+    "DividendYield": "5.41",
+    "PBratio": "1.03"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3617",
+    "Name": "碩天",
+    "PEratio": "13.03",
+    "DividendYield": "5.31",
+    "PBratio": "1.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3622",
+    "Name": "洋華",
+    "PEratio": "9.05",
+    "DividendYield": "5.81",
+    "PBratio": "1.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3645",
+    "Name": "達邁",
+    "PEratio": "66.01",
+    "DividendYield": "1.19",
+    "PBratio": "4.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3652",
+    "Name": "精聯",
+    "PEratio": "23.88",
+    "DividendYield": "3.75",
+    "PBratio": "1.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3653",
+    "Name": "健策",
+    "PEratio": "137.65",
+    "DividendYield": "0.44",
+    "PBratio": "31.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3661",
+    "Name": "世芯-KY",
+    "PEratio": "58.08",
+    "DividendYield": "0.86",
+    "PBratio": "7.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3665",
+    "Name": "貿聯-KY",
+    "PEratio": "56.95",
+    "DividendYield": "0.57",
+    "PBratio": "11.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3669",
+    "Name": "圓展",
+    "PEratio": "33.05",
+    "DividendYield": "2.68",
+    "PBratio": "1.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3673",
+    "Name": "TPK-KY",
+    "PEratio": "22.18",
+    "DividendYield": "3.00",
+    "PBratio": "0.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3679",
+    "Name": "新至陞",
+    "PEratio": "12.19",
+    "DividendYield": "7.56",
+    "PBratio": "1.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3686",
+    "Name": "達能",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3694",
+    "Name": "海華",
+    "PEratio": "15.59",
+    "DividendYield": "3.72",
+    "PBratio": "2.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3701",
+    "Name": "大眾控",
+    "PEratio": "",
+    "DividendYield": "0.30",
+    "PBratio": "3.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3702",
+    "Name": "大聯大",
+    "PEratio": "16.53",
+    "DividendYield": "3.22",
+    "PBratio": "2.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3703",
+    "Name": "欣陸",
+    "PEratio": "11.61",
+    "DividendYield": "5.02",
+    "PBratio": "0.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3704",
+    "Name": "合勤控",
+    "PEratio": "22.35",
+    "DividendYield": "1.15",
+    "PBratio": "1.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3705",
+    "Name": "永信",
+    "PEratio": "16.68",
+    "DividendYield": "5.43",
+    "PBratio": "1.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3706",
+    "Name": "神達",
+    "PEratio": "15.92",
+    "DividendYield": "4.88",
+    "PBratio": "1.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3708",
+    "Name": "上緯投控",
+    "PEratio": "3.15",
+    "DividendYield": "5.08",
+    "PBratio": "0.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3711",
+    "Name": "日月光投控",
+    "PEratio": "53.34",
+    "DividendYield": "1.33",
+    "PBratio": "6.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3712",
+    "Name": "永崴投控",
+    "PEratio": "",
+    "DividendYield": "14.85",
+    "PBratio": "1.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3714",
+    "Name": "富采",
+    "PEratio": "",
+    "DividendYield": "1.26",
+    "PBratio": "1.27"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3715",
+    "Name": "定穎投控",
+    "PEratio": "67.80",
+    "DividendYield": "0.60",
+    "PBratio": "4.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3716",
+    "Name": "中化控股",
+    "PEratio": "15.56",
+    "DividendYield": "3.13",
+    "PBratio": "0.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "3717",
+    "Name": "聯嘉投控",
+    "PEratio": "249.38",
+    "DividendYield": "1.00",
+    "PBratio": "1.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4104",
+    "Name": "佳醫",
+    "PEratio": "15.43",
+    "DividendYield": "5.93",
+    "PBratio": "1.35"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4106",
+    "Name": "雃博",
+    "PEratio": "18.50",
+    "DividendYield": "4.50",
+    "PBratio": "0.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4108",
+    "Name": "懷特",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4119",
+    "Name": "旭富",
+    "PEratio": "52.78",
+    "DividendYield": "1.58",
+    "PBratio": "1.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4133",
+    "Name": "亞諾法",
+    "PEratio": "",
+    "DividendYield": "0.51",
+    "PBratio": "1.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4137",
+    "Name": "麗豐-KY",
+    "PEratio": "14.80",
+    "DividendYield": "9.48",
+    "PBratio": "1.65"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4142",
+    "Name": "國光生",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4148",
+    "Name": "全宇生技-KY",
+    "PEratio": "16.51",
+    "DividendYield": "2.66",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4155",
+    "Name": "訊映",
+    "PEratio": "22.63",
+    "DividendYield": "2.33",
+    "PBratio": "0.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4164",
+    "Name": "承業醫",
+    "PEratio": "30.74",
+    "DividendYield": "3.77",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4169",
+    "Name": "泰宗",
+    "PEratio": "492.19",
+    "DividendYield": "0.23",
+    "PBratio": "8.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4190",
+    "Name": "佐登-KY",
+    "PEratio": "",
+    "DividendYield": "2.01",
+    "PBratio": "0.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4306",
+    "Name": "炎洲",
+    "PEratio": "51.15",
+    "DividendYield": "5.26",
+    "PBratio": "0.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4414",
+    "Name": "如興",
+    "PEratio": "16.09",
+    "DividendYield": "1.07",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4426",
+    "Name": "利勤",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4438",
+    "Name": "廣越",
+    "PEratio": "19.79",
+    "DividendYield": "4.09",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4439",
+    "Name": "冠星-KY",
+    "PEratio": "12.82",
+    "DividendYield": "4.04",
+    "PBratio": "1.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4440",
+    "Name": "宜新實業",
+    "PEratio": "15.79",
+    "DividendYield": "5.56",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4441",
+    "Name": "振大環球",
+    "PEratio": "13.88",
+    "DividendYield": "5.71",
+    "PBratio": "1.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4526",
+    "Name": "東台",
+    "PEratio": "19.20",
+    "DividendYield": "2.86",
+    "PBratio": "1.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4532",
+    "Name": "瑞智",
+    "PEratio": "10.93",
+    "DividendYield": "6.56",
+    "PBratio": "1.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4536",
+    "Name": "拓凱",
+    "PEratio": "10.15",
+    "DividendYield": "5.28",
+    "PBratio": "1.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4540",
+    "Name": "全球傳動",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.03"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4545",
+    "Name": "銘鈺",
+    "PEratio": "176.18",
+    "DividendYield": "0.43",
+    "PBratio": "1.21"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4551",
+    "Name": "智伸科",
+    "PEratio": "22.02",
+    "DividendYield": "3.16",
+    "PBratio": "1.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4552",
+    "Name": "力達-KY",
+    "PEratio": "9.66",
+    "DividendYield": "3.00",
+    "PBratio": "0.37"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4555",
+    "Name": "氣立",
+    "PEratio": "199.25",
+    "DividendYield": "1.25",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4557",
+    "Name": "永新-KY",
+    "PEratio": "",
+    "DividendYield": "4.03",
+    "PBratio": "0.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4560",
+    "Name": "強信-KY",
+    "PEratio": "12.33",
+    "DividendYield": "4.03",
+    "PBratio": "1.27"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4562",
+    "Name": "穎漢",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4564",
+    "Name": "元翎",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4566",
+    "Name": "時碩工業",
+    "PEratio": "48.24",
+    "DividendYield": "1.04",
+    "PBratio": "1.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4569",
+    "Name": "六方科-KY",
+    "PEratio": "45.19",
+    "DividendYield": "1.73",
+    "PBratio": "2.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4571",
+    "Name": "鈞興-KY",
+    "PEratio": "17.73",
+    "DividendYield": "3.12",
+    "PBratio": "2.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4572",
+    "Name": "駐龍",
+    "PEratio": "48.50",
+    "DividendYield": "3.44",
+    "PBratio": "2.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4576",
+    "Name": "大銀微系統",
+    "PEratio": "99.00",
+    "DividendYield": "0.40",
+    "PBratio": "5.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4581",
+    "Name": "光隆精密-KY",
+    "PEratio": "10.55",
+    "DividendYield": "6.01",
+    "PBratio": "1.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4583",
+    "Name": "台灣精銳",
+    "PEratio": "63.33",
+    "DividendYield": "1.39",
+    "PBratio": "5.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4585",
+    "Name": "達明",
+    "PEratio": "243.08",
+    "DividendYield": "0.32",
+    "PBratio": "4.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4588",
+    "Name": "玖鼎電力",
+    "PEratio": "18.63",
+    "DividendYield": "5.03",
+    "PBratio": "2.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4590",
+    "Name": "富田-創",
+    "PEratio": "27.27",
+    "DividendYield": "3.11",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4720",
+    "Name": "德淵",
+    "PEratio": "37.09",
+    "DividendYield": "1.46",
+    "PBratio": "1.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4722",
+    "Name": "國精化",
+    "PEratio": "92.13",
+    "DividendYield": "0.66",
+    "PBratio": "5.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4736",
+    "Name": "泰博",
+    "PEratio": "8.37",
+    "DividendYield": "3.95",
+    "PBratio": "1.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4737",
+    "Name": "華廣",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4739",
+    "Name": "康普",
+    "PEratio": "53.21",
+    "DividendYield": "1.20",
+    "PBratio": "1.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4746",
+    "Name": "台耀",
+    "PEratio": "15.15",
+    "DividendYield": "5.40",
+    "PBratio": "0.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4755",
+    "Name": "三福化",
+    "PEratio": "41.76",
+    "DividendYield": "2.39",
+    "PBratio": "2.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4763",
+    "Name": "材料*-KY",
+    "PEratio": "6.95",
+    "DividendYield": "7.19",
+    "PBratio": "2.11"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4764",
+    "Name": "雙鍵",
+    "PEratio": "194.26",
+    "DividendYield": "0.42",
+    "PBratio": "8.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4766",
+    "Name": "南寶",
+    "PEratio": "17.09",
+    "DividendYield": "5.20",
+    "PBratio": "3.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4770",
+    "Name": "上品",
+    "PEratio": "22.25",
+    "DividendYield": "2.64",
+    "PBratio": "2.21"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4771",
+    "Name": "望隼",
+    "PEratio": "14.97",
+    "DividendYield": "3.69",
+    "PBratio": "2.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4807",
+    "Name": "日成-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4904",
+    "Name": "遠傳",
+    "PEratio": "24.78",
+    "DividendYield": "4.04",
+    "PBratio": "3.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4906",
+    "Name": "正文",
+    "PEratio": "",
+    "DividendYield": "1.41",
+    "PBratio": "1.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4912",
+    "Name": "聯德控股-KY",
+    "PEratio": "42.55",
+    "DividendYield": "1.14",
+    "PBratio": "1.41"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4915",
+    "Name": "致伸",
+    "PEratio": "13.05",
+    "DividendYield": "6.28",
+    "PBratio": "1.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4916",
+    "Name": "事欣科",
+    "PEratio": "38.04",
+    "DividendYield": "0.81",
+    "PBratio": "2.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4919",
+    "Name": "新唐",
+    "PEratio": "",
+    "DividendYield": "0.27",
+    "PBratio": "4.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4927",
+    "Name": "泰鼎-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4930",
+    "Name": "燦星網",
+    "PEratio": "30.67",
+    "DividendYield": "3.26",
+    "PBratio": "0.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4934",
+    "Name": "太極",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4935",
+    "Name": "茂林-KY",
+    "PEratio": "28.40",
+    "DividendYield": "2.63",
+    "PBratio": "0.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4938",
+    "Name": "和碩",
+    "PEratio": "15.40",
+    "DividendYield": "4.84",
+    "PBratio": "1.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4942",
+    "Name": "嘉彰",
+    "PEratio": "12.42",
+    "DividendYield": "5.26",
+    "PBratio": "0.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4943",
+    "Name": "康控-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.41"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4949",
+    "Name": "有成精密",
+    "PEratio": "49.42",
+    "DividendYield": "1.49",
+    "PBratio": "3.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4952",
+    "Name": "凌通",
+    "PEratio": "46.31",
+    "DividendYield": "2.10",
+    "PBratio": "2.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4956",
+    "Name": "光鋐",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4958",
+    "Name": "臻鼎-KY",
+    "PEratio": "62.05",
+    "DividendYield": "0.88",
+    "PBratio": "3.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4960",
+    "Name": "誠美材",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4961",
+    "Name": "天鈺",
+    "PEratio": "16.29",
+    "DividendYield": "4.92",
+    "PBratio": "1.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4967",
+    "Name": "十銓",
+    "PEratio": "23.20",
+    "DividendYield": "3.30",
+    "PBratio": "5.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4968",
+    "Name": "立積",
+    "PEratio": "44.74",
+    "DividendYield": "1.34",
+    "PBratio": "3.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4976",
+    "Name": "佳凌",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4977",
+    "Name": "眾達-KY",
+    "PEratio": "48.19",
+    "DividendYield": "1.06",
+    "PBratio": "4.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4989",
+    "Name": "榮科",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "10.10"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4994",
+    "Name": "傳奇",
+    "PEratio": "50.46",
+    "DividendYield": "3.03",
+    "PBratio": "6.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "4999",
+    "Name": "鑫禾",
+    "PEratio": "",
+    "DividendYield": "1.13",
+    "PBratio": "0.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5007",
+    "Name": "三星",
+    "PEratio": "19.24",
+    "DividendYield": "5.16",
+    "PBratio": "2.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5203",
+    "Name": "訊連",
+    "PEratio": "17.54",
+    "DividendYield": "5.67",
+    "PBratio": "1.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5215",
+    "Name": "科嘉-KY",
+    "PEratio": "18.33",
+    "DividendYield": "5.35",
+    "PBratio": "0.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5222",
+    "Name": "全訊",
+    "PEratio": "53.44",
+    "DividendYield": "1.89",
+    "PBratio": "4.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5225",
+    "Name": "東科-KY",
+    "PEratio": "7.37",
+    "DividendYield": "9.61",
+    "PBratio": "1.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5234",
+    "Name": "達興材料",
+    "PEratio": "58.07",
+    "DividendYield": "1.52",
+    "PBratio": "12.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5243",
+    "Name": "乙盛-KY",
+    "PEratio": "22.68",
+    "DividendYield": "2.20",
+    "PBratio": "2.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5244",
+    "Name": "弘凱",
+    "PEratio": "78.92",
+    "DividendYield": "0.99",
+    "PBratio": "1.54"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5258",
+    "Name": "虹堡",
+    "PEratio": "11.24",
+    "DividendYield": "2.10",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5269",
+    "Name": "祥碩",
+    "PEratio": "17.64",
+    "DividendYield": "3.52",
+    "PBratio": "2.65"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5283",
+    "Name": "禾聯碩",
+    "PEratio": "9.43",
+    "DividendYield": "3.77",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5284",
+    "Name": "jpp-KY",
+    "PEratio": "28.19",
+    "DividendYield": "1.52",
+    "PBratio": "4.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5285",
+    "Name": "界霖",
+    "PEratio": "34.97",
+    "DividendYield": "2.80",
+    "PBratio": "1.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5288",
+    "Name": "豐祥-KY",
+    "PEratio": "13.97",
+    "DividendYield": "3.82",
+    "PBratio": "1.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5292",
+    "Name": "華懋",
+    "PEratio": "24.57",
+    "DividendYield": "2.66",
+    "PBratio": "5.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5306",
+    "Name": "桂盟",
+    "PEratio": "10.56",
+    "DividendYield": "4.64",
+    "PBratio": "1.15"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5388",
+    "Name": "中磊",
+    "PEratio": "19.20",
+    "DividendYield": "3.25",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5434",
+    "Name": "崇越",
+    "PEratio": "19.03",
+    "DividendYield": "3.26",
+    "PBratio": "3.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5469",
+    "Name": "瀚宇博",
+    "PEratio": "15.20",
+    "DividendYield": "2.75",
+    "PBratio": "1.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5471",
+    "Name": "松翰",
+    "PEratio": "58.54",
+    "DividendYield": "2.37",
+    "PBratio": "2.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5484",
+    "Name": "慧友",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "5.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5515",
+    "Name": "建國",
+    "PEratio": "9.11",
+    "DividendYield": "8.09",
+    "PBratio": "1.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5519",
+    "Name": "隆大",
+    "PEratio": "6.50",
+    "DividendYield": "11.78",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5521",
+    "Name": "工信",
+    "PEratio": "22.40",
+    "DividendYield": "1.29",
+    "PBratio": "1.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5522",
+    "Name": "遠雄",
+    "PEratio": "9.18",
+    "DividendYield": "8.04",
+    "PBratio": "1.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5525",
+    "Name": "順天",
+    "PEratio": "16.57",
+    "DividendYield": "5.17",
+    "PBratio": "1.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5531",
+    "Name": "鄉林",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5533",
+    "Name": "皇鼎",
+    "PEratio": "25.63",
+    "DividendYield": "4.18",
+    "PBratio": "0.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5534",
+    "Name": "長虹",
+    "PEratio": "12.95",
+    "DividendYield": "7.08",
+    "PBratio": "1.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5538",
+    "Name": "東明-KY",
+    "PEratio": "10.38",
+    "DividendYield": "4.78",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5546",
+    "Name": "永固-KY",
+    "PEratio": "",
+    "DividendYield": "11.70",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5607",
+    "Name": "遠雄港",
+    "PEratio": "17.00",
+    "DividendYield": "3.82",
+    "PBratio": "1.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5608",
+    "Name": "四維航",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5706",
+    "Name": "鳳凰",
+    "PEratio": "15.01",
+    "DividendYield": "8.84",
+    "PBratio": "2.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5871",
+    "Name": "中租-KY",
+    "PEratio": "11.09",
+    "DividendYield": "5.08",
+    "PBratio": "1.20"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5876",
+    "Name": "上海商銀",
+    "PEratio": "12.71",
+    "DividendYield": "4.63",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5880",
+    "Name": "合庫金",
+    "PEratio": "16.88",
+    "DividendYield": "4.58",
+    "PBratio": "1.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5906",
+    "Name": "台南-KY",
+    "PEratio": "49.74",
+    "DividendYield": "1.44",
+    "PBratio": "2.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "5907",
+    "Name": "大洋-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6005",
+    "Name": "群益證",
+    "PEratio": "10.61",
+    "DividendYield": "6.11",
+    "PBratio": "1.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6024",
+    "Name": "群益期",
+    "PEratio": "10.51",
+    "DividendYield": "6.20",
+    "PBratio": "1.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6108",
+    "Name": "競國",
+    "PEratio": "",
+    "DividendYield": "5.13",
+    "PBratio": "0.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6112",
+    "Name": "邁達特",
+    "PEratio": "25.16",
+    "DividendYield": "3.60",
+    "PBratio": "2.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6115",
+    "Name": "鎰勝",
+    "PEratio": "16.77",
+    "DividendYield": "5.86",
+    "PBratio": "1.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6116",
+    "Name": "彩晶",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6117",
+    "Name": "迎廣",
+    "PEratio": "23.82",
+    "DividendYield": "2.44",
+    "PBratio": "3.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6120",
+    "Name": "達運",
+    "PEratio": "",
+    "DividendYield": "1.86",
+    "PBratio": "0.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6128",
+    "Name": "上福",
+    "PEratio": "",
+    "DividendYield": "2.41",
+    "PBratio": "0.96"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6133",
+    "Name": "金橋",
+    "PEratio": "30.56",
+    "DividendYield": "4.55",
+    "PBratio": "1.61"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6136",
+    "Name": "富爾特",
+    "PEratio": "28.71",
+    "DividendYield": "4.54",
+    "PBratio": "0.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6139",
+    "Name": "亞翔",
+    "PEratio": "22.40",
+    "DividendYield": "3.38",
+    "PBratio": "8.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6141",
+    "Name": "柏承",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "5.37"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6142",
+    "Name": "友勁",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6152",
+    "Name": "百一",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.88"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6153",
+    "Name": "嘉聯益",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6155",
+    "Name": "鈞寶",
+    "PEratio": "66.89",
+    "DividendYield": "1.62",
+    "PBratio": "2.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6164",
+    "Name": "華興",
+    "PEratio": "169.29",
+    "DividendYield": "4.22",
+    "PBratio": "1.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6165",
+    "Name": "浪凡",
+    "PEratio": "12.23",
+    "DividendYield": "9.90",
+    "PBratio": "2.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6166",
+    "Name": "凌華",
+    "PEratio": "32.81",
+    "DividendYield": "1.56",
+    "PBratio": "3.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6168",
+    "Name": "宏齊",
+    "PEratio": "490.00",
+    "DividendYield": "",
+    "PBratio": "1.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6176",
+    "Name": "瑞儀",
+    "PEratio": "10.19",
+    "DividendYield": "3.66",
+    "PBratio": "1.22"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6177",
+    "Name": "達麗",
+    "PEratio": "11.81",
+    "DividendYield": "6.67",
+    "PBratio": "1.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6183",
+    "Name": "關貿",
+    "PEratio": "24.00",
+    "DividendYield": "3.79",
+    "PBratio": "4.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6184",
+    "Name": "大豐電",
+    "PEratio": "18.46",
+    "DividendYield": "6.42",
+    "PBratio": "1.45"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6189",
+    "Name": "豐藝",
+    "PEratio": "17.51",
+    "DividendYield": "5.65",
+    "PBratio": "2.03"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6191",
+    "Name": "精成科",
+    "PEratio": "17.19",
+    "DividendYield": "2.77",
+    "PBratio": "2.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6192",
+    "Name": "巨路",
+    "PEratio": "11.68",
+    "DividendYield": "4.94",
+    "PBratio": "1.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6196",
+    "Name": "帆宣",
+    "PEratio": "25.78",
+    "DividendYield": "1.70",
+    "PBratio": "5.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6197",
+    "Name": "佳必琪",
+    "PEratio": "21.68",
+    "DividendYield": "3.72",
+    "PBratio": "4.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6201",
+    "Name": "亞弘電",
+    "PEratio": "15.50",
+    "DividendYield": "6.08",
+    "PBratio": "1.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6202",
+    "Name": "盛群",
+    "PEratio": "83.33",
+    "DividendYield": "1.24",
+    "PBratio": "3.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6205",
+    "Name": "詮欣",
+    "PEratio": "41.49",
+    "DividendYield": "1.80",
+    "PBratio": "2.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6206",
+    "Name": "飛捷",
+    "PEratio": "15.22",
+    "DividendYield": "5.24",
+    "PBratio": "2.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6209",
+    "Name": "今國光",
+    "PEratio": "69.89",
+    "DividendYield": "0.78",
+    "PBratio": "3.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6213",
+    "Name": "聯茂",
+    "PEratio": "60.94",
+    "DividendYield": "1.18",
+    "PBratio": "4.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6214",
+    "Name": "精誠",
+    "PEratio": "15.91",
+    "DividendYield": "4.78",
+    "PBratio": "1.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6215",
+    "Name": "和椿",
+    "PEratio": "51.68",
+    "DividendYield": "0.93",
+    "PBratio": "5.54"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6216",
+    "Name": "居易",
+    "PEratio": "41.61",
+    "DividendYield": "4.20",
+    "PBratio": "1.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6224",
+    "Name": "聚鼎",
+    "PEratio": "90.75",
+    "DividendYield": "2.06",
+    "PBratio": "2.36"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6225",
+    "Name": "天瀚",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "5.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6226",
+    "Name": "光鼎",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6230",
+    "Name": "尼得科超眾",
+    "PEratio": "",
+    "DividendYield": "0.14",
+    "PBratio": "2.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6235",
+    "Name": "華孚",
+    "PEratio": "15.43",
+    "DividendYield": "2.68",
+    "PBratio": "1.79"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6239",
+    "Name": "力成",
+    "PEratio": "29.17",
+    "DividendYield": "2.06",
+    "PBratio": "2.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6243",
+    "Name": "迅杰",
+    "PEratio": "",
+    "DividendYield": "3.53",
+    "PBratio": "2.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6257",
+    "Name": "矽格",
+    "PEratio": "29.25",
+    "DividendYield": "2.33",
+    "PBratio": "3.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6269",
+    "Name": "台郡",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6271",
+    "Name": "同欣電",
+    "PEratio": "26.04",
+    "DividendYield": "1.71",
+    "PBratio": "1.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6272",
+    "Name": "驊陞",
+    "PEratio": "10.41",
+    "DividendYield": "6.28",
+    "PBratio": "1.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6277",
+    "Name": "宏正",
+    "PEratio": "23.05",
+    "DividendYield": "4.93",
+    "PBratio": "1.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6278",
+    "Name": "台表科",
+    "PEratio": "18.09",
+    "DividendYield": "3.47",
+    "PBratio": "2.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6281",
+    "Name": "全國電",
+    "PEratio": "13.57",
+    "DividendYield": "6.57",
+    "PBratio": "1.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6282",
+    "Name": "康舒",
+    "PEratio": "265.00",
+    "DividendYield": "1.68",
+    "PBratio": "1.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6283",
+    "Name": "淳安",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6285",
+    "Name": "啟碁",
+    "PEratio": "34.36",
+    "DividendYield": "1.98",
+    "PBratio": "3.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6405",
+    "Name": "悅城",
+    "PEratio": "",
+    "DividendYield": "0.24",
+    "PBratio": "1.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6409",
+    "Name": "旭隼",
+    "PEratio": "18.73",
+    "DividendYield": "4.92",
+    "PBratio": "6.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6412",
+    "Name": "群電",
+    "PEratio": "14.73",
+    "DividendYield": "4.83",
+    "PBratio": "2.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6414",
+    "Name": "樺漢",
+    "PEratio": "14.59",
+    "DividendYield": "4.35",
+    "PBratio": "1.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6415",
+    "Name": "矽力*-KY",
+    "PEratio": "64.63",
+    "DividendYield": "0.62",
+    "PBratio": "4.29"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6416",
+    "Name": "瑞祺電通",
+    "PEratio": "18.51",
+    "DividendYield": "3.52",
+    "PBratio": "1.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6426",
+    "Name": "統新",
+    "PEratio": "",
+    "DividendYield": "0.23",
+    "PBratio": "9.18"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6431",
+    "Name": "光麗-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6438",
+    "Name": "迅得",
+    "PEratio": "34.53",
+    "DividendYield": "2.80",
+    "PBratio": "2.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6442",
+    "Name": "光聖",
+    "PEratio": "83.37",
+    "DividendYield": "0.62",
+    "PBratio": "21.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6443",
+    "Name": "元晶",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6446",
+    "Name": "藥華藥",
+    "PEratio": "45.84",
+    "DividendYield": "0.42",
+    "PBratio": "7.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6449",
+    "Name": "鈺邦",
+    "PEratio": "23.21",
+    "DividendYield": "2.54",
+    "PBratio": "3.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6451",
+    "Name": "訊芯-KY",
+    "PEratio": "1557.69",
+    "DividendYield": "0.09",
+    "PBratio": "6.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6456",
+    "Name": "GIS-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6464",
+    "Name": "台數科",
+    "PEratio": "18.10",
+    "DividendYield": "2.28",
+    "PBratio": "1.20"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6472",
+    "Name": "保瑞",
+    "PEratio": "17.41",
+    "DividendYield": "2.45",
+    "PBratio": "3.37"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6477",
+    "Name": "安集",
+    "PEratio": "1642.50",
+    "DividendYield": "1.07",
+    "PBratio": "1.27"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6491",
+    "Name": "晶碩",
+    "PEratio": "13.51",
+    "DividendYield": "3.55",
+    "PBratio": "1.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6504",
+    "Name": "南六",
+    "PEratio": "",
+    "DividendYield": "2.55",
+    "PBratio": "0.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6505",
+    "Name": "台塑化",
+    "PEratio": "50.87",
+    "DividendYield": "2.27",
+    "PBratio": "1.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6515",
+    "Name": "穎崴",
+    "PEratio": "218.33",
+    "DividendYield": "0.49",
+    "PBratio": "56.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6525",
+    "Name": "捷敏-KY",
+    "PEratio": "15.34",
+    "DividendYield": "5.54",
+    "PBratio": "2.48"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6526",
+    "Name": "達發",
+    "PEratio": "32.91",
+    "DividendYield": "2.37",
+    "PBratio": "4.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6531",
+    "Name": "愛普*",
+    "PEratio": "103.49",
+    "DividendYield": "0.88",
+    "PBratio": "10.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6533",
+    "Name": "晶心科",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6534",
+    "Name": "正瀚-創",
+    "PEratio": "21.26",
+    "DividendYield": "5.01",
+    "PBratio": "3.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6541",
+    "Name": "泰福-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6550",
+    "Name": "北極星藥業-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6552",
+    "Name": "易華電",
+    "PEratio": "",
+    "DividendYield": "0.67",
+    "PBratio": "1.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6558",
+    "Name": "興能高",
+    "PEratio": "",
+    "DividendYield": "1.03",
+    "PBratio": "1.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6573",
+    "Name": "虹揚-KY",
+    "PEratio": "10.49",
+    "DividendYield": "",
+    "PBratio": "1.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6579",
+    "Name": "研揚",
+    "PEratio": "28.30",
+    "DividendYield": "3.18",
+    "PBratio": "2.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6581",
+    "Name": "鋼聯",
+    "PEratio": "17.50",
+    "DividendYield": "4.91",
+    "PBratio": "2.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6582",
+    "Name": "申豐",
+    "PEratio": "",
+    "DividendYield": "3.19",
+    "PBratio": "0.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6585",
+    "Name": "鼎基",
+    "PEratio": "14.88",
+    "DividendYield": "5.37",
+    "PBratio": "1.55"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6589",
+    "Name": "台康生技",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6591",
+    "Name": "動力-KY",
+    "PEratio": "11.35",
+    "DividendYield": "6.91",
+    "PBratio": "1.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6592",
+    "Name": "和潤企業",
+    "PEratio": "13.32",
+    "DividendYield": "5.31",
+    "PBratio": "1.17"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6598",
+    "Name": "ABC-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6605",
+    "Name": "帝寶",
+    "PEratio": "8.95",
+    "DividendYield": "5.20",
+    "PBratio": "1.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6606",
+    "Name": "建德工業",
+    "PEratio": "22.48",
+    "DividendYield": "4.20",
+    "PBratio": "1.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6614",
+    "Name": "資拓宏宇",
+    "PEratio": "21.95",
+    "DividendYield": "3.96",
+    "PBratio": "2.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6625",
+    "Name": "必應",
+    "PEratio": "8.34",
+    "DividendYield": "6.80",
+    "PBratio": "2.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6641",
+    "Name": "基士德-KY",
+    "PEratio": "40.43",
+    "DividendYield": "2.15",
+    "PBratio": "0.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6645",
+    "Name": "金萬林-創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6655",
+    "Name": "科定",
+    "PEratio": "35.59",
+    "DividendYield": "8.60",
+    "PBratio": "4.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6657",
+    "Name": "華安",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6658",
+    "Name": "聯策",
+    "PEratio": "98.16",
+    "DividendYield": "0.90",
+    "PBratio": "3.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6666",
+    "Name": "羅麗芬-KY",
+    "PEratio": "16.82",
+    "DividendYield": "4.91",
+    "PBratio": "1.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6668",
+    "Name": "中揚光",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6669",
+    "Name": "緯穎",
+    "PEratio": "17.45",
+    "DividendYield": "3.44",
+    "PBratio": "7.16"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6670",
+    "Name": "復盛應用",
+    "PEratio": "11.23",
+    "DividendYield": "6.36",
+    "PBratio": "2.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6671",
+    "Name": "三能-KY",
+    "PEratio": "12.78",
+    "DividendYield": "3.96",
+    "PBratio": "1.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6672",
+    "Name": "騰輝電子-KY",
+    "PEratio": "42.78",
+    "DividendYield": "1.61",
+    "PBratio": "4.15"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6674",
+    "Name": "鋐寶科技",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.44"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6689",
+    "Name": "伊雲谷",
+    "PEratio": "29.91",
+    "DividendYield": "2.89",
+    "PBratio": "1.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6691",
+    "Name": "洋基工程",
+    "PEratio": "25.78",
+    "DividendYield": "3.45",
+    "PBratio": "10.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6695",
+    "Name": "芯鼎",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6698",
+    "Name": "旭暉應材",
+    "PEratio": "",
+    "DividendYield": "1.65",
+    "PBratio": "1.84"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6706",
+    "Name": "惠特",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6715",
+    "Name": "嘉基",
+    "PEratio": "207.50",
+    "DividendYield": "0.54",
+    "PBratio": "7.16"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6719",
+    "Name": "力智",
+    "PEratio": "26.41",
+    "DividendYield": "2.65",
+    "PBratio": "1.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6722",
+    "Name": "輝創",
+    "PEratio": "13.81",
+    "DividendYield": "4.99",
+    "PBratio": "1.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6742",
+    "Name": "澤米",
+    "PEratio": "",
+    "DividendYield": "0.75",
+    "PBratio": "2.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6743",
+    "Name": "安普新",
+    "PEratio": "43.03",
+    "DividendYield": "4.91",
+    "PBratio": "1.69"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6753",
+    "Name": "龍德造船",
+    "PEratio": "23.33",
+    "DividendYield": "0.92",
+    "PBratio": "3.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6754",
+    "Name": "匯僑設計",
+    "PEratio": "13.53",
+    "DividendYield": "7.58",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6756",
+    "Name": "威鋒電子",
+    "PEratio": "75.14",
+    "DividendYield": "1.08",
+    "PBratio": "2.03"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6757",
+    "Name": "台灣虎航",
+    "PEratio": "9.00",
+    "DividendYield": "5.01",
+    "PBratio": "3.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6768",
+    "Name": "志強-KY",
+    "PEratio": "11.46",
+    "DividendYield": "6.66",
+    "PBratio": "1.03"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6770",
+    "Name": "力積電",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6771",
+    "Name": "平和環保-創",
+    "PEratio": "12.31",
+    "DividendYield": "7.14",
+    "PBratio": "1.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6776",
+    "Name": "展碁國際",
+    "PEratio": "15.45",
+    "DividendYield": "5.14",
+    "PBratio": "1.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6781",
+    "Name": "AES-KY",
+    "PEratio": "31.54",
+    "DividendYield": "1.59",
+    "PBratio": "6.13"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6782",
+    "Name": "視陽",
+    "PEratio": "15.77",
+    "DividendYield": "3.78",
+    "PBratio": "3.16"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6789",
+    "Name": "采鈺",
+    "PEratio": "140.50",
+    "DividendYield": "0.53",
+    "PBratio": "9.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6790",
+    "Name": "永豐實",
+    "PEratio": "13.05",
+    "DividendYield": "6.70",
+    "PBratio": "1.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6792",
+    "Name": "詠業",
+    "PEratio": "26.46",
+    "DividendYield": "4.24",
+    "PBratio": "1.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6794",
+    "Name": "向榮生技",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "6.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6796",
+    "Name": "晉弘",
+    "PEratio": "353.00",
+    "DividendYield": "0.35",
+    "PBratio": "3.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6799",
+    "Name": "來頡",
+    "PEratio": "24.53",
+    "DividendYield": "2.82",
+    "PBratio": "2.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6805",
+    "Name": "富世達",
+    "PEratio": "67.26",
+    "DividendYield": "0.60",
+    "PBratio": "19.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6806",
+    "Name": "森崴能源",
+    "PEratio": "",
+    "DividendYield": "5.68",
+    "PBratio": "4.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6807",
+    "Name": "峰源-KY",
+    "PEratio": "7.71",
+    "DividendYield": "6.92",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6830",
+    "Name": "汎銓",
+    "PEratio": "",
+    "DividendYield": "0.14",
+    "PBratio": "12.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6831",
+    "Name": "邁科",
+    "PEratio": "106.74",
+    "DividendYield": "0.63",
+    "PBratio": "11.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6834",
+    "Name": "天二科技",
+    "PEratio": "75.90",
+    "DividendYield": "1.05",
+    "PBratio": "2.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6835",
+    "Name": "圓裕",
+    "PEratio": "40.62",
+    "DividendYield": "2.54",
+    "PBratio": "1.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6838",
+    "Name": "台新藥",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.89"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6854",
+    "Name": "錼創科技-KY創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "4.73"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6861",
+    "Name": "睿生光電",
+    "PEratio": "71.28",
+    "DividendYield": "0.73",
+    "PBratio": "7.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6862",
+    "Name": "三集瑞-KY",
+    "PEratio": "21.05",
+    "DividendYield": "2.87",
+    "PBratio": "2.92"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6863",
+    "Name": "永道-KY",
+    "PEratio": "32.90",
+    "DividendYield": "1.52",
+    "PBratio": "1.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6869",
+    "Name": "雲豹能源",
+    "PEratio": "",
+    "DividendYield": "2.45",
+    "PBratio": "2.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6873",
+    "Name": "泓德能源",
+    "PEratio": "24.53",
+    "DividendYield": "2.89",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6885",
+    "Name": "全福生技",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6887",
+    "Name": "寶綠特-KY",
+    "PEratio": "8.44",
+    "DividendYield": "6.39",
+    "PBratio": "0.95"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6890",
+    "Name": "來億-KY",
+    "PEratio": "12.25",
+    "DividendYield": "5.64",
+    "PBratio": "1.65"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6901",
+    "Name": "鑽石投資",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6902",
+    "Name": "GOGOLOOK",
+    "PEratio": "72.04",
+    "DividendYield": "",
+    "PBratio": "5.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6906",
+    "Name": "現觀科",
+    "PEratio": "33.00",
+    "DividendYield": "2.87",
+    "PBratio": "2.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6908",
+    "Name": "宏碁遊戲-創",
+    "PEratio": "27.05",
+    "DividendYield": "3.18",
+    "PBratio": "1.17"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6909",
+    "Name": "創控",
+    "PEratio": "61.25",
+    "DividendYield": "1.70",
+    "PBratio": "3.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6914",
+    "Name": "阜爾運通",
+    "PEratio": "15.26",
+    "DividendYield": "5.46",
+    "PBratio": "2.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6916",
+    "Name": "華凌",
+    "PEratio": "",
+    "DividendYield": "1.48",
+    "PBratio": "1.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6918",
+    "Name": "愛派司",
+    "PEratio": "15.08",
+    "DividendYield": "6.68",
+    "PBratio": "2.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6919",
+    "Name": "康霈*",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "16.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6921",
+    "Name": "嘉雨思-創",
+    "PEratio": "285.00",
+    "DividendYield": "",
+    "PBratio": "10.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6923",
+    "Name": "中台",
+    "PEratio": "27.99",
+    "DividendYield": "3.53",
+    "PBratio": "3.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6924",
+    "Name": "榮惠-KY創",
+    "PEratio": "15.49",
+    "DividendYield": "5.62",
+    "PBratio": "3.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6928",
+    "Name": "攸泰科技",
+    "PEratio": "",
+    "DividendYield": "1.05",
+    "PBratio": "2.01"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6931",
+    "Name": "青松健康",
+    "PEratio": "35.58",
+    "DividendYield": "0.97",
+    "PBratio": "2.86"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6933",
+    "Name": "AMAX-KY",
+    "PEratio": "33.50",
+    "DividendYield": "1.48",
+    "PBratio": "3.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6934",
+    "Name": "心誠鎂",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "9.43"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6936",
+    "Name": "永鴻生技",
+    "PEratio": "19.44",
+    "DividendYield": "4.39",
+    "PBratio": "1.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6937",
+    "Name": "天虹",
+    "PEratio": "100.00",
+    "DividendYield": "0.47",
+    "PBratio": "5.88"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6944",
+    "Name": "兆聯實業",
+    "PEratio": "29.50",
+    "DividendYield": "2.19",
+    "PBratio": "8.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6949",
+    "Name": "沛爾生醫-創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "32.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6951",
+    "Name": "青新-創",
+    "PEratio": "14.89",
+    "DividendYield": "6.62",
+    "PBratio": "3.21"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6952",
+    "Name": "大武山",
+    "PEratio": "",
+    "DividendYield": "5.31",
+    "PBratio": "1.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6955",
+    "Name": "邦睿生技-創",
+    "PEratio": "39.71",
+    "DividendYield": "1.83",
+    "PBratio": "6.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6957",
+    "Name": "裕慶-KY",
+    "PEratio": "15.40",
+    "DividendYield": "5.71",
+    "PBratio": "3.27"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6958",
+    "Name": "日盛台駿",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6962",
+    "Name": "奕力-KY",
+    "PEratio": "12.82",
+    "DividendYield": "2.82",
+    "PBratio": "0.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6965",
+    "Name": "中傑-KY",
+    "PEratio": "25.22",
+    "DividendYield": "5.78",
+    "PBratio": "1.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6969",
+    "Name": "成信實業*-創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "3.34"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6988",
+    "Name": "威力暘-創",
+    "PEratio": "",
+    "DividendYield": "3.21",
+    "PBratio": "0.91"
+  },
+  {
+    "Date": "1150428",
+    "Code": "6994",
+    "Name": "富威電力",
+    "PEratio": "10.14",
+    "DividendYield": "4.73",
+    "PBratio": "1.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7610",
+    "Name": "聯友金屬-創",
+    "PEratio": "127.16",
+    "DividendYield": "0.40",
+    "PBratio": "19.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7631",
+    "Name": "聚賢研發-創",
+    "PEratio": "20.86",
+    "DividendYield": "2.85",
+    "PBratio": "3.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7705",
+    "Name": "三商餐飲",
+    "PEratio": "17.34",
+    "DividendYield": "4.80",
+    "PBratio": "1.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7711",
+    "Name": "永擎",
+    "PEratio": "38.57",
+    "DividendYield": "2.08",
+    "PBratio": "6.39"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7721",
+    "Name": "微程式",
+    "PEratio": "134.81",
+    "DividendYield": "1.43",
+    "PBratio": "3.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7722",
+    "Name": "LINEPAY",
+    "PEratio": "37.67",
+    "DividendYield": "0.71",
+    "PBratio": "1.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7730",
+    "Name": "暉盛-創",
+    "PEratio": "99.70",
+    "DividendYield": "0.92",
+    "PBratio": "6.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7732",
+    "Name": "金興精密",
+    "PEratio": "20.11",
+    "DividendYield": "4.24",
+    "PBratio": "1.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7736",
+    "Name": "虎山",
+    "PEratio": "15.72",
+    "DividendYield": "4.88",
+    "PBratio": "1.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7740",
+    "Name": "熙特爾-創",
+    "PEratio": "38.47",
+    "DividendYield": "1.81",
+    "PBratio": "7.72"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7749",
+    "Name": "意騰-KY",
+    "PEratio": "37.83",
+    "DividendYield": "1.66",
+    "PBratio": "5.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7750",
+    "Name": "新代",
+    "PEratio": "75.42",
+    "DividendYield": "0.67",
+    "PBratio": "15.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7760",
+    "Name": "享溫馨",
+    "PEratio": "60.68",
+    "DividendYield": "6.15",
+    "PBratio": "1.07"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7765",
+    "Name": "中華資安",
+    "PEratio": "20.86",
+    "DividendYield": "4.32",
+    "PBratio": "4.44"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7769",
+    "Name": "鴻勁",
+    "PEratio": "74.23",
+    "DividendYield": "1.27",
+    "PBratio": "15.81"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7780",
+    "Name": "大研生醫*",
+    "PEratio": "44.76",
+    "DividendYield": "3.72",
+    "PBratio": "2.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7786",
+    "Name": "東方風能",
+    "PEratio": "13.19",
+    "DividendYield": "4.21",
+    "PBratio": "2.37"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7788",
+    "Name": "松川精密",
+    "PEratio": "49.26",
+    "DividendYield": "1.20",
+    "PBratio": "2.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7791",
+    "Name": "皇家可口",
+    "PEratio": "12.80",
+    "DividendYield": "5.91",
+    "PBratio": "1.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7795",
+    "Name": "長廣",
+    "PEratio": "125.40",
+    "DividendYield": "0.55",
+    "PBratio": "17.38"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7799",
+    "Name": "禾榮科",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "5.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7821",
+    "Name": "神數",
+    "PEratio": "15.90",
+    "DividendYield": "4.21",
+    "PBratio": "2.40"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7822",
+    "Name": "倍利科",
+    "PEratio": "96.79",
+    "DividendYield": "0.52",
+    "PBratio": "55.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "7823",
+    "Name": "奧義賽博-KY創",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "8.24"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8011",
+    "Name": "台通",
+    "PEratio": "15.15",
+    "DividendYield": "3.55",
+    "PBratio": "1.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8016",
+    "Name": "矽創",
+    "PEratio": "15.02",
+    "DividendYield": "5.19",
+    "PBratio": "2.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8021",
+    "Name": "尖點",
+    "PEratio": "145.80",
+    "DividendYield": "0.50",
+    "PBratio": "11.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8028",
+    "Name": "昇陽半導體",
+    "PEratio": "54.51",
+    "DividendYield": "1.19",
+    "PBratio": "8.08"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8033",
+    "Name": "雷虎",
+    "PEratio": "253.51",
+    "DividendYield": "",
+    "PBratio": "11.71"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8039",
+    "Name": "台虹",
+    "PEratio": "67.65",
+    "DividendYield": "1.45",
+    "PBratio": "3.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8045",
+    "Name": "達運光電",
+    "PEratio": "114.69",
+    "DividendYield": "1.36",
+    "PBratio": "3.47"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8046",
+    "Name": "南電",
+    "PEratio": "309.63",
+    "DividendYield": "0.21",
+    "PBratio": "13.06"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8070",
+    "Name": "長華*",
+    "PEratio": "45.69",
+    "DividendYield": "5.82",
+    "PBratio": "1.83"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8072",
+    "Name": "陞泰",
+    "PEratio": "25.05",
+    "DividendYield": "3.60",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8081",
+    "Name": "致新",
+    "PEratio": "14.04",
+    "DividendYield": "6.41",
+    "PBratio": "2.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8101",
+    "Name": "華冠",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "2.48"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8103",
+    "Name": "瀚荃",
+    "PEratio": "29.02",
+    "DividendYield": "2.19",
+    "PBratio": "2.59"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8104",
+    "Name": "錸寶",
+    "PEratio": "",
+    "DividendYield": "0.59",
+    "PBratio": "1.25"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8105",
+    "Name": "凌巨",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8110",
+    "Name": "華東",
+    "PEratio": "19.88",
+    "DividendYield": "0.41",
+    "PBratio": "2.04"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8112",
+    "Name": "至上",
+    "PEratio": "17.75",
+    "DividendYield": "4.41",
+    "PBratio": "2.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8114",
+    "Name": "振樺電",
+    "PEratio": "10.25",
+    "DividendYield": "6.05",
+    "PBratio": "1.98"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8131",
+    "Name": "福懋科",
+    "PEratio": "46.10",
+    "DividendYield": "1.59",
+    "PBratio": "2.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8150",
+    "Name": "南茂",
+    "PEratio": "96.20",
+    "DividendYield": "1.80",
+    "PBratio": "1.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8162",
+    "Name": "微矽電子-創",
+    "PEratio": "31.02",
+    "DividendYield": "3.08",
+    "PBratio": "2.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8163",
+    "Name": "達方",
+    "PEratio": "52.84",
+    "DividendYield": "1.86",
+    "PBratio": "0.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8201",
+    "Name": "無敵",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8210",
+    "Name": "勤誠",
+    "PEratio": "41.20",
+    "DividendYield": "1.20",
+    "PBratio": "13.47"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8213",
+    "Name": "志超",
+    "PEratio": "16.30",
+    "DividendYield": "3.08",
+    "PBratio": "0.62"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8215",
+    "Name": "明基材",
+    "PEratio": "",
+    "DividendYield": "1.19",
+    "PBratio": "1.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8222",
+    "Name": "寶一",
+    "PEratio": "63.91",
+    "DividendYield": "1.00",
+    "PBratio": "2.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8249",
+    "Name": "菱光",
+    "PEratio": "15.16",
+    "DividendYield": "4.36",
+    "PBratio": "0.85"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8261",
+    "Name": "富鼎",
+    "PEratio": "20.29",
+    "DividendYield": "4.22",
+    "PBratio": "2.30"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8271",
+    "Name": "宇瞻",
+    "PEratio": "10.96",
+    "DividendYield": "2.00",
+    "PBratio": "4.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8341",
+    "Name": "日友",
+    "PEratio": "16.63",
+    "DividendYield": "5.37",
+    "PBratio": "1.82"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8367",
+    "Name": "建新國際",
+    "PEratio": "11.22",
+    "DividendYield": "6.68",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8374",
+    "Name": "羅昇",
+    "PEratio": "",
+    "DividendYield": "0.24",
+    "PBratio": "4.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8404",
+    "Name": "百和興業-KY",
+    "PEratio": "11.85",
+    "DividendYield": "2.95",
+    "PBratio": "0.99"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8411",
+    "Name": "福貞-KY",
+    "PEratio": "",
+    "DividendYield": "0.82",
+    "PBratio": "0.46"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8422",
+    "Name": "可寧衛*",
+    "PEratio": "21.95",
+    "DividendYield": "4.27",
+    "PBratio": "3.78"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8429",
+    "Name": "金麗-KY",
+    "PEratio": "54.25",
+    "DividendYield": "",
+    "PBratio": "0.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8438",
+    "Name": "昶昕",
+    "PEratio": "42.57",
+    "DividendYield": "1.45",
+    "PBratio": "3.26"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8442",
+    "Name": "威宏-KY",
+    "PEratio": "12.22",
+    "DividendYield": "6.00",
+    "PBratio": "0.93"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8443",
+    "Name": "阿瘦",
+    "PEratio": "",
+    "DividendYield": "1.68",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8454",
+    "Name": "富邦媒",
+    "PEratio": "15.23",
+    "DividendYield": "5.81",
+    "PBratio": "4.70"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8462",
+    "Name": "柏文",
+    "PEratio": "17.80",
+    "DividendYield": "4.94",
+    "PBratio": "5.02"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8463",
+    "Name": "潤泰材",
+    "PEratio": "12.03",
+    "DividendYield": "3.60",
+    "PBratio": "1.35"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8464",
+    "Name": "億豐",
+    "PEratio": "15.85",
+    "DividendYield": "4.48",
+    "PBratio": "3.49"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8466",
+    "Name": "美吉吉-KY",
+    "PEratio": "",
+    "DividendYield": "1.86",
+    "PBratio": "0.42"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8467",
+    "Name": "波力-KY",
+    "PEratio": "14.43",
+    "DividendYield": "4.80",
+    "PBratio": "2.56"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8473",
+    "Name": "山林水",
+    "PEratio": "14.33",
+    "DividendYield": "5.14",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8476",
+    "Name": "台境*",
+    "PEratio": "33.87",
+    "DividendYield": "1.11",
+    "PBratio": "1.61"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8478",
+    "Name": "東哥遊艇",
+    "PEratio": "12.91",
+    "DividendYield": "3.80",
+    "PBratio": "1.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8481",
+    "Name": "政伸",
+    "PEratio": "12.62",
+    "DividendYield": "6.71",
+    "PBratio": "1.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8482",
+    "Name": "商億-KY",
+    "PEratio": "21.36",
+    "DividendYield": "3.97",
+    "PBratio": "1.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8487",
+    "Name": "愛爾達-創",
+    "PEratio": "19.35",
+    "DividendYield": "6.17",
+    "PBratio": "3.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8488",
+    "Name": "吉源-KY",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8499",
+    "Name": "鼎炫-KY",
+    "PEratio": "26.01",
+    "DividendYield": "3.03",
+    "PBratio": "1.32"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8926",
+    "Name": "台汽電",
+    "PEratio": "18.67",
+    "DividendYield": "5.27",
+    "PBratio": "2.12"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8940",
+    "Name": "新天地",
+    "PEratio": "31.45",
+    "DividendYield": "",
+    "PBratio": "1.53"
+  },
+  {
+    "Date": "1150428",
+    "Code": "8996",
+    "Name": "高力",
+    "PEratio": "130.27",
+    "DividendYield": "0.39",
+    "PBratio": "25.90"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9802",
+    "Name": "鈺齊-KY",
+    "PEratio": "12.45",
+    "DividendYield": "6.78",
+    "PBratio": "1.10"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9902",
+    "Name": "台火",
+    "PEratio": "",
+    "DividendYield": "2.06",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9904",
+    "Name": "寶成",
+    "PEratio": "6.29",
+    "DividendYield": "5.04",
+    "PBratio": "0.54"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9905",
+    "Name": "大華",
+    "PEratio": "16.54",
+    "DividendYield": "5.12",
+    "PBratio": "0.80"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9906",
+    "Name": "欣巴巴",
+    "PEratio": "425.56",
+    "DividendYield": "0.21",
+    "PBratio": "2.57"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9907",
+    "Name": "統一實",
+    "PEratio": "13.05",
+    "DividendYield": "6.65",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9908",
+    "Name": "大台北",
+    "PEratio": "17.21",
+    "DividendYield": "4.05",
+    "PBratio": "1.05"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9910",
+    "Name": "豐泰",
+    "PEratio": "14.06",
+    "DividendYield": "5.72",
+    "PBratio": "2.74"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9911",
+    "Name": "櫻花",
+    "PEratio": "13.11",
+    "DividendYield": "6.11",
+    "PBratio": "2.60"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9912",
+    "Name": "偉聯",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9914",
+    "Name": "美利達",
+    "PEratio": "14.11",
+    "DividendYield": "4.95",
+    "PBratio": "0.87"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9917",
+    "Name": "中保科",
+    "PEratio": "16.69",
+    "DividendYield": "5.49",
+    "PBratio": "3.68"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9918",
+    "Name": "欣天然",
+    "PEratio": "27.20",
+    "DividendYield": "3.42",
+    "PBratio": "2.35"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9919",
+    "Name": "康那香",
+    "PEratio": "",
+    "DividendYield": "1.41",
+    "PBratio": "1.31"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9921",
+    "Name": "巨大",
+    "PEratio": "35.49",
+    "DividendYield": "2.76",
+    "PBratio": "0.75"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9924",
+    "Name": "福興",
+    "PEratio": "12.46",
+    "DividendYield": "5.67",
+    "PBratio": "0.94"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9925",
+    "Name": "新保",
+    "PEratio": "17.00",
+    "DividendYield": "4.96",
+    "PBratio": "1.19"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9926",
+    "Name": "新海",
+    "PEratio": "18.40",
+    "DividendYield": "4.26",
+    "PBratio": "2.09"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9927",
+    "Name": "泰銘",
+    "PEratio": "12.63",
+    "DividendYield": "7.28",
+    "PBratio": "1.47"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9928",
+    "Name": "中視",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "0.58"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9929",
+    "Name": "秋雨",
+    "PEratio": "",
+    "DividendYield": "",
+    "PBratio": "1.51"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9930",
+    "Name": "中聯資源",
+    "PEratio": "14.09",
+    "DividendYield": "5.72",
+    "PBratio": "2.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9931",
+    "Name": "欣高",
+    "PEratio": "14.33",
+    "DividendYield": "5.13",
+    "PBratio": "1.28"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9933",
+    "Name": "中鼎",
+    "PEratio": "19.60",
+    "DividendYield": "2.70",
+    "PBratio": "1.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9934",
+    "Name": "成霖",
+    "PEratio": "",
+    "DividendYield": "1.07",
+    "PBratio": "0.63"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9935",
+    "Name": "慶豐富",
+    "PEratio": "11.21",
+    "DividendYield": "6.49",
+    "PBratio": "1.23"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9937",
+    "Name": "全國",
+    "PEratio": "23.98",
+    "DividendYield": "3.89",
+    "PBratio": "3.00"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9938",
+    "Name": "百和",
+    "PEratio": "10.60",
+    "DividendYield": "6.90",
+    "PBratio": "0.97"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9939",
+    "Name": "宏全",
+    "PEratio": "12.42",
+    "DividendYield": "5.49",
+    "PBratio": "1.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9940",
+    "Name": "信義",
+    "PEratio": "71.25",
+    "DividendYield": "3.01",
+    "PBratio": "1.14"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9941",
+    "Name": "裕融",
+    "PEratio": "11.58",
+    "DividendYield": "5.74",
+    "PBratio": "1.33"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9942",
+    "Name": "茂順",
+    "PEratio": "14.34",
+    "DividendYield": "5.98",
+    "PBratio": "2.27"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9943",
+    "Name": "好樂迪",
+    "PEratio": "15.10",
+    "DividendYield": "6.35",
+    "PBratio": "1.76"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9944",
+    "Name": "新麗",
+    "PEratio": "",
+    "DividendYield": "1.82",
+    "PBratio": "0.52"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9945",
+    "Name": "潤泰新",
+    "PEratio": "6.32",
+    "DividendYield": "4.60",
+    "PBratio": "0.67"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9946",
+    "Name": "三發地產",
+    "PEratio": "10.53",
+    "DividendYield": "8.56",
+    "PBratio": "0.77"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9955",
+    "Name": "佳龍",
+    "PEratio": "54.72",
+    "DividendYield": "",
+    "PBratio": "2.50"
+  },
+  {
+    "Date": "1150428",
+    "Code": "9958",
+    "Name": "世紀鋼",
+    "PEratio": "15.42",
+    "DividendYield": "4.37",
+    "PBratio": "2.29"
+  }
+]

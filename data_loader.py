@@ -2,6 +2,7 @@ import os
 import pickle
 import re
 import time
+import json
 try:
     import urllib3
 except Exception:
@@ -30,6 +31,8 @@ C_NET_INCOME = "NetIncome"
 
 TWSE_LISTED_INFO_URL = "https://openapi.twse.com.tw/v1/opendata/t187ap03_L"
 MOPS_MONTHLY_REVENUE_URL_TEMPLATE = "https://mops.twse.com.tw/nas/t21/sii/t21sc03_{roc_year}_{month}_0.html"
+TWSE_LISTED_INFO_BACKUP_FILE = os.path.join("data", "twse_listed_info_backup.json")
+TWSE_DAILY_STATS_BACKUP_FILE = os.path.join("data", "twse_daily_stats_backup.json")
 
 STOCK_ID_COLUMNS = ["公司代號", "股票代號", "證券代號", "stock_id"]
 STOCK_NAME_COLUMNS = ["公司名稱", "股票名稱", "證券名稱", "stock_name"]
@@ -106,6 +109,19 @@ def _save_monthly_revenue_cache(df):
         pickle.dump(payload, f)
 
 
+def _load_bundled_json_backup(path, source_name):
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        print(f"Using bundled backup for {source_name}: {path}")
+        return data
+    except Exception as exc:
+        print(f"Failed to load bundled backup for {source_name} from {path}: {exc}")
+        return None
+
+
 def _summarize_response(response, max_preview_chars=180):
     content_type = response.headers.get("Content-Type", "")
     preview = response.text.strip().replace("\n", " ").replace("\r", " ")
@@ -135,6 +151,9 @@ def _fetch_twse_stock_info():
     except requests.RequestException as exc:
         print(f"TWSE listed info API request failed: {exc}")
         raw = None
+
+    if not raw:
+        raw = _load_bundled_json_backup(TWSE_LISTED_INFO_BACKUP_FILE, "TWSE listed info API")
 
     if not raw:
         return pd.DataFrame(columns=["stock_id", "stock_name", "industry_category", "listing_date"])
@@ -288,6 +307,8 @@ def fetch_twse_daily_stats():
     url = "https://openapi.twse.com.tw/v1/exchangeReport/BWIBBU_ALL"
     try:
         raw = _get_json_response(url, "TWSE daily stats API", timeout=10)
+        if not raw:
+            raw = _load_bundled_json_backup(TWSE_DAILY_STATS_BACKUP_FILE, "TWSE daily stats API")
         if not raw:
             return pd.DataFrame()
         df = pd.DataFrame(raw)
